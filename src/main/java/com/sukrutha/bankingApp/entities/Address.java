@@ -13,7 +13,7 @@ public class Address {
 	
 	
 	@NotNull
-	@Column(name="houseno")
+	@Column(name="buildingno")
 	private String houseNumber;
 	@NotNull
 	@Column(name="street")

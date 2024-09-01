@@ -19,4 +19,5 @@ public class EnumContainer {
     public enum StatusIn{
     	PENDING,SUCCESS,FAILED
     }
+    
 }

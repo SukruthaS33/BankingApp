@@ -19,8 +19,8 @@ public class Bank{
   @GeneratedValue(strategy=GenerationType.UUID )
   @Column(name="bank_id")
   private String bankId;
-  @NotNull(message="bank name can not be null")
   @Column(name="bank_Name")
+  @NotNull(message="bank name can not be null")
   private String bankName;
   @OneToMany(mappedBy="bank")
   private List<Branch> branches;

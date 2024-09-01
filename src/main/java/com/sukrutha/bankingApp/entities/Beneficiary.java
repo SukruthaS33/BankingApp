@@ -1,13 +1,21 @@
 package com.sukrutha.bankingApp.entities;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.List;
+
+import org.springframework.data.annotation.LastModifiedDate;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
 import jakarta.validation.constraints.NotNull;
 
 
@@ -18,27 +26,30 @@ public class Beneficiary {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.UUID)
-	@NotNull
 	@Column(name="beneficiary_id")
-	private String beneficiaryId;
 	@NotNull
+    private String beneficiaryId;
+	@ManyToMany(mappedBy = "beneficiaries")
+	private List<Account> account;
 	@Column(name="beneficiary_name")
+	@NotNull
 	private String beneficiaryName;
-	@NotNull
 	@Column(name="beneficiary_acct_no")
+	@NotNull
 	private String beneficiaryAcctNumber;
-	@NotNull
 	@Column(name="beneficiary_bank_nm")
+	@NotNull
 	private String beneficiaryBankName;
+	@Column(name="beneficiary_ISBN")
 	@NotNull
-	@Column(name="beneficiary_inbank")
-	private boolean beneficiaryIsInBank;
-	@NotNull
-	@Column(name="created_on")
-	private LocalDate createdDate;
-	@NotNull
+	private String beneficiaryISBN;
+	@Column(name="isActive",columnDefinition="BOOLEAN DEFAULT true")
+	private boolean isActive;
+	@Column(name="createdAt")
+	private LocalDateTime createdAt;
 	@Column(name="last_updated_ts")
-	private LocalTime LastUpdatedAt;
+	@LastModifiedDate
+	private LocalDateTime lastUpdatedAt;
 	
 	
 	

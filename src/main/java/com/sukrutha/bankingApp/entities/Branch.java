@@ -28,10 +28,10 @@ public class Branch {
 	@Column(name="branch_name")
 	private String branchName;
 	@Embedded
-	private Address branchLocality;
+	private Address branchAddress;
 	@ManyToOne
 	@JoinColumn(name="bank_id")
-	private String bank;
+	private Bank bank;
 	@OneToMany(mappedBy="branch")
 	private List<Account> accounts;
 	

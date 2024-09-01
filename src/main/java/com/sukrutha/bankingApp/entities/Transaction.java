@@ -25,25 +25,27 @@ import jakarta.persistence.GenerationType;
 @Entity
 @Table(name="transactions")
 public class Transaction {
-	
+	@Id
 	@GeneratedValue(strategy=GenerationType.UUID)
 	@NotNull
 	@Column(name="transaction_id")
 	private String transactionId;
 	@ManyToOne
-	@JoinColumn(name="account_id")
+	@JoinColumn(name="source_acct_id")
 	private Account sourceAccountId;
 	@ManyToOne
 	@JoinColumn(name="target_account_id")
 	private Beneficiary targetAccountId;
+	@Column(name="amount")
 	@NotNull
 	@Min(value=1, message ="Please add amount to transfer")
-	@Column(name="amount")
 	private double Amount;
+	@Column(name="transaction_type")
 	@NotNull
+	@Enumerated(EnumType.STRING)
 	private TransactionType transactionType;
 	@NotNull
-	@Column(name="last_updated_ts")
+	@Column(name="transaction_date_time")
 	private LocalDateTime transcationTime;
 	@NotNull
 	@Enumerated(EnumType.STRING)
