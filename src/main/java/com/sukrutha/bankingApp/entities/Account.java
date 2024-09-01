@@ -1,0 +1,70 @@
+package com.sukrutha.bankingApp.entities;
+
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.List;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.Table;
+import jakarta.persistence.Column;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Embedded;
+import jakarta.persistence.GenerationType;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.Max;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
+
+import com.sukrutha.bankingApp.entities.EnumContainer.AccountType;
+
+
+@Entity
+@Table(name="account")
+public class Account {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.UUID)
+	@Column(name="account_number")
+	private String accountNumber;
+	@Column(name="account_type")
+	@Enumerated(EnumType.STRING)
+	private AccountType accountType;
+	@ManyToOne
+	@JoinColumn(name="branch_id")
+	private Branch branch;
+	@ManyToOne
+	@JoinColumn(name="customer_id")
+	private Customer customer;
+	//@OneToMany(mappedBy="account")
+	@ManyToMany
+	@JoinTable(
+	    name = "account_beneficiary",
+	    joinColumns = @JoinColumn(name = "account_number"),
+	    inverseJoinColumns = @JoinColumn(name = "beneficiary_id")
+	)
+	private List<Beneficiary> beneficiaries ;
+	@Column(name="balance", columnDefinition="DECIMAL(10,2) DEFAULT '0.00'")
+	@NotNull
+	@Min(value = 0 , message = "Minimum balance must be more than 0")
+	private double balance;
+	@OneToMany(mappedBy="sourceAccountId")
+	private List<Transaction> transactions;
+	@Column(name="isActive",columnDefinition="BOOLEAN DEFAULT true")
+	@NotNull
+	private boolean isActive;
+	
+	
+	
+	
+	
+	
+
+}
