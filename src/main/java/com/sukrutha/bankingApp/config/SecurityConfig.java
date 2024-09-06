@@ -15,8 +15,8 @@ public class SecurityConfig {
 		http.csrf().disable() // Disable CSRF for testing or with public endpoints like registration
 								// (Optional)
 				.authorizeHttpRequests()
-				.requestMatchers("/api/v1/customer/register", "/api/v1/customer/login", "/api/v1/accounts/{customerId}")
-				//.requestMatchers("/api/v1/*")
+				//.requestMatchers("/api/v1/customer/register", "/api/v1/customer/login", "/api/v1/accounts/{customerId}")
+				.requestMatchers("/api/v1/**")
 				.permitAll() // Allow unauthenticated access to register
 				.anyRequest().authenticated(); // Protect other endpoints
 
