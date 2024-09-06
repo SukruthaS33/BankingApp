@@ -2,6 +2,7 @@ package com.sukrutha.bankingApp.entities;
 
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.List;
 import jakarta.persistence.Entity;
@@ -14,6 +15,11 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.GenerationType;
 import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.Max;
@@ -28,6 +34,11 @@ import com.sukrutha.bankingApp.entities.EnumContainer.AccountType;
 
 @Entity
 @Table(name="account")
+@Getter
+@Setter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Account {
 	
 	@Id

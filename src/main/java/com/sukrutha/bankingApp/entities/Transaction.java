@@ -1,7 +1,9 @@
 package com.sukrutha.bankingApp.entities;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
+import com.sukrutha.bankingApp.entities.EnumContainer.AccountType;
 import com.sukrutha.bankingApp.entities.EnumContainer.StatusIn;
 import com.sukrutha.bankingApp.entities.EnumContainer.TransactionType;
 import jakarta.persistence.Entity;
@@ -14,6 +16,11 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.GenerationType;
 import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.Max;
@@ -24,6 +31,11 @@ import jakarta.persistence.GenerationType;
 
 @Entity
 @Table(name="transactions")
+@Getter
+@Setter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Transaction {
 	@Id
 	@GeneratedValue(strategy=GenerationType.UUID)
