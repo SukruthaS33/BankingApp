@@ -4,11 +4,25 @@ import jakarta.persistence.Embeddable;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.util.List;
 import java.util.Map;
+
+import com.sukrutha.bankingApp.entities.EnumContainer.AccountType;
 import com.sukrutha.bankingApp.entities.EnumContainer.PhoneType;
 
 
 @Embeddable
+@Getter
+@Setter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class PhoneNumber {
 	@Column(name="extension")
 	@NotNull
