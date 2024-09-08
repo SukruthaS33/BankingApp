@@ -1,6 +1,5 @@
 package com.sukrutha.bankingApp.entities;
 
-
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -32,53 +31,41 @@ import jakarta.persistence.ManyToMany;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sukrutha.bankingApp.entities.EnumContainer.AccountType;
 
-
 @Entity
-@Table(name="account")
+@Table(name = "account")
 @Getter
 @Setter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class Account {
-	
+
 	@Id
-	@GeneratedValue(strategy = GenerationType.UUID)
-	@Column(name="account_number")
+	@Column(name = "account_number")
 	private String accountNumber;
-	@Column(name="account_type")
+	@Column(name = "account_type")
 	@Enumerated(EnumType.STRING)
 	private AccountType accountType;
 	@ManyToOne
-	@JoinColumn(name="branch_id")
+	@JoinColumn(name = "branch_id")
 	private Branch branch;
 	@ManyToOne
-	@JoinColumn(name="customer_id")
+	@JoinColumn(name = "customer_id")
 	@JsonIgnore
 	private Customer customer;
-	//@OneToMany(mappedBy="account")
+	// @OneToMany(mappedBy="account")
 	@ManyToMany
-	@JoinTable(
-	    name = "account_beneficiary",
-	    joinColumns = @JoinColumn(name = "account_number"),
-	    inverseJoinColumns = @JoinColumn(name = "beneficiary_id")
-	)
+	@JoinTable(name = "account_beneficiary", joinColumns = @JoinColumn(name = "account_number"), inverseJoinColumns = @JoinColumn(name = "beneficiary_id"))
 	@JsonIgnore
-	private List<Beneficiary> beneficiaries ;
-	@Column(name="balance", columnDefinition="DECIMAL(10,2) DEFAULT '0.00'")
+	private List<Beneficiary> beneficiaries;
+	@Column(name = "balance", columnDefinition = "DECIMAL(10,2) DEFAULT '0.00'")
 	@NotNull
-	@Min(value = 0 , message = "Minimum balance must be more than 0")
+	@Min(value = 0, message = "Minimum balance must be more than 0")
 	private double balance;
-	@OneToMany(mappedBy="sourceAccountId")
+	@OneToMany(mappedBy = "sourceAccountId")
 	private List<Transaction> transactions;
-	@Column(name="isActive",columnDefinition="BOOLEAN DEFAULT false")
+	@Column(name = "isActive", columnDefinition = "BOOLEAN DEFAULT false")
 	@NotNull
 	private boolean isActive;
-	
-	
-	
-	
-	
-	
 
 }

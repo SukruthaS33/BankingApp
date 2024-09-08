@@ -32,6 +32,7 @@ public class CustomerService {
 	PasswordEncoder passwordEncoder;
 
 	public String register(Customer customer) {
+		log.info("CustomerSerivce:register");
 		String customerId = null;
 
 		try {
@@ -72,6 +73,7 @@ public class CustomerService {
 	}
 
 	public boolean login(String customerEmail, String password) {
+		log.info("CustomerService::login");
 		boolean loggedIn = false;
 		try {
 			if (customerEmail == null || customerEmail.trim().isEmpty() || password == null
@@ -95,7 +97,7 @@ public class CustomerService {
 	}
 
 	public List<Customer> getAllCustomers() {
-		log.info("getAllCustomers");
+		log.info("CustomerService::getAllCustomers");
 		List<Customer> allCustomers = new ArrayList<Customer>();
 		try {
 			allCustomers = customerRepository.findAll();
@@ -107,7 +109,7 @@ public class CustomerService {
 		return allCustomers;
 	}
 
-	public Customer getCustomerDetails(String customerId) {
+	public Customer getCustomerDetailsByCustomerId(String customerId) {
 		Customer customer;
 		try {
 			customer = customerRepository.getReferenceById(customerId);
@@ -127,6 +129,7 @@ public class CustomerService {
 	}
 
 	public Customer getCustomerById(String customerId) {
+		log.info("CustomerService::getCustomerById");
 
 		try {
 			Customer customer = customerRepository.findById(customerId)

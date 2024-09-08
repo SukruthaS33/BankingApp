@@ -19,11 +19,11 @@ public class AdminService {
 
 	public List<Customer> getAllCustomersForAdmin() {
 		log.info("AdminService::getAllCustomersForAdmin::");
-		
+
 		List<Customer> allCustomers = new ArrayList<Customer>();
-		
+
 		try {
-			allCustomers=customerService.getAllCustomers();
+			allCustomers = customerService.getAllCustomers();
 		} catch (Exception e) {
 			log.error("error in getAllCustomersForAdmin");
 		}

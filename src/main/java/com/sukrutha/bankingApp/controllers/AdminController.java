@@ -22,16 +22,15 @@ public class AdminController {
 
 	@Autowired
 	AdminService adminService;
-	
+
 	@GetMapping("/customers")
-	public ResponseEntity<List<Customer>> getAllCustomersForAdmin()
-	{
-		log.info("getAllCustomersForAdmi::started");
-		List<Customer> allCustomers= new ArrayList<Customer>();
+	public ResponseEntity<List<Customer>> getAllCustomersForAdmin() {
+		log.info("AdminController::getAllCustomersForAdmin");
+
+		List<Customer> allCustomers = new ArrayList<Customer>();
 		try {
-			allCustomers= adminService.getAllCustomersForAdmin();
-		}
-		catch(Exception e) {
+			allCustomers = adminService.getAllCustomersForAdmin();
+		} catch (Exception e) {
 			log.error("getAllCustomersForAdmin ::error in getting all customers ");
 			e.printStackTrace();
 		}

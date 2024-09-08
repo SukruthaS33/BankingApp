@@ -17,15 +17,13 @@ import org.springframework.web.bind.annotation.RestController;
 import com.sukrutha.bankingApp.entities.Beneficiary;
 import com.sukrutha.bankingApp.services.BeneficiaryService;
 
-
 @RestController
 @RequestMapping("/api/v1/beneficiaries")
 public class BeneficiaryController {
 
-
 	@Autowired
 	BeneficiaryService beneficiaryService;
-	
+
 //	@GetMapping("/{accountNumber}")
 //	public ResponseEntity<List<Beneficiary>> getAllBeneficiaries(@PathVariable String accountNumber){
 //		List<Beneficiary> beneficiaries;
@@ -38,7 +36,7 @@ public class BeneficiaryController {
 //			e.printStackTrace()
 //;		}
 //	}
-	
+
 //	@PostMapping("/")//add beneficiary should be in accountController not in beneficiaryController
 //	public ResponseEntity<Beneficiary>addBeneficiary(@RequestBody Beneficiary beneficiary){
 //		
@@ -58,8 +56,7 @@ public class BeneficiaryController {
 //		
 //		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
 //	}
-	
-	
+
 //	@PostMapping("/delete/{beneficiaryId}")
 //	public ResponseEntity<Beneficiary,String>deleteBeneficiary(@PathVariable String beneficiaryId){
 //		boolean deleteStatus=false;
@@ -74,11 +71,5 @@ public class BeneficiaryController {
 //}
 //	}
 //	
-	
-	
-		
-	
-
-
 
 }
