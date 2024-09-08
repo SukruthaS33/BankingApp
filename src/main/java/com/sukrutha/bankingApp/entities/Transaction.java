@@ -30,7 +30,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.GenerationType;
 
 @Entity
-@Table(name="transactions")
+@Table(name = "transactions")
 @Getter
 @Setter
 @Builder
@@ -38,32 +38,30 @@ import jakarta.persistence.GenerationType;
 @NoArgsConstructor
 public class Transaction {
 	@Id
-	@GeneratedValue(strategy=GenerationType.UUID)
+	@GeneratedValue(strategy = GenerationType.UUID)
 	@NotNull
-	@Column(name="transaction_id")
+	@Column(name = "transaction_id")
 	private String transactionId;
 	@ManyToOne
-	@JoinColumn(name="source_acct_id")
+	@JoinColumn(name = "source_acct_id")
 	private Account sourceAccountId;
 	@ManyToOne
-	@JoinColumn(name="target_account_id")
+	@JoinColumn(name = "target_account_id")
 	private Beneficiary targetAccountId;
-	@Column(name="amount")
+	@Column(name = "amount")
 	@NotNull
-	@Min(value=1, message ="Please add amount to transfer")
+	@Min(value = 1, message = "Please add amount to transfer")
 	private double Amount;
-	@Column(name="transaction_type")
+	@Column(name = "transaction_type")
 	@NotNull
 	@Enumerated(EnumType.STRING)
 	private TransactionType transactionType;
 	@NotNull
-	@Column(name="transaction_date_time")
+	@Column(name = "transaction_date_time")
 	private LocalDateTime transcationTime;
 	@NotNull
 	@Enumerated(EnumType.STRING)
-	@Column(name="transaction_status")
+	@Column(name = "transaction_status")
 	private StatusIn transactionStatus;
-	
-	
 
 }

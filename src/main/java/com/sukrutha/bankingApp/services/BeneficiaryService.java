@@ -28,18 +28,19 @@ public class BeneficiaryService {
 //	}
 
 	public Beneficiary addBeneficiary(Beneficiary beneficiary) {
-		log.info("adding beneficiary to the beneficiary table...");
+		log.info("BeneficiaryService::addBeneficiary");
+		// adds beneficiary to beneficiary table
 		Beneficiary savedBeneficiary = null;
 		try {
 			// check if beneficiary already exists in table
-			if(this.getBeneficiaryByBeneficiaryAccountNumber(beneficiary.getBeneficiaryAcctNumber())==null) {
+			if (this.getBeneficiaryByBeneficiaryAccountNumber(beneficiary.getBeneficiaryAcctNumber()) == null) {
 				savedBeneficiary = beneficiaryRepository.save(beneficiary);
 			}
-			
+
 			else {
 				log.error("beneficiary already exists");
 			}
-			
+
 		} catch (Exception e) {
 			log.error("failed to add beneficiary");
 			e.printStackTrace();
@@ -48,10 +49,10 @@ public class BeneficiaryService {
 
 		return savedBeneficiary;
 	}
-	
+
 	public Beneficiary getBeneficiaryById(String beneficiaryId) {
 
-		log.info("getting beneficiary by Id");
+		log.info("BeneficiaryService::getBeneficiaryById");
 		Beneficiary beneficiary = null;
 		try {
 			beneficiary = beneficiaryRepository.findById(beneficiaryId)
@@ -66,7 +67,7 @@ public class BeneficiaryService {
 
 	public Beneficiary getBeneficiaryByBeneficiaryAccountNumber(String beneficiaryAcctNumber) {
 
-		log.info("getBeneficiaryByBeneficiaryAccountNumber");
+		log.info("BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber");
 		Beneficiary beneficiary = null;
 		try {
 			beneficiary = beneficiaryRepository.findByBeneficiaryAcctNumber(beneficiaryAcctNumber)
@@ -79,8 +80,8 @@ public class BeneficiaryService {
 		return beneficiary;
 	}
 
-	
 	public String updateBeneficiary(Beneficiary beneficiary) {
+		log.info("BeneficiaryService updateBeneficiary");
 		try {
 
 			// updating existing account
@@ -101,8 +102,9 @@ public class BeneficiaryService {
 		}
 		return beneficiary.getBeneficiaryId();
 	}
-	
+
 	public boolean deleteBeneficiary(Beneficiary beneficiary) {
+		log.info("BeneficiaryService::deleteBeneficiary");
 		try {
 
 		} catch (Exception e) {

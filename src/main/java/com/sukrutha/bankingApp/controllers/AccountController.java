@@ -54,8 +54,8 @@ public class AccountController {
 //	
 
 	@GetMapping("/{accountNumber}")
-	public ResponseEntity<Account> getAccount(@PathVariable String accountNumber) {
-
+	public ResponseEntity<Account> getAccountByAccountNumber(@PathVariable String accountNumber) {
+		log.info("AccountController::getAccountByAccountNumber");
 		try {
 			Account account = accountService.getAccountByAccountNumber(accountNumber);
 
@@ -100,7 +100,8 @@ public class AccountController {
 	@PostMapping("/addbeneficiary/{accountNumber}")
 	public ResponseEntity<Boolean> addBeneficiaryToAccount(@PathVariable String accountNumber,
 			@RequestBody Beneficiary beneficiary) {
-		log.info("addBeneficiaryToAccount::adding Beneficiary "+ beneficiary);
+		log.info("AccountController::addBeneficiaryToAccount::");
+		log.info(beneficiary.toString());
 		try {
 			if (accountService.addBeneficiaryToAccount(accountNumber, beneficiary)) {
 				return ResponseEntity.status(HttpStatus.OK).body(true);

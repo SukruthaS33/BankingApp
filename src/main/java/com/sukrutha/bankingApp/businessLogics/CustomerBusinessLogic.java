@@ -42,4 +42,15 @@ public class CustomerBusinessLogic {
 			/// if all the checks are completed return true 
 			return false;
 		}
+		
+		
+		public String generateRandomNumber() {
+			log.info("CustomerBusinessLogic:generateRandomNumber");
+			long min = 1000000000L;
+			long max = 9999999999L;
+
+			long randomNum = min + (long) (Math.random() * ((max - min) + 1));
+			return String.valueOf(randomNum);
+
+		}
 }

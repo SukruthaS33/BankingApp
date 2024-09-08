@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.sukrutha.bankingApp.Repositories.AccountRepository;
+import com.sukrutha.bankingApp.businessLogics.CustomerBusinessLogic;
 import com.sukrutha.bankingApp.entities.Account;
 import com.sukrutha.bankingApp.entities.Beneficiary;
 import com.sukrutha.bankingApp.entities.Branch;
@@ -33,12 +34,19 @@ public class AccountService {
 	@Autowired
 	CustomerService customerService;
 
+	@Autowired
+	CustomerBusinessLogic customerBusinessLogic;
+
 	public String createAccount(String accountTypeStr, Branch branch, Customer customer) {
+		log.info("AccountService::createAccount");
 		try {
 
 			EnumContainer.AccountType accountType = EnumContainer.AccountType.valueOf(accountTypeStr.toUpperCase());
 
 			Account account = new Account();
+
+			String accountNumber = customerBusinessLogic.generateRandomNumber();
+			account.setAccountNumber(accountNumber);
 			// account.setAccountType(accountType);
 			// account.setBalance(0);
 			account.setActive(true);
@@ -46,7 +54,7 @@ public class AccountService {
 			account.setCustomer(customer);
 
 			account = accountRepository.save(account);
-			return account.getAccountNumber();
+			return accountNumber;
 
 		} catch (IllegalArgumentException e) {
 
@@ -63,6 +71,7 @@ public class AccountService {
 	}
 
 	public String updateAccount(Account account) {
+		log.info("AccountService:updateAccount");
 		try {
 
 			// updating existing account
@@ -118,7 +127,9 @@ public class AccountService {
 	// think only about the back end now to return /throw exceptions do not worry
 	// about the front end at all
 	public Account getAccountByAccountNumber(String accountNumber) {
+		log.info("AccountService::getAccountByAccountNumber");
 		Account account = null;
+
 		try {
 
 			account = accountRepository.findById(accountNumber)
@@ -133,7 +144,7 @@ public class AccountService {
 	}
 
 	public boolean addBeneficiaryToAccount(String accountNumber, Beneficiary beneficiary) {
-
+		log.info("AccountService::addBeneficiaryToAccount");
 		try {
 			// the job of this method is to connect the beneficiary with the account number
 			// NOT to create a beneficiary(this will be done in beneficiary controller
@@ -194,7 +205,7 @@ public class AccountService {
 	}
 
 	public List<Account> getAccountsByCustomerId(String customerId) {
-		log.info("getAccountsByCustomerId:: fetching accounts for a given customer");
+		log.info("AccountService::getAccountsByCustomerId:: fetching accounts for a given customer");
 		List<Account> accounts = new ArrayList<Account>();
 
 		try {

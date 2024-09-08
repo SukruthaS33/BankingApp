@@ -49,21 +49,21 @@ public class Customer {
 	@NotBlank
 	private String customerName;
 	@Column(name = "customer_email")
-	@Email(message="given email Id is not valid")
+	@Email(message = "given email Id is not valid")
 	private String customerEmail;
 	@Column(name = "customer_password")
 	@NotNull
 	@NotBlank
 	@JsonIgnore
 	private String customerPassword;
-	@Min(value=10, message="Sorry you should be 10 years old to open an account. Go to child's bank")
-	@Max(value=100, message="you are 100 years old!")
+	@Min(value = 10, message = "Sorry you should be 10 years old to open an account. Go to child's bank")
+	@Max(value = 100, message = "you are 100 years old!")
 	private int age;
 	@Embedded
 	private Address customerAddress;
 	@Embedded
 	private PhoneNumber customerPhoneNumber;
-	@OneToMany(mappedBy="customer")
+	@OneToMany(mappedBy = "customer")
 	private List<Account> accounts;
 	@Column(name = "created_at")
 	@CreatedDate
@@ -71,7 +71,7 @@ public class Customer {
 	@Column(name = "last_updated_at")
 	@LastModifiedDate
 	private LocalDateTime LastUpdatedAt;
-	@Column(name="isActive",columnDefinition="BOOLEAN DEFAULT false")
+	@Column(name = "isActive", columnDefinition = "BOOLEAN DEFAULT false")
 	@NotNull
 	private boolean isActive;
 

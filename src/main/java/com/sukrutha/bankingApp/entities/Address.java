@@ -14,7 +14,6 @@ import com.sukrutha.bankingApp.entities.EnumContainer.AccountType;
 
 import jakarta.persistence.Column;
 
-
 @Embeddable
 @Getter
 @Setter
@@ -22,28 +21,21 @@ import jakarta.persistence.Column;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Address {
-	
-	
-	
-	
-	
+
 	@NotNull
-	@Column(name="buildingno")
+	@Column(name = "buildingno")
 	private String houseNumber;
 	@NotNull
-	@Column(name="street")
+	@Column(name = "street")
 	private String street;
 	@NotNull
-	@Column(name="locality")
+	@Column(name = "locality")
 	private String locality;
 	@NotNull
-	@Column(name="city")
+	@Column(name = "city")
 	private String city;
 	@NotNull
-	@Column(name="zipcode")
+	@Column(name = "zipcode")
 	private String zipcode;
-	
-	
-	
 
 }
