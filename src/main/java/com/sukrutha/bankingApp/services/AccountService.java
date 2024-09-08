@@ -30,6 +30,9 @@ public class AccountService {
 	@Autowired
 	BeneficiaryService beneficiaryService;
 
+	@Autowired
+	CustomerService customerService;
+
 	public String createAccount(String accountTypeStr, Branch branch, Customer customer) {
 		try {
 
@@ -140,7 +143,7 @@ public class AccountService {
 			// getting account from AccountNumber;
 
 			Account account = this.getAccountByAccountNumber(accountNumber);
-			if (account == null) {
+			if (account == null || !account.isActive()) {// if account is not active user cannot add any beneficiary
 				return false;
 			}
 			// Step2
@@ -189,29 +192,35 @@ public class AccountService {
 		}
 		return false;
 	}
-//	public List<Account> getAccountsByCustomerId(Iterable<String> customerId){
-//		List<Account> accounts;
-//
-//		try {
-//			if(customerId!=null) {
-//				accounts = accountRepository.findAllById(customerId);
-//				return accounts;
-//			}
-//			
-//			else if(customerId ==null){
-//				return null;
-//			}
-//			
-//			
-//		}
-//		
-//		catch(Exception e) {
-//			e.printStackTrace();
-//			
-//			
-//		}
-//		
-//	}
+
+	public List<Account> getAccountsByCustomerId(String customerId) {
+		log.info("getAccountsByCustomerId:: fetching accounts for a given customer");
+		List<Account> accounts = new ArrayList<Account>();
+
+		try {
+			if (customerId != null) {
+				Customer inputCustomer = customerService.getCustomerById(customerId);
+				if (inputCustomer == null) {
+					return accounts;// accounts will be an empty arraylist
+				}
+				accounts = accountRepository.findByCustomer(inputCustomer);
+
+			}
+
+			else if (customerId == null) {
+				return accounts;// accounts will be an empty arraylist
+			}
+
+		}
+
+		catch (Exception e) {
+			log.error("error while fetching accounts for a given customer");
+			e.printStackTrace();
+
+		}
+		return accounts;
+
+	}
 //	
 //	public boolean deposit(String accountNumber,double amount) {
 //	    boolean depositStatus=false;

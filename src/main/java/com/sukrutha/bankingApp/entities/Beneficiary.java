@@ -54,7 +54,7 @@ public class Beneficiary {
 	private String beneficiaryBankName;
 	@Column(name="beneficiary_ISBN")
 	@NotNull
-	private String beneficiaryISBN;
+	private String beneficiaryIFSC;
 	@Column(name="isActive",columnDefinition="BOOLEAN DEFAULT true")
 	private boolean isActive;
 	@Column(name="createdAt")
@@ -62,6 +62,7 @@ public class Beneficiary {
 	@Column(name="last_updated_ts")
 	@LastModifiedDate
 	private LocalDateTime lastUpdatedAt;
+	
 	
 	
 	

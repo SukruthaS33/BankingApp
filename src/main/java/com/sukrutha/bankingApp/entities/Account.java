@@ -29,6 +29,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sukrutha.bankingApp.entities.EnumContainer.AccountType;
 
 
@@ -53,6 +54,7 @@ public class Account {
 	private Branch branch;
 	@ManyToOne
 	@JoinColumn(name="customer_id")
+	@JsonIgnore
 	private Customer customer;
 	//@OneToMany(mappedBy="account")
 	@ManyToMany
@@ -61,6 +63,7 @@ public class Account {
 	    joinColumns = @JoinColumn(name = "account_number"),
 	    inverseJoinColumns = @JoinColumn(name = "beneficiary_id")
 	)
+	@JsonIgnore
 	private List<Beneficiary> beneficiaries ;
 	@Column(name="balance", columnDefinition="DECIMAL(10,2) DEFAULT '0.00'")
 	@NotNull
@@ -68,7 +71,7 @@ public class Account {
 	private double balance;
 	@OneToMany(mappedBy="sourceAccountId")
 	private List<Transaction> transactions;
-	@Column(name="isActive",columnDefinition="BOOLEAN DEFAULT true")
+	@Column(name="isActive",columnDefinition="BOOLEAN DEFAULT false")
 	@NotNull
 	private boolean isActive;
 	
