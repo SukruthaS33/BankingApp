@@ -2,7 +2,9 @@ package com.sukrutha.bankingApp.services;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -92,6 +94,19 @@ public class CustomerService {
 		return false;
 	}
 
+	public List<Customer> getAllCustomers() {
+		log.info("getAllCustomers");
+		List<Customer> allCustomers = new ArrayList<Customer>();
+		try {
+			allCustomers = customerRepository.findAll();
+
+		} catch (Exception e) {
+			log.error("error in getting all customers");
+			e.printStackTrace();
+		}
+		return allCustomers;
+	}
+
 	public Customer getCustomerDetails(String customerId) {
 		Customer customer;
 		try {
@@ -112,7 +127,7 @@ public class CustomerService {
 	}
 
 	public Customer getCustomerById(String customerId) {
-		
+
 		try {
 			Customer customer = customerRepository.findById(customerId)
 					.orElseThrow(() -> new Exception("customer id is not found"));
@@ -124,9 +139,9 @@ public class CustomerService {
 		catch (Exception e) {
 			log.error("internal error in getCustomerDetails()  method");
 			e.printStackTrace();
-			
+
 		}
-		
+
 		return null;
 	}
 

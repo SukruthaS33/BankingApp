@@ -6,6 +6,7 @@ import jakarta.persistence.OneToMany;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sukrutha.bankingApp.entities.EnumContainer.AccountType;
 
 import jakarta.persistence.Column;
@@ -43,8 +44,10 @@ public class Branch {
 	private Address branchAddress;
 	@ManyToOne
 	@JoinColumn(name="bank_id")
+	@JsonIgnore
 	private Bank bank;
 	@OneToMany(mappedBy="branch")
+	@JsonIgnore
 	private List<Account> accounts;
 	
 	

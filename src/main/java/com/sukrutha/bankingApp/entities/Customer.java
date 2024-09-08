@@ -11,6 +11,8 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -52,6 +54,7 @@ public class Customer {
 	@Column(name = "customer_password")
 	@NotNull
 	@NotBlank
+	@JsonIgnore
 	private String customerPassword;
 	@Min(value=10, message="Sorry you should be 10 years old to open an account. Go to child's bank")
 	@Max(value=100, message="you are 100 years old!")
@@ -68,5 +71,8 @@ public class Customer {
 	@Column(name = "last_updated_at")
 	@LastModifiedDate
 	private LocalDateTime LastUpdatedAt;
+	@Column(name="isActive",columnDefinition="BOOLEAN DEFAULT false")
+	@NotNull
+	private boolean isActive;
 
 }
