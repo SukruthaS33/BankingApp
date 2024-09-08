@@ -1218,3 +1218,565 @@ This generated password is for development use only. Your security configuration
 >06-09-2024 12:21:37 [RMI TCP Connection(29)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Closing JPA EntityManagerFactory for persistence unit 'default' Closing JPA EntityManagerFactory for persistence unit 'default'
 >06-09-2024 12:21:37 [RMI TCP Connection(29)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-4 - Shutdown initiated... HikariPool-4 - Shutdown initiated...
 >06-09-2024 12:21:37 [RMI TCP Connection(29)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-4 - Shutdown completed. HikariPool-4 - Shutdown completed.
+>06-09-2024 12:55:46 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Starting BankingAppApplication using Java 21.0.3 with PID 1372 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp) Starting BankingAppApplication using Java 21.0.3 with PID 1372 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp)
+>06-09-2024 12:55:46 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> No active profile set, falling back to 1 default profile: "default" No active profile set, falling back to 1 default profile: "default"
+>06-09-2024 12:55:46 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor ::-> Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+>06-09-2024 12:55:46 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor ::-> For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+>06-09-2024 12:55:47 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Bootstrapping Spring Data JPA repositories in DEFAULT mode. Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+>06-09-2024 12:55:47 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Finished Spring Data repository scanning in 63 ms. Found 6 JPA repository interfaces. Finished Spring Data repository scanning in 63 ms. Found 6 JPA repository interfaces.
+>06-09-2024 12:55:47 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat initialized with port 8081 (http) Tomcat initialized with port 8081 (http)
+>06-09-2024 12:55:47 [restartedMain] INFO  o.apache.catalina.core.StandardService   ::-> Starting service [Tomcat] Starting service [Tomcat]
+>06-09-2024 12:55:47 [restartedMain] INFO  org.apache.catalina.core.StandardEngine  ::-> Starting Servlet engine: [Apache Tomcat/10.1.28] Starting Servlet engine: [Apache Tomcat/10.1.28]
+>06-09-2024 12:55:48 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/bankingapp]    ::-> Initializing Spring embedded WebApplicationContext Initializing Spring embedded WebApplicationContext
+>06-09-2024 12:55:48 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext ::-> Root WebApplicationContext: initialization completed in 1508 ms Root WebApplicationContext: initialization completed in 1508 ms
+>06-09-2024 12:55:48 [restartedMain] INFO  o.hibernate.jpa.internal.util.LogHelper  ::-> HHH000204: Processing PersistenceUnitInfo [name: default] HHH000204: Processing PersistenceUnitInfo [name: default]
+>06-09-2024 12:55:48 [restartedMain] INFO  org.hibernate.Version                    ::-> HHH000412: Hibernate ORM core version 6.5.2.Final HHH000412: Hibernate ORM core version 6.5.2.Final
+>06-09-2024 12:55:48 [restartedMain] INFO  o.h.c.internal.RegionFactoryInitiator    ::-> HHH000026: Second-level cache disabled HHH000026: Second-level cache disabled
+>06-09-2024 12:55:48 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      ::-> No LoadTimeWeaver setup: ignoring JPA class transformer No LoadTimeWeaver setup: ignoring JPA class transformer
+>06-09-2024 12:55:48 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Starting... HikariPool-1 - Starting...
+>06-09-2024 12:55:48 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4595f03e HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4595f03e
+>06-09-2024 12:55:48 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Start completed. HikariPool-1 - Start completed.
+>06-09-2024 12:55:48 [restartedMain] WARN  org.hibernate.orm.deprecation            ::-> HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+>06-09-2024 12:55:50 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       ::-> HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+>06-09-2024 12:55:50 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Initialized JPA EntityManagerFactory for persistence unit 'default' Initialized JPA EntityManagerFactory for persistence unit 'default'
+>06-09-2024 12:55:50 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ::-> spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+>06-09-2024 12:55:50 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration ::-> 
+
+Using generated security password: 79d20c5d-9b4f-4ba1-977e-af92dd06ed26
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+ 
+
+Using generated security password: 79d20c5d-9b4f-4ba1-977e-af92dd06ed26
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+>06-09-2024 12:55:50 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ::-> Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+>06-09-2024 12:55:50 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer       ::-> LiveReload server is running on port 35729 LiveReload server is running on port 35729
+>06-09-2024 12:55:50 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat started on port 8081 (http) with context path '/bankingapp' Tomcat started on port 8081 (http) with context path '/bankingapp'
+>06-09-2024 12:55:50 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Started BankingAppApplication in 4.917 seconds (process running for 5.724) Started BankingAppApplication in 4.917 seconds (process running for 5.724)
+>06-09-2024 12:55:50 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>06-09-2024 12:55:50 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> banking app started! banking app started!
+>06-09-2024 12:55:50 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>06-09-2024 12:56:33 [http-nio-8081-exec-2] INFO  o.a.c.c.C.[.[localhost].[/bankingapp]    ::-> Initializing Spring DispatcherServlet 'dispatcherServlet' Initializing Spring DispatcherServlet 'dispatcherServlet'
+>06-09-2024 12:56:33 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet        ::-> Initializing Servlet 'dispatcherServlet' Initializing Servlet 'dispatcherServlet'
+>06-09-2024 12:56:33 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet        ::-> Completed initialization in 1 ms Completed initialization in 1 ms
+>06-09-2024 12:56:33 [http-nio-8081-exec-2] INFO  c.s.b.controllers.AccountController      ::-> AccountController::createAccount AccountController::createAccount
+>06-09-2024 12:56:33 [http-nio-8081-exec-2] INFO  c.s.b.controllers.AccountController      ::-> customer and branch found customer and branch found
+>06-09-2024 12:59:10 [http-nio-8081-exec-4] INFO  c.s.b.controllers.AccountController      ::-> AccountController::createAccount AccountController::createAccount
+>06-09-2024 12:59:10 [http-nio-8081-exec-4] INFO  c.s.b.controllers.AccountController      ::-> customer and branch found customer and branch found
+>06-09-2024 12:59:33 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener ::-> Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+>06-09-2024 12:59:33 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Closing JPA EntityManagerFactory for persistence unit 'default' Closing JPA EntityManagerFactory for persistence unit 'default'
+>06-09-2024 12:59:33 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Shutdown initiated... HikariPool-1 - Shutdown initiated...
+>06-09-2024 12:59:33 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Shutdown completed. HikariPool-1 - Shutdown completed.
+>06-09-2024 12:59:34 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Starting BankingAppApplication using Java 21.0.3 with PID 1372 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp) Starting BankingAppApplication using Java 21.0.3 with PID 1372 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp)
+>06-09-2024 12:59:34 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> No active profile set, falling back to 1 default profile: "default" No active profile set, falling back to 1 default profile: "default"
+>06-09-2024 12:59:34 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Bootstrapping Spring Data JPA repositories in DEFAULT mode. Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+>06-09-2024 12:59:34 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Finished Spring Data repository scanning in 14 ms. Found 6 JPA repository interfaces. Finished Spring Data repository scanning in 14 ms. Found 6 JPA repository interfaces.
+>06-09-2024 12:59:34 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat initialized with port 8081 (http) Tomcat initialized with port 8081 (http)
+>06-09-2024 12:59:34 [restartedMain] INFO  o.apache.catalina.core.StandardService   ::-> Starting service [Tomcat] Starting service [Tomcat]
+>06-09-2024 12:59:34 [restartedMain] INFO  org.apache.catalina.core.StandardEngine  ::-> Starting Servlet engine: [Apache Tomcat/10.1.28] Starting Servlet engine: [Apache Tomcat/10.1.28]
+>06-09-2024 12:59:34 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/bankingapp]    ::-> Initializing Spring embedded WebApplicationContext Initializing Spring embedded WebApplicationContext
+>06-09-2024 12:59:34 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext ::-> Root WebApplicationContext: initialization completed in 307 ms Root WebApplicationContext: initialization completed in 307 ms
+>06-09-2024 12:59:34 [restartedMain] INFO  o.hibernate.jpa.internal.util.LogHelper  ::-> HHH000204: Processing PersistenceUnitInfo [name: default] HHH000204: Processing PersistenceUnitInfo [name: default]
+>06-09-2024 12:59:34 [restartedMain] INFO  o.h.c.internal.RegionFactoryInitiator    ::-> HHH000026: Second-level cache disabled HHH000026: Second-level cache disabled
+>06-09-2024 12:59:34 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      ::-> No LoadTimeWeaver setup: ignoring JPA class transformer No LoadTimeWeaver setup: ignoring JPA class transformer
+>06-09-2024 12:59:34 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-2 - Starting... HikariPool-2 - Starting...
+>06-09-2024 12:59:34 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@75fce7aa HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@75fce7aa
+>06-09-2024 12:59:34 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-2 - Start completed. HikariPool-2 - Start completed.
+>06-09-2024 12:59:34 [restartedMain] WARN  org.hibernate.orm.deprecation            ::-> HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+>06-09-2024 12:59:34 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       ::-> HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+>06-09-2024 12:59:34 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Initialized JPA EntityManagerFactory for persistence unit 'default' Initialized JPA EntityManagerFactory for persistence unit 'default'
+>06-09-2024 12:59:34 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ::-> spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+>06-09-2024 12:59:34 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration ::-> 
+
+Using generated security password: 9f64b634-1724-493b-abb3-11862976e975
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+ 
+
+Using generated security password: 9f64b634-1724-493b-abb3-11862976e975
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+>06-09-2024 12:59:34 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ::-> Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+>06-09-2024 12:59:34 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer       ::-> LiveReload server is running on port 35729 LiveReload server is running on port 35729
+>06-09-2024 12:59:34 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat started on port 8081 (http) with context path '/bankingapp' Tomcat started on port 8081 (http) with context path '/bankingapp'
+>06-09-2024 12:59:34 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Started BankingAppApplication in 0.881 seconds (process running for 229.657) Started BankingAppApplication in 0.881 seconds (process running for 229.657)
+>06-09-2024 12:59:34 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener ::-> Condition evaluation unchanged Condition evaluation unchanged
+>06-09-2024 12:59:34 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>06-09-2024 12:59:34 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> banking app started! banking app started!
+>06-09-2024 12:59:34 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>06-09-2024 12:59:42 [http-nio-8081-exec-4] INFO  o.a.c.c.C.[.[localhost].[/bankingapp]    ::-> Initializing Spring DispatcherServlet 'dispatcherServlet' Initializing Spring DispatcherServlet 'dispatcherServlet'
+>06-09-2024 12:59:42 [http-nio-8081-exec-4] INFO  o.s.web.servlet.DispatcherServlet        ::-> Initializing Servlet 'dispatcherServlet' Initializing Servlet 'dispatcherServlet'
+>06-09-2024 12:59:42 [http-nio-8081-exec-4] INFO  o.s.web.servlet.DispatcherServlet        ::-> Completed initialization in 1 ms Completed initialization in 1 ms
+>06-09-2024 12:59:42 [http-nio-8081-exec-4] INFO  c.s.b.controllers.AccountController      ::-> AccountController::createAccount AccountController::createAccount
+>06-09-2024 12:59:42 [http-nio-8081-exec-4] INFO  c.s.b.controllers.AccountController      ::-> customer and branch found customer and branch found
+>06-09-2024 01:00:25 [RMI TCP Connection(15)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin ::-> Application shutdown requested. Application shutdown requested.
+>06-09-2024 01:00:25 [RMI TCP Connection(15)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Closing JPA EntityManagerFactory for persistence unit 'default' Closing JPA EntityManagerFactory for persistence unit 'default'
+>06-09-2024 01:00:25 [RMI TCP Connection(15)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-2 - Shutdown initiated... HikariPool-2 - Shutdown initiated...
+>06-09-2024 01:00:25 [RMI TCP Connection(15)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-2 - Shutdown completed. HikariPool-2 - Shutdown completed.
+>06-09-2024 01:07:51 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Starting BankingAppApplication using Java 21.0.3 with PID 10172 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp) Starting BankingAppApplication using Java 21.0.3 with PID 10172 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp)
+>06-09-2024 01:07:51 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> No active profile set, falling back to 1 default profile: "default" No active profile set, falling back to 1 default profile: "default"
+>06-09-2024 01:07:51 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor ::-> Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+>06-09-2024 01:07:51 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor ::-> For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+>06-09-2024 01:07:52 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Bootstrapping Spring Data JPA repositories in DEFAULT mode. Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+>06-09-2024 01:07:52 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Finished Spring Data repository scanning in 123 ms. Found 6 JPA repository interfaces. Finished Spring Data repository scanning in 123 ms. Found 6 JPA repository interfaces.
+>06-09-2024 01:07:53 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat initialized with port 8081 (http) Tomcat initialized with port 8081 (http)
+>06-09-2024 01:07:53 [restartedMain] INFO  o.apache.catalina.core.StandardService   ::-> Starting service [Tomcat] Starting service [Tomcat]
+>06-09-2024 01:07:53 [restartedMain] INFO  org.apache.catalina.core.StandardEngine  ::-> Starting Servlet engine: [Apache Tomcat/10.1.28] Starting Servlet engine: [Apache Tomcat/10.1.28]
+>06-09-2024 01:07:53 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/bankingapp]    ::-> Initializing Spring embedded WebApplicationContext Initializing Spring embedded WebApplicationContext
+>06-09-2024 01:07:53 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext ::-> Root WebApplicationContext: initialization completed in 1824 ms Root WebApplicationContext: initialization completed in 1824 ms
+>06-09-2024 01:07:53 [restartedMain] INFO  o.hibernate.jpa.internal.util.LogHelper  ::-> HHH000204: Processing PersistenceUnitInfo [name: default] HHH000204: Processing PersistenceUnitInfo [name: default]
+>06-09-2024 01:07:53 [restartedMain] INFO  org.hibernate.Version                    ::-> HHH000412: Hibernate ORM core version 6.5.2.Final HHH000412: Hibernate ORM core version 6.5.2.Final
+>06-09-2024 01:07:53 [restartedMain] INFO  o.h.c.internal.RegionFactoryInitiator    ::-> HHH000026: Second-level cache disabled HHH000026: Second-level cache disabled
+>06-09-2024 01:07:53 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      ::-> No LoadTimeWeaver setup: ignoring JPA class transformer No LoadTimeWeaver setup: ignoring JPA class transformer
+>06-09-2024 01:07:54 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Starting... HikariPool-1 - Starting...
+>06-09-2024 01:07:54 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3a57243c HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3a57243c
+>06-09-2024 01:07:54 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Start completed. HikariPool-1 - Start completed.
+>06-09-2024 01:07:54 [restartedMain] WARN  org.hibernate.orm.deprecation            ::-> HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+>06-09-2024 01:07:55 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       ::-> HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+>06-09-2024 01:07:55 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Initialized JPA EntityManagerFactory for persistence unit 'default' Initialized JPA EntityManagerFactory for persistence unit 'default'
+>06-09-2024 01:07:55 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ::-> spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+>06-09-2024 01:07:55 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration ::-> 
+
+Using generated security password: c4a7ae2e-9130-4d3f-b60e-209fde4cfcf4
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+ 
+
+Using generated security password: c4a7ae2e-9130-4d3f-b60e-209fde4cfcf4
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+>06-09-2024 01:07:55 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ::-> Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+>06-09-2024 01:07:56 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer       ::-> LiveReload server is running on port 35729 LiveReload server is running on port 35729
+>06-09-2024 01:07:56 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat started on port 8081 (http) with context path '/bankingapp' Tomcat started on port 8081 (http) with context path '/bankingapp'
+>06-09-2024 01:07:56 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Started BankingAppApplication in 5.182 seconds (process running for 6.347) Started BankingAppApplication in 5.182 seconds (process running for 6.347)
+>06-09-2024 01:07:56 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>06-09-2024 01:07:56 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> banking app started! banking app started!
+>06-09-2024 01:07:56 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>06-09-2024 01:09:54 [http-nio-8081-exec-2] INFO  o.a.c.c.C.[.[localhost].[/bankingapp]    ::-> Initializing Spring DispatcherServlet 'dispatcherServlet' Initializing Spring DispatcherServlet 'dispatcherServlet'
+>06-09-2024 01:09:54 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet        ::-> Initializing Servlet 'dispatcherServlet' Initializing Servlet 'dispatcherServlet'
+>06-09-2024 01:09:54 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet        ::-> Completed initialization in 2 ms Completed initialization in 2 ms
+>06-09-2024 01:09:55 [http-nio-8081-exec-2] INFO  c.s.b.controllers.CustomerController     ::-> inside try of register inside try of register
+>06-09-2024 01:09:55 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.CustomerService  ::-> inside try of service inside try of service
+>06-09-2024 01:09:55 [http-nio-8081-exec-2] INFO  c.s.b.b.CustomerBusinessLogic            ::-> CustomerBusinessLogic::verifyRegisteringCustomer CustomerBusinessLogic::verifyRegisteringCustomer
+>06-09-2024 01:09:55 [http-nio-8081-exec-2] INFO  c.s.b.b.CustomerBusinessLogic            ::-> message customer is not there in the table message customer is not there in the table
+>06-09-2024 01:09:55 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.CustomerService  ::-> Sukrutha Sukrutha
+>06-09-2024 01:09:55 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.CustomerService  ::-> Sukrutha@gmail.com Sukrutha@gmail.com
+>06-09-2024 01:09:55 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.CustomerService  ::-> $2a$10$Lo97uYcN9SkAjcO4QhEf8evuAJhv1wydSftVvRvpvGS62fttH05r6 $2a$10$Lo97uYcN9SkAjcO4QhEf8evuAJhv1wydSftVvRvpvGS62fttH05r6
+>06-09-2024 01:10:21 [http-nio-8081-exec-3] INFO  c.s.b.controllers.CustomerController     ::-> login attempt with email Sukrutha@gmail.com login attempt with email Sukrutha@gmail.com
+>06-09-2024 01:10:21 [http-nio-8081-exec-3] INFO  c.s.b.controllers.CustomerController     ::-> inside try of login inside try of login
+>06-09-2024 01:10:50 [http-nio-8081-exec-4] INFO  c.s.b.controllers.AccountController      ::-> AccountController::createAccount AccountController::createAccount
+>06-09-2024 01:10:50 [http-nio-8081-exec-4] INFO  c.s.b.controllers.AccountController      ::-> customer and branch found customer and branch found
+>06-09-2024 01:11:22 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener ::-> Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+>06-09-2024 01:11:22 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Closing JPA EntityManagerFactory for persistence unit 'default' Closing JPA EntityManagerFactory for persistence unit 'default'
+>06-09-2024 01:11:22 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Shutdown initiated... HikariPool-1 - Shutdown initiated...
+>06-09-2024 01:11:22 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Shutdown completed. HikariPool-1 - Shutdown completed.
+>06-09-2024 01:11:22 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Starting BankingAppApplication using Java 21.0.3 with PID 10172 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp) Starting BankingAppApplication using Java 21.0.3 with PID 10172 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp)
+>06-09-2024 01:11:22 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> No active profile set, falling back to 1 default profile: "default" No active profile set, falling back to 1 default profile: "default"
+>06-09-2024 01:11:22 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Bootstrapping Spring Data JPA repositories in DEFAULT mode. Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+>06-09-2024 01:11:22 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Finished Spring Data repository scanning in 15 ms. Found 6 JPA repository interfaces. Finished Spring Data repository scanning in 15 ms. Found 6 JPA repository interfaces.
+>06-09-2024 01:11:22 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat initialized with port 8081 (http) Tomcat initialized with port 8081 (http)
+>06-09-2024 01:11:22 [restartedMain] INFO  o.apache.catalina.core.StandardService   ::-> Starting service [Tomcat] Starting service [Tomcat]
+>06-09-2024 01:11:22 [restartedMain] INFO  org.apache.catalina.core.StandardEngine  ::-> Starting Servlet engine: [Apache Tomcat/10.1.28] Starting Servlet engine: [Apache Tomcat/10.1.28]
+>06-09-2024 01:11:22 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/bankingapp]    ::-> Initializing Spring embedded WebApplicationContext Initializing Spring embedded WebApplicationContext
+>06-09-2024 01:11:22 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext ::-> Root WebApplicationContext: initialization completed in 344 ms Root WebApplicationContext: initialization completed in 344 ms
+>06-09-2024 01:11:22 [restartedMain] INFO  o.hibernate.jpa.internal.util.LogHelper  ::-> HHH000204: Processing PersistenceUnitInfo [name: default] HHH000204: Processing PersistenceUnitInfo [name: default]
+>06-09-2024 01:11:22 [restartedMain] INFO  o.h.c.internal.RegionFactoryInitiator    ::-> HHH000026: Second-level cache disabled HHH000026: Second-level cache disabled
+>06-09-2024 01:11:22 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      ::-> No LoadTimeWeaver setup: ignoring JPA class transformer No LoadTimeWeaver setup: ignoring JPA class transformer
+>06-09-2024 01:11:22 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-2 - Starting... HikariPool-2 - Starting...
+>06-09-2024 01:11:22 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1f26b666 HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1f26b666
+>06-09-2024 01:11:22 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-2 - Start completed. HikariPool-2 - Start completed.
+>06-09-2024 01:11:22 [restartedMain] WARN  org.hibernate.orm.deprecation            ::-> HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+>06-09-2024 01:11:23 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       ::-> HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+>06-09-2024 01:11:23 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Initialized JPA EntityManagerFactory for persistence unit 'default' Initialized JPA EntityManagerFactory for persistence unit 'default'
+>06-09-2024 01:11:23 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ::-> spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+>06-09-2024 01:11:23 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration ::-> 
+
+Using generated security password: 6b1ce572-2eac-4b0d-b59f-b7be4b19f36f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+ 
+
+Using generated security password: 6b1ce572-2eac-4b0d-b59f-b7be4b19f36f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+>06-09-2024 01:11:23 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ::-> Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+>06-09-2024 01:11:23 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer       ::-> LiveReload server is running on port 35729 LiveReload server is running on port 35729
+>06-09-2024 01:11:23 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat started on port 8081 (http) with context path '/bankingapp' Tomcat started on port 8081 (http) with context path '/bankingapp'
+>06-09-2024 01:11:23 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Started BankingAppApplication in 1.052 seconds (process running for 213.449) Started BankingAppApplication in 1.052 seconds (process running for 213.449)
+>06-09-2024 01:11:23 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener ::-> Condition evaluation unchanged Condition evaluation unchanged
+>06-09-2024 01:11:23 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>06-09-2024 01:11:23 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> banking app started! banking app started!
+>06-09-2024 01:11:23 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>06-09-2024 01:11:34 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[.[localhost].[/bankingapp]    ::-> Initializing Spring DispatcherServlet 'dispatcherServlet' Initializing Spring DispatcherServlet 'dispatcherServlet'
+>06-09-2024 01:11:34 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet        ::-> Initializing Servlet 'dispatcherServlet' Initializing Servlet 'dispatcherServlet'
+>06-09-2024 01:11:34 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet        ::-> Completed initialization in 2 ms Completed initialization in 2 ms
+>06-09-2024 01:11:34 [http-nio-8081-exec-1] INFO  c.s.b.controllers.AccountController      ::-> AccountController::createAccount AccountController::createAccount
+>06-09-2024 01:11:34 [http-nio-8081-exec-1] INFO  c.s.b.controllers.AccountController      ::-> customer and branch found customer and branch found
+>06-09-2024 01:12:00 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener ::-> Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+>06-09-2024 01:12:00 [Thread-7] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Closing JPA EntityManagerFactory for persistence unit 'default' Closing JPA EntityManagerFactory for persistence unit 'default'
+>06-09-2024 01:12:00 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-2 - Shutdown initiated... HikariPool-2 - Shutdown initiated...
+>06-09-2024 01:12:00 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-2 - Shutdown completed. HikariPool-2 - Shutdown completed.
+>06-09-2024 01:12:00 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Starting BankingAppApplication using Java 21.0.3 with PID 10172 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp) Starting BankingAppApplication using Java 21.0.3 with PID 10172 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp)
+>06-09-2024 01:12:00 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> No active profile set, falling back to 1 default profile: "default" No active profile set, falling back to 1 default profile: "default"
+>06-09-2024 01:12:01 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Bootstrapping Spring Data JPA repositories in DEFAULT mode. Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+>06-09-2024 01:12:01 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Finished Spring Data repository scanning in 96 ms. Found 6 JPA repository interfaces. Finished Spring Data repository scanning in 96 ms. Found 6 JPA repository interfaces.
+>06-09-2024 01:12:01 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat initialized with port 8081 (http) Tomcat initialized with port 8081 (http)
+>06-09-2024 01:12:01 [restartedMain] INFO  o.apache.catalina.core.StandardService   ::-> Starting service [Tomcat] Starting service [Tomcat]
+>06-09-2024 01:12:01 [restartedMain] INFO  org.apache.catalina.core.StandardEngine  ::-> Starting Servlet engine: [Apache Tomcat/10.1.28] Starting Servlet engine: [Apache Tomcat/10.1.28]
+>06-09-2024 01:12:02 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/bankingapp]    ::-> Initializing Spring embedded WebApplicationContext Initializing Spring embedded WebApplicationContext
+>06-09-2024 01:12:02 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext ::-> Root WebApplicationContext: initialization completed in 1483 ms Root WebApplicationContext: initialization completed in 1483 ms
+>06-09-2024 01:12:02 [restartedMain] INFO  o.hibernate.jpa.internal.util.LogHelper  ::-> HHH000204: Processing PersistenceUnitInfo [name: default] HHH000204: Processing PersistenceUnitInfo [name: default]
+>06-09-2024 01:12:02 [restartedMain] INFO  o.h.c.internal.RegionFactoryInitiator    ::-> HHH000026: Second-level cache disabled HHH000026: Second-level cache disabled
+>06-09-2024 01:12:02 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      ::-> No LoadTimeWeaver setup: ignoring JPA class transformer No LoadTimeWeaver setup: ignoring JPA class transformer
+>06-09-2024 01:12:02 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-3 - Starting... HikariPool-3 - Starting...
+>06-09-2024 01:12:02 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@14a59d56 HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@14a59d56
+>06-09-2024 01:12:02 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-3 - Start completed. HikariPool-3 - Start completed.
+>06-09-2024 01:12:02 [restartedMain] WARN  org.hibernate.orm.deprecation            ::-> HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+>06-09-2024 01:12:02 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       ::-> HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+>06-09-2024 01:12:03 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Initialized JPA EntityManagerFactory for persistence unit 'default' Initialized JPA EntityManagerFactory for persistence unit 'default'
+>06-09-2024 01:12:03 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ::-> spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+>06-09-2024 01:12:03 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration ::-> 
+
+Using generated security password: e5dfc292-0d65-442b-be2f-3b10a35b9131
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+ 
+
+Using generated security password: e5dfc292-0d65-442b-be2f-3b10a35b9131
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+>06-09-2024 01:12:03 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ::-> Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+>06-09-2024 01:12:03 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer       ::-> LiveReload server is running on port 35729 LiveReload server is running on port 35729
+>06-09-2024 01:12:03 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat started on port 8081 (http) with context path '/bankingapp' Tomcat started on port 8081 (http) with context path '/bankingapp'
+>06-09-2024 01:12:03 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Started BankingAppApplication in 3.021 seconds (process running for 253.399) Started BankingAppApplication in 3.021 seconds (process running for 253.399)
+>06-09-2024 01:12:03 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener ::-> Condition evaluation unchanged Condition evaluation unchanged
+>06-09-2024 01:12:03 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>06-09-2024 01:12:03 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> banking app started! banking app started!
+>06-09-2024 01:12:03 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>06-09-2024 01:16:50 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener ::-> Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+>06-09-2024 01:16:50 [Thread-11] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Closing JPA EntityManagerFactory for persistence unit 'default' Closing JPA EntityManagerFactory for persistence unit 'default'
+>06-09-2024 01:16:50 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-3 - Shutdown initiated... HikariPool-3 - Shutdown initiated...
+>06-09-2024 01:16:50 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-3 - Shutdown completed. HikariPool-3 - Shutdown completed.
+>06-09-2024 01:16:50 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Starting BankingAppApplication using Java 21.0.3 with PID 10172 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp) Starting BankingAppApplication using Java 21.0.3 with PID 10172 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp)
+>06-09-2024 01:16:50 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> No active profile set, falling back to 1 default profile: "default" No active profile set, falling back to 1 default profile: "default"
+>06-09-2024 01:16:51 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Bootstrapping Spring Data JPA repositories in DEFAULT mode. Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+>06-09-2024 01:16:51 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Finished Spring Data repository scanning in 14 ms. Found 6 JPA repository interfaces. Finished Spring Data repository scanning in 14 ms. Found 6 JPA repository interfaces.
+>06-09-2024 01:16:51 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat initialized with port 8081 (http) Tomcat initialized with port 8081 (http)
+>06-09-2024 01:16:51 [restartedMain] INFO  o.apache.catalina.core.StandardService   ::-> Starting service [Tomcat] Starting service [Tomcat]
+>06-09-2024 01:16:51 [restartedMain] INFO  org.apache.catalina.core.StandardEngine  ::-> Starting Servlet engine: [Apache Tomcat/10.1.28] Starting Servlet engine: [Apache Tomcat/10.1.28]
+>06-09-2024 01:16:51 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/bankingapp]    ::-> Initializing Spring embedded WebApplicationContext Initializing Spring embedded WebApplicationContext
+>06-09-2024 01:16:51 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext ::-> Root WebApplicationContext: initialization completed in 274 ms Root WebApplicationContext: initialization completed in 274 ms
+>06-09-2024 01:16:51 [restartedMain] INFO  o.hibernate.jpa.internal.util.LogHelper  ::-> HHH000204: Processing PersistenceUnitInfo [name: default] HHH000204: Processing PersistenceUnitInfo [name: default]
+>06-09-2024 01:16:51 [restartedMain] INFO  o.h.c.internal.RegionFactoryInitiator    ::-> HHH000026: Second-level cache disabled HHH000026: Second-level cache disabled
+>06-09-2024 01:16:51 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      ::-> No LoadTimeWeaver setup: ignoring JPA class transformer No LoadTimeWeaver setup: ignoring JPA class transformer
+>06-09-2024 01:16:51 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-4 - Starting... HikariPool-4 - Starting...
+>06-09-2024 01:16:51 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4b364763 HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4b364763
+>06-09-2024 01:16:51 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-4 - Start completed. HikariPool-4 - Start completed.
+>06-09-2024 01:16:51 [restartedMain] WARN  org.hibernate.orm.deprecation            ::-> HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+>06-09-2024 01:16:51 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       ::-> HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+>06-09-2024 01:16:51 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Initialized JPA EntityManagerFactory for persistence unit 'default' Initialized JPA EntityManagerFactory for persistence unit 'default'
+>06-09-2024 01:16:51 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ::-> spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+>06-09-2024 01:16:51 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration ::-> 
+
+Using generated security password: 7974864b-e0c3-4de9-9cc2-1fd5f902e89a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+ 
+
+Using generated security password: 7974864b-e0c3-4de9-9cc2-1fd5f902e89a
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+>06-09-2024 01:16:51 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ::-> Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+>06-09-2024 01:16:51 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer       ::-> LiveReload server is running on port 35729 LiveReload server is running on port 35729
+>06-09-2024 01:16:51 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat started on port 8081 (http) with context path '/bankingapp' Tomcat started on port 8081 (http) with context path '/bankingapp'
+>06-09-2024 01:16:51 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Started BankingAppApplication in 0.782 seconds (process running for 541.555) Started BankingAppApplication in 0.782 seconds (process running for 541.555)
+>06-09-2024 01:16:51 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener ::-> Condition evaluation unchanged Condition evaluation unchanged
+>06-09-2024 01:16:51 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>06-09-2024 01:16:51 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> banking app started! banking app started!
+>06-09-2024 01:16:51 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>06-09-2024 01:17:14 [http-nio-8081-exec-2] INFO  o.a.c.c.C.[.[localhost].[/bankingapp]    ::-> Initializing Spring DispatcherServlet 'dispatcherServlet' Initializing Spring DispatcherServlet 'dispatcherServlet'
+>06-09-2024 01:17:14 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet        ::-> Initializing Servlet 'dispatcherServlet' Initializing Servlet 'dispatcherServlet'
+>06-09-2024 01:17:14 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet        ::-> Completed initialization in 2 ms Completed initialization in 2 ms
+>06-09-2024 01:17:14 [http-nio-8081-exec-2] INFO  c.s.b.controllers.AccountController      ::-> AccountController::createAccount AccountController::createAccount
+>06-09-2024 01:17:14 [http-nio-8081-exec-2] INFO  c.s.b.controllers.AccountController      ::-> customer and branch found customer and branch found
+>06-09-2024 02:06:38 [HikariPool-4 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-4 - Thread starvation or clock leap detected (housekeeper delta=39m47s245ms395µs600ns). HikariPool-4 - Thread starvation or clock leap detected (housekeeper delta=39m47s245ms395µs600ns).
+>06-09-2024 03:13:14 [HikariPool-4 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-4 - Thread starvation or clock leap detected (housekeeper delta=1h6m5s658ms54µs200ns). HikariPool-4 - Thread starvation or clock leap detected (housekeeper delta=1h6m5s658ms54µs200ns).
+>06-09-2024 03:14:31 [RMI TCP Connection(44)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin ::-> Application shutdown requested. Application shutdown requested.
+>06-09-2024 03:14:31 [RMI TCP Connection(44)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Closing JPA EntityManagerFactory for persistence unit 'default' Closing JPA EntityManagerFactory for persistence unit 'default'
+>06-09-2024 03:14:31 [RMI TCP Connection(44)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-4 - Shutdown initiated... HikariPool-4 - Shutdown initiated...
+>06-09-2024 03:14:31 [RMI TCP Connection(44)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-4 - Shutdown completed. HikariPool-4 - Shutdown completed.
+>06-09-2024 03:14:34 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Starting BankingAppApplication using Java 21.0.3 with PID 27864 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp) Starting BankingAppApplication using Java 21.0.3 with PID 27864 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp)
+>06-09-2024 03:14:34 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> No active profile set, falling back to 1 default profile: "default" No active profile set, falling back to 1 default profile: "default"
+>06-09-2024 03:14:34 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor ::-> Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+>06-09-2024 03:14:34 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor ::-> For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+>06-09-2024 03:14:35 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Bootstrapping Spring Data JPA repositories in DEFAULT mode. Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+>06-09-2024 03:14:35 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Finished Spring Data repository scanning in 51 ms. Found 6 JPA repository interfaces. Finished Spring Data repository scanning in 51 ms. Found 6 JPA repository interfaces.
+>06-09-2024 03:14:35 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat initialized with port 8081 (http) Tomcat initialized with port 8081 (http)
+>06-09-2024 03:14:35 [restartedMain] INFO  o.apache.catalina.core.StandardService   ::-> Starting service [Tomcat] Starting service [Tomcat]
+>06-09-2024 03:14:35 [restartedMain] INFO  org.apache.catalina.core.StandardEngine  ::-> Starting Servlet engine: [Apache Tomcat/10.1.28] Starting Servlet engine: [Apache Tomcat/10.1.28]
+>06-09-2024 03:14:35 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/bankingapp]    ::-> Initializing Spring embedded WebApplicationContext Initializing Spring embedded WebApplicationContext
+>06-09-2024 03:14:35 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext ::-> Root WebApplicationContext: initialization completed in 1086 ms Root WebApplicationContext: initialization completed in 1086 ms
+>06-09-2024 03:14:35 [restartedMain] INFO  o.hibernate.jpa.internal.util.LogHelper  ::-> HHH000204: Processing PersistenceUnitInfo [name: default] HHH000204: Processing PersistenceUnitInfo [name: default]
+>06-09-2024 03:14:35 [restartedMain] INFO  org.hibernate.Version                    ::-> HHH000412: Hibernate ORM core version 6.5.2.Final HHH000412: Hibernate ORM core version 6.5.2.Final
+>06-09-2024 03:14:35 [restartedMain] INFO  o.h.c.internal.RegionFactoryInitiator    ::-> HHH000026: Second-level cache disabled HHH000026: Second-level cache disabled
+>06-09-2024 03:14:36 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      ::-> No LoadTimeWeaver setup: ignoring JPA class transformer No LoadTimeWeaver setup: ignoring JPA class transformer
+>06-09-2024 03:14:36 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Starting... HikariPool-1 - Starting...
+>06-09-2024 03:14:36 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4417f153 HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4417f153
+>06-09-2024 03:14:36 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Start completed. HikariPool-1 - Start completed.
+>06-09-2024 03:14:36 [restartedMain] WARN  org.hibernate.orm.deprecation            ::-> HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+>06-09-2024 03:14:37 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       ::-> HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+>06-09-2024 03:14:37 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Initialized JPA EntityManagerFactory for persistence unit 'default' Initialized JPA EntityManagerFactory for persistence unit 'default'
+>06-09-2024 03:14:37 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ::-> spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+>06-09-2024 03:14:37 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration ::-> 
+
+Using generated security password: 51b2a77c-e38c-466e-b2a2-36fbae70b681
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+ 
+
+Using generated security password: 51b2a77c-e38c-466e-b2a2-36fbae70b681
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+>06-09-2024 03:14:37 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ::-> Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+>06-09-2024 03:14:37 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer       ::-> LiveReload server is running on port 35729 LiveReload server is running on port 35729
+>06-09-2024 03:14:37 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat started on port 8081 (http) with context path '/bankingapp' Tomcat started on port 8081 (http) with context path '/bankingapp'
+>06-09-2024 03:14:37 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Started BankingAppApplication in 3.694 seconds (process running for 4.284) Started BankingAppApplication in 3.694 seconds (process running for 4.284)
+>06-09-2024 03:14:37 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>06-09-2024 03:14:37 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> banking app started! banking app started!
+>06-09-2024 03:14:37 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>06-09-2024 03:14:51 [http-nio-8081-exec-4] INFO  o.a.c.c.C.[.[localhost].[/bankingapp]    ::-> Initializing Spring DispatcherServlet 'dispatcherServlet' Initializing Spring DispatcherServlet 'dispatcherServlet'
+>06-09-2024 03:14:51 [http-nio-8081-exec-4] INFO  o.s.web.servlet.DispatcherServlet        ::-> Initializing Servlet 'dispatcherServlet' Initializing Servlet 'dispatcherServlet'
+>06-09-2024 03:14:51 [http-nio-8081-exec-4] INFO  o.s.web.servlet.DispatcherServlet        ::-> Completed initialization in 1 ms Completed initialization in 1 ms
+>06-09-2024 03:14:52 [http-nio-8081-exec-4] INFO  c.s.b.controllers.AccountController      ::-> AccountController::createAccount AccountController::createAccount
+>06-09-2024 03:14:52 [http-nio-8081-exec-4] INFO  c.s.b.controllers.AccountController      ::-> customer and branch found customer and branch found
+>06-09-2024 03:16:28 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener ::-> Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications) Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+>06-09-2024 03:16:28 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Closing JPA EntityManagerFactory for persistence unit 'default' Closing JPA EntityManagerFactory for persistence unit 'default'
+>06-09-2024 03:16:28 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Shutdown initiated... HikariPool-1 - Shutdown initiated...
+>06-09-2024 03:16:28 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Shutdown completed. HikariPool-1 - Shutdown completed.
+>06-09-2024 03:16:28 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Starting BankingAppApplication using Java 21.0.3 with PID 27864 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp) Starting BankingAppApplication using Java 21.0.3 with PID 27864 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp)
+>06-09-2024 03:16:28 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> No active profile set, falling back to 1 default profile: "default" No active profile set, falling back to 1 default profile: "default"
+>06-09-2024 03:16:28 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Bootstrapping Spring Data JPA repositories in DEFAULT mode. Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+>06-09-2024 03:16:28 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Finished Spring Data repository scanning in 12 ms. Found 6 JPA repository interfaces. Finished Spring Data repository scanning in 12 ms. Found 6 JPA repository interfaces.
+>06-09-2024 03:16:28 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat initialized with port 8081 (http) Tomcat initialized with port 8081 (http)
+>06-09-2024 03:16:28 [restartedMain] INFO  o.apache.catalina.core.StandardService   ::-> Starting service [Tomcat] Starting service [Tomcat]
+>06-09-2024 03:16:28 [restartedMain] INFO  org.apache.catalina.core.StandardEngine  ::-> Starting Servlet engine: [Apache Tomcat/10.1.28] Starting Servlet engine: [Apache Tomcat/10.1.28]
+>06-09-2024 03:16:28 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/bankingapp]    ::-> Initializing Spring embedded WebApplicationContext Initializing Spring embedded WebApplicationContext
+>06-09-2024 03:16:28 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext ::-> Root WebApplicationContext: initialization completed in 223 ms Root WebApplicationContext: initialization completed in 223 ms
+>06-09-2024 03:16:28 [restartedMain] INFO  o.hibernate.jpa.internal.util.LogHelper  ::-> HHH000204: Processing PersistenceUnitInfo [name: default] HHH000204: Processing PersistenceUnitInfo [name: default]
+>06-09-2024 03:16:28 [restartedMain] INFO  o.h.c.internal.RegionFactoryInitiator    ::-> HHH000026: Second-level cache disabled HHH000026: Second-level cache disabled
+>06-09-2024 03:16:28 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      ::-> No LoadTimeWeaver setup: ignoring JPA class transformer No LoadTimeWeaver setup: ignoring JPA class transformer
+>06-09-2024 03:16:28 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-2 - Starting... HikariPool-2 - Starting...
+>06-09-2024 03:16:28 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@662c1424 HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@662c1424
+>06-09-2024 03:16:28 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-2 - Start completed. HikariPool-2 - Start completed.
+>06-09-2024 03:16:28 [restartedMain] WARN  org.hibernate.orm.deprecation            ::-> HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+>06-09-2024 03:16:29 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       ::-> HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+>06-09-2024 03:16:29 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Initialized JPA EntityManagerFactory for persistence unit 'default' Initialized JPA EntityManagerFactory for persistence unit 'default'
+>06-09-2024 03:16:29 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ::-> spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+>06-09-2024 03:16:29 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration ::-> 
+
+Using generated security password: 1ce1190b-f26e-46c5-bb42-ce92f47fd7d7
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+ 
+
+Using generated security password: 1ce1190b-f26e-46c5-bb42-ce92f47fd7d7
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+>06-09-2024 03:16:29 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ::-> Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+>06-09-2024 03:16:29 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer       ::-> LiveReload server is running on port 35729 LiveReload server is running on port 35729
+>06-09-2024 03:16:29 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat started on port 8081 (http) with context path '/bankingapp' Tomcat started on port 8081 (http) with context path '/bankingapp'
+>06-09-2024 03:16:29 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Started BankingAppApplication in 0.634 seconds (process running for 115.622) Started BankingAppApplication in 0.634 seconds (process running for 115.622)
+>06-09-2024 03:16:29 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener ::-> Condition evaluation unchanged Condition evaluation unchanged
+>06-09-2024 03:16:29 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>06-09-2024 03:16:29 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> banking app started! banking app started!
+>06-09-2024 03:16:29 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>06-09-2024 03:16:30 [RMI TCP Connection(13)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin ::-> Application shutdown requested. Application shutdown requested.
+>06-09-2024 03:16:30 [RMI TCP Connection(13)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Closing JPA EntityManagerFactory for persistence unit 'default' Closing JPA EntityManagerFactory for persistence unit 'default'
+>06-09-2024 03:16:30 [RMI TCP Connection(13)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-2 - Shutdown initiated... HikariPool-2 - Shutdown initiated...
+>06-09-2024 03:16:30 [RMI TCP Connection(13)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-2 - Shutdown completed. HikariPool-2 - Shutdown completed.
+>06-09-2024 05:20:14 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Starting BankingAppApplication using Java 21.0.3 with PID 5536 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp) Starting BankingAppApplication using Java 21.0.3 with PID 5536 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp)
+>06-09-2024 05:20:14 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> No active profile set, falling back to 1 default profile: "default" No active profile set, falling back to 1 default profile: "default"
+>06-09-2024 05:20:14 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor ::-> Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+>06-09-2024 05:20:14 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor ::-> For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+>06-09-2024 05:20:15 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Bootstrapping Spring Data JPA repositories in DEFAULT mode. Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+>06-09-2024 05:20:15 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Finished Spring Data repository scanning in 82 ms. Found 6 JPA repository interfaces. Finished Spring Data repository scanning in 82 ms. Found 6 JPA repository interfaces.
+>06-09-2024 05:20:16 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat initialized with port 8081 (http) Tomcat initialized with port 8081 (http)
+>06-09-2024 05:20:16 [restartedMain] INFO  o.apache.catalina.core.StandardService   ::-> Starting service [Tomcat] Starting service [Tomcat]
+>06-09-2024 05:20:16 [restartedMain] INFO  org.apache.catalina.core.StandardEngine  ::-> Starting Servlet engine: [Apache Tomcat/10.1.28] Starting Servlet engine: [Apache Tomcat/10.1.28]
+>06-09-2024 05:20:16 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/bankingapp]    ::-> Initializing Spring embedded WebApplicationContext Initializing Spring embedded WebApplicationContext
+>06-09-2024 05:20:16 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext ::-> Root WebApplicationContext: initialization completed in 1635 ms Root WebApplicationContext: initialization completed in 1635 ms
+>06-09-2024 05:20:16 [restartedMain] INFO  o.hibernate.jpa.internal.util.LogHelper  ::-> HHH000204: Processing PersistenceUnitInfo [name: default] HHH000204: Processing PersistenceUnitInfo [name: default]
+>06-09-2024 05:20:16 [restartedMain] INFO  org.hibernate.Version                    ::-> HHH000412: Hibernate ORM core version 6.5.2.Final HHH000412: Hibernate ORM core version 6.5.2.Final
+>06-09-2024 05:20:16 [restartedMain] INFO  o.h.c.internal.RegionFactoryInitiator    ::-> HHH000026: Second-level cache disabled HHH000026: Second-level cache disabled
+>06-09-2024 05:20:17 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      ::-> No LoadTimeWeaver setup: ignoring JPA class transformer No LoadTimeWeaver setup: ignoring JPA class transformer
+>06-09-2024 05:20:17 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Starting... HikariPool-1 - Starting...
+>06-09-2024 05:20:17 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1b2aeafe HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1b2aeafe
+>06-09-2024 05:20:17 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Start completed. HikariPool-1 - Start completed.
+>06-09-2024 05:20:17 [restartedMain] WARN  org.hibernate.orm.deprecation            ::-> HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+>06-09-2024 05:20:18 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       ::-> HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+>06-09-2024 05:20:18 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Initialized JPA EntityManagerFactory for persistence unit 'default' Initialized JPA EntityManagerFactory for persistence unit 'default'
+>06-09-2024 05:20:19 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ::-> spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+>06-09-2024 05:20:19 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration ::-> 
+
+Using generated security password: 48ea06f9-e39e-4ab5-a3e7-50d9dc4094c5
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+ 
+
+Using generated security password: 48ea06f9-e39e-4ab5-a3e7-50d9dc4094c5
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+>06-09-2024 05:20:19 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ::-> Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+>06-09-2024 05:20:19 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer       ::-> LiveReload server is running on port 35729 LiveReload server is running on port 35729
+>06-09-2024 05:20:19 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat started on port 8081 (http) with context path '/bankingapp' Tomcat started on port 8081 (http) with context path '/bankingapp'
+>06-09-2024 05:20:19 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Started BankingAppApplication in 5.403 seconds (process running for 6.346) Started BankingAppApplication in 5.403 seconds (process running for 6.346)
+>06-09-2024 05:20:19 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>06-09-2024 05:20:19 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> banking app started! banking app started!
+>06-09-2024 05:20:19 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>06-09-2024 05:20:58 [http-nio-8081-exec-2] INFO  o.a.c.c.C.[.[localhost].[/bankingapp]    ::-> Initializing Spring DispatcherServlet 'dispatcherServlet' Initializing Spring DispatcherServlet 'dispatcherServlet'
+>06-09-2024 05:20:58 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet        ::-> Initializing Servlet 'dispatcherServlet' Initializing Servlet 'dispatcherServlet'
+>06-09-2024 05:20:58 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet        ::-> Completed initialization in 1 ms Completed initialization in 1 ms
+>06-09-2024 05:20:58 [http-nio-8081-exec-2] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver ::-> Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported] Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+>06-09-2024 05:21:13 [http-nio-8081-exec-4] INFO  c.s.b.controllers.AccountController      ::-> addBeneficiaryToAccount::adding Beneficiary com.sukrutha.bankingApp.entities.Beneficiary@56e6c138 addBeneficiaryToAccount::adding Beneficiary com.sukrutha.bankingApp.entities.Beneficiary@56e6c138
+>06-09-2024 05:21:14 [http-nio-8081-exec-4] INFO  c.s.b.services.BeneficiaryService        ::-> getBeneficiaryByBeneficiaryAccountNumber getBeneficiaryByBeneficiaryAccountNumber
+>06-09-2024 05:21:15 [http-nio-8081-exec-4] ERROR c.s.b.services.BeneficiaryService        ::-> error getting beneficiary error getting beneficiary
+>06-09-2024 05:21:15 [http-nio-8081-exec-4] INFO  c.s.b.services.BeneficiaryService        ::-> adding beneficiary to the beneficiary table... adding beneficiary to the beneficiary table...
+>06-09-2024 05:21:15 [http-nio-8081-exec-4] INFO  c.s.b.services.BeneficiaryService        ::-> getBeneficiaryByBeneficiaryAccountNumber getBeneficiaryByBeneficiaryAccountNumber
+>06-09-2024 05:21:15 [http-nio-8081-exec-4] ERROR c.s.b.services.BeneficiaryService        ::-> error getting beneficiary error getting beneficiary
+>06-09-2024 05:21:15 [http-nio-8081-exec-4] ERROR c.s.bankingApp.services.AccountService   ::-> error adding beneficiary error adding beneficiary
+>06-09-2024 05:29:42 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener ::-> Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+>06-09-2024 05:29:42 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Closing JPA EntityManagerFactory for persistence unit 'default' Closing JPA EntityManagerFactory for persistence unit 'default'
+>06-09-2024 05:29:42 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Shutdown initiated... HikariPool-1 - Shutdown initiated...
+>06-09-2024 05:29:42 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Shutdown completed. HikariPool-1 - Shutdown completed.
+>06-09-2024 05:29:42 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Starting BankingAppApplication using Java 21.0.3 with PID 5536 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp) Starting BankingAppApplication using Java 21.0.3 with PID 5536 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp)
+>06-09-2024 05:29:42 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> No active profile set, falling back to 1 default profile: "default" No active profile set, falling back to 1 default profile: "default"
+>06-09-2024 05:29:43 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Bootstrapping Spring Data JPA repositories in DEFAULT mode. Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+>06-09-2024 05:29:43 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Finished Spring Data repository scanning in 14 ms. Found 6 JPA repository interfaces. Finished Spring Data repository scanning in 14 ms. Found 6 JPA repository interfaces.
+>06-09-2024 05:29:43 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat initialized with port 8081 (http) Tomcat initialized with port 8081 (http)
+>06-09-2024 05:29:43 [restartedMain] INFO  o.apache.catalina.core.StandardService   ::-> Starting service [Tomcat] Starting service [Tomcat]
+>06-09-2024 05:29:43 [restartedMain] INFO  org.apache.catalina.core.StandardEngine  ::-> Starting Servlet engine: [Apache Tomcat/10.1.28] Starting Servlet engine: [Apache Tomcat/10.1.28]
+>06-09-2024 05:29:43 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/bankingapp]    ::-> Initializing Spring embedded WebApplicationContext Initializing Spring embedded WebApplicationContext
+>06-09-2024 05:29:43 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext ::-> Root WebApplicationContext: initialization completed in 287 ms Root WebApplicationContext: initialization completed in 287 ms
+>06-09-2024 05:29:43 [restartedMain] INFO  o.hibernate.jpa.internal.util.LogHelper  ::-> HHH000204: Processing PersistenceUnitInfo [name: default] HHH000204: Processing PersistenceUnitInfo [name: default]
+>06-09-2024 05:29:43 [restartedMain] INFO  o.h.c.internal.RegionFactoryInitiator    ::-> HHH000026: Second-level cache disabled HHH000026: Second-level cache disabled
+>06-09-2024 05:29:43 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      ::-> No LoadTimeWeaver setup: ignoring JPA class transformer No LoadTimeWeaver setup: ignoring JPA class transformer
+>06-09-2024 05:29:43 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-2 - Starting... HikariPool-2 - Starting...
+>06-09-2024 05:29:43 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@32f2de82 HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@32f2de82
+>06-09-2024 05:29:43 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-2 - Start completed. HikariPool-2 - Start completed.
+>06-09-2024 05:29:43 [restartedMain] WARN  org.hibernate.orm.deprecation            ::-> HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+>06-09-2024 05:29:43 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       ::-> HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+>06-09-2024 05:29:43 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Initialized JPA EntityManagerFactory for persistence unit 'default' Initialized JPA EntityManagerFactory for persistence unit 'default'
+>06-09-2024 05:29:43 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ::-> spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+>06-09-2024 05:29:43 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration ::-> 
+
+Using generated security password: da4b0422-9414-45bd-95f7-da3b5bfe4696
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+ 
+
+Using generated security password: da4b0422-9414-45bd-95f7-da3b5bfe4696
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+>06-09-2024 05:29:43 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ::-> Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+>06-09-2024 05:29:43 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer       ::-> LiveReload server is running on port 35729 LiveReload server is running on port 35729
+>06-09-2024 05:29:43 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat started on port 8081 (http) with context path '/bankingapp' Tomcat started on port 8081 (http) with context path '/bankingapp'
+>06-09-2024 05:29:43 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Started BankingAppApplication in 0.859 seconds (process running for 570.325) Started BankingAppApplication in 0.859 seconds (process running for 570.325)
+>06-09-2024 05:29:43 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener ::-> Condition evaluation unchanged Condition evaluation unchanged
+>06-09-2024 05:29:43 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>06-09-2024 05:29:43 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> banking app started! banking app started!
+>06-09-2024 05:29:43 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>06-09-2024 05:31:08 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener ::-> Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+>06-09-2024 05:31:08 [Thread-7] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Closing JPA EntityManagerFactory for persistence unit 'default' Closing JPA EntityManagerFactory for persistence unit 'default'
+>06-09-2024 05:31:08 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-2 - Shutdown initiated... HikariPool-2 - Shutdown initiated...
+>06-09-2024 05:31:08 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-2 - Shutdown completed. HikariPool-2 - Shutdown completed.
+>06-09-2024 05:31:08 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Starting BankingAppApplication using Java 21.0.3 with PID 5536 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp) Starting BankingAppApplication using Java 21.0.3 with PID 5536 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp)
+>06-09-2024 05:31:08 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> No active profile set, falling back to 1 default profile: "default" No active profile set, falling back to 1 default profile: "default"
+>06-09-2024 05:31:08 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Bootstrapping Spring Data JPA repositories in DEFAULT mode. Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+>06-09-2024 05:31:08 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Finished Spring Data repository scanning in 15 ms. Found 6 JPA repository interfaces. Finished Spring Data repository scanning in 15 ms. Found 6 JPA repository interfaces.
+>06-09-2024 05:31:08 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat initialized with port 8081 (http) Tomcat initialized with port 8081 (http)
+>06-09-2024 05:31:08 [restartedMain] INFO  o.apache.catalina.core.StandardService   ::-> Starting service [Tomcat] Starting service [Tomcat]
+>06-09-2024 05:31:08 [restartedMain] INFO  org.apache.catalina.core.StandardEngine  ::-> Starting Servlet engine: [Apache Tomcat/10.1.28] Starting Servlet engine: [Apache Tomcat/10.1.28]
+>06-09-2024 05:31:08 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/bankingapp]    ::-> Initializing Spring embedded WebApplicationContext Initializing Spring embedded WebApplicationContext
+>06-09-2024 05:31:08 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext ::-> Root WebApplicationContext: initialization completed in 252 ms Root WebApplicationContext: initialization completed in 252 ms
+>06-09-2024 05:31:08 [restartedMain] INFO  o.hibernate.jpa.internal.util.LogHelper  ::-> HHH000204: Processing PersistenceUnitInfo [name: default] HHH000204: Processing PersistenceUnitInfo [name: default]
+>06-09-2024 05:31:08 [restartedMain] INFO  o.h.c.internal.RegionFactoryInitiator    ::-> HHH000026: Second-level cache disabled HHH000026: Second-level cache disabled
+>06-09-2024 05:31:08 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      ::-> No LoadTimeWeaver setup: ignoring JPA class transformer No LoadTimeWeaver setup: ignoring JPA class transformer
+>06-09-2024 05:31:08 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-3 - Starting... HikariPool-3 - Starting...
+>06-09-2024 05:31:08 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6feede33 HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6feede33
+>06-09-2024 05:31:08 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-3 - Start completed. HikariPool-3 - Start completed.
+>06-09-2024 05:31:08 [restartedMain] WARN  org.hibernate.orm.deprecation            ::-> HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+>06-09-2024 05:31:08 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       ::-> HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+>06-09-2024 05:31:08 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Initialized JPA EntityManagerFactory for persistence unit 'default' Initialized JPA EntityManagerFactory for persistence unit 'default'
+>06-09-2024 05:31:08 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ::-> spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+>06-09-2024 05:31:08 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration ::-> 
+
+Using generated security password: c2c1eb4a-ec70-4d4c-91de-5bd2586c47fa
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+ 
+
+Using generated security password: c2c1eb4a-ec70-4d4c-91de-5bd2586c47fa
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+>06-09-2024 05:31:08 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ::-> Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+>06-09-2024 05:31:08 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer       ::-> LiveReload server is running on port 35729 LiveReload server is running on port 35729
+>06-09-2024 05:31:08 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat started on port 8081 (http) with context path '/bankingapp' Tomcat started on port 8081 (http) with context path '/bankingapp'
+>06-09-2024 05:31:08 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Started BankingAppApplication in 0.661 seconds (process running for 655.459) Started BankingAppApplication in 0.661 seconds (process running for 655.459)
+>06-09-2024 05:31:08 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener ::-> Condition evaluation unchanged Condition evaluation unchanged
+>06-09-2024 05:31:08 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>06-09-2024 05:31:08 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> banking app started! banking app started!
+>06-09-2024 05:31:08 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>06-09-2024 05:31:20 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener ::-> Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+>06-09-2024 05:31:20 [Thread-11] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Closing JPA EntityManagerFactory for persistence unit 'default' Closing JPA EntityManagerFactory for persistence unit 'default'
+>06-09-2024 05:31:20 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-3 - Shutdown initiated... HikariPool-3 - Shutdown initiated...
+>06-09-2024 05:31:20 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-3 - Shutdown completed. HikariPool-3 - Shutdown completed.
+>06-09-2024 05:31:20 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Starting BankingAppApplication using Java 21.0.3 with PID 5536 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp) Starting BankingAppApplication using Java 21.0.3 with PID 5536 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp)
+>06-09-2024 05:31:20 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> No active profile set, falling back to 1 default profile: "default" No active profile set, falling back to 1 default profile: "default"
+>06-09-2024 05:31:20 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Bootstrapping Spring Data JPA repositories in DEFAULT mode. Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+>06-09-2024 05:31:20 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Finished Spring Data repository scanning in 13 ms. Found 6 JPA repository interfaces. Finished Spring Data repository scanning in 13 ms. Found 6 JPA repository interfaces.
+>06-09-2024 05:31:21 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat initialized with port 8081 (http) Tomcat initialized with port 8081 (http)
+>06-09-2024 05:31:21 [restartedMain] INFO  o.apache.catalina.core.StandardService   ::-> Starting service [Tomcat] Starting service [Tomcat]
+>06-09-2024 05:31:21 [restartedMain] INFO  org.apache.catalina.core.StandardEngine  ::-> Starting Servlet engine: [Apache Tomcat/10.1.28] Starting Servlet engine: [Apache Tomcat/10.1.28]
+>06-09-2024 05:31:21 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/bankingapp]    ::-> Initializing Spring embedded WebApplicationContext Initializing Spring embedded WebApplicationContext
+>06-09-2024 05:31:21 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext ::-> Root WebApplicationContext: initialization completed in 265 ms Root WebApplicationContext: initialization completed in 265 ms
+>06-09-2024 05:31:21 [restartedMain] INFO  o.hibernate.jpa.internal.util.LogHelper  ::-> HHH000204: Processing PersistenceUnitInfo [name: default] HHH000204: Processing PersistenceUnitInfo [name: default]
+>06-09-2024 05:31:21 [restartedMain] INFO  o.h.c.internal.RegionFactoryInitiator    ::-> HHH000026: Second-level cache disabled HHH000026: Second-level cache disabled
+>06-09-2024 05:31:21 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      ::-> No LoadTimeWeaver setup: ignoring JPA class transformer No LoadTimeWeaver setup: ignoring JPA class transformer
+>06-09-2024 05:31:21 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-4 - Starting... HikariPool-4 - Starting...
+>06-09-2024 05:31:21 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7c51f8ab HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7c51f8ab
+>06-09-2024 05:31:21 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-4 - Start completed. HikariPool-4 - Start completed.
+>06-09-2024 05:31:21 [restartedMain] WARN  org.hibernate.orm.deprecation            ::-> HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+>06-09-2024 05:31:21 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       ::-> HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+>06-09-2024 05:31:21 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Initialized JPA EntityManagerFactory for persistence unit 'default' Initialized JPA EntityManagerFactory for persistence unit 'default'
+>06-09-2024 05:31:21 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ::-> spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+>06-09-2024 05:31:21 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration ::-> 
+
+Using generated security password: 492b2386-ed57-4733-868a-6c1b2003b0b9
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+ 
+
+Using generated security password: 492b2386-ed57-4733-868a-6c1b2003b0b9
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+>06-09-2024 05:31:21 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ::-> Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+>06-09-2024 05:31:21 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer       ::-> LiveReload server is running on port 35729 LiveReload server is running on port 35729
+>06-09-2024 05:31:21 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat started on port 8081 (http) with context path '/bankingapp' Tomcat started on port 8081 (http) with context path '/bankingapp'
+>06-09-2024 05:31:21 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Started BankingAppApplication in 0.702 seconds (process running for 668.013) Started BankingAppApplication in 0.702 seconds (process running for 668.013)
+>06-09-2024 05:31:21 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener ::-> Condition evaluation unchanged Condition evaluation unchanged
+>06-09-2024 05:31:21 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>06-09-2024 05:31:21 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> banking app started! banking app started!
+>06-09-2024 05:31:21 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************

@@ -1,16 +1,23 @@
-//package com.sukrutha.bankingApp.services;
-//
-//import org.springframework.beans.factory.annotation.Autowired;
-//import com.sukrutha.bankingApp.entities.Beneficiary;
-//
-//public class BeneficiaryService {
+package com.sukrutha.bankingApp.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.sukrutha.bankingApp.Repositories.BeneficiaryRepository;
+import com.sukrutha.bankingApp.controllers.BeneficiaryController;
+import com.sukrutha.bankingApp.entities.Account;
+import com.sukrutha.bankingApp.entities.Beneficiary;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Service
+@Slf4j
+public class BeneficiaryService {
+
+	@Autowired
+	BeneficiaryRepository beneficiaryRepository;
 //	
-//	
-//	@Autowired
-//	
-//	BeneficiaryService beneficiaryService ;
-//	
-//	public <Beneficiary> getBeneficiaries(String accountNumber){
+//	public <Beneficiary> getBeneficiariesLinkedToACustomerAccount(String accountNumber){
 //		
 //		try {
 //			return null;
@@ -19,24 +26,89 @@
 //			
 //		}
 //	}
-//	
-//	public <Beneficiary> addBeneficiary(Beneficiary beneficiary){
-//		try {
-//			
-//		}
-//		catch(Exception e) {
-//			
-//		}
-//	}
-//	
-//	public boolean deleteBeneficiary(Beneficiary beneficiary){
-//		try {
-//			
-//		}
-//		catch(Exception e) {
-//			
-//		}
-//		return false;
-//	}
-//
-//}
+
+	public Beneficiary addBeneficiary(Beneficiary beneficiary) {
+		log.info("adding beneficiary to the beneficiary table...");
+		Beneficiary savedBeneficiary = null;
+		try {
+			// check if beneficiary already exists in table
+			if(this.getBeneficiaryByBeneficiaryAccountNumber(beneficiary.getBeneficiaryAcctNumber())==null) {
+				savedBeneficiary = beneficiaryRepository.save(beneficiary);
+			}
+			
+			else {
+				log.error("beneficiary already exists");
+			}
+			
+		} catch (Exception e) {
+			log.error("failed to add beneficiary");
+			e.printStackTrace();
+
+		}
+
+		return savedBeneficiary;
+	}
+	
+	public Beneficiary getBeneficiaryById(String beneficiaryId) {
+
+		log.info("getting beneficiary by Id");
+		Beneficiary beneficiary = null;
+		try {
+			beneficiary = beneficiaryRepository.findById(beneficiaryId)
+					.orElseThrow(() -> new Exception("beneficiary is not found"));
+		} catch (Exception e) {
+			log.error("error getting beneficiary");
+			e.printStackTrace();
+
+		}
+		return beneficiary;
+	}
+
+	public Beneficiary getBeneficiaryByBeneficiaryAccountNumber(String beneficiaryAcctNumber) {
+
+		log.info("getBeneficiaryByBeneficiaryAccountNumber");
+		Beneficiary beneficiary = null;
+		try {
+			beneficiary = beneficiaryRepository.findByBeneficiaryAcctNumber(beneficiaryAcctNumber)
+					.orElseThrow(() -> new Exception("beneficiary is not found"));
+		} catch (Exception e) {
+			log.error("error getting beneficiary");
+			e.printStackTrace();
+
+		}
+		return beneficiary;
+	}
+
+	
+	public String updateBeneficiary(Beneficiary beneficiary) {
+		try {
+
+			// updating existing account
+
+			beneficiary = beneficiaryRepository.save(beneficiary);
+			return beneficiary.getBeneficiaryId();
+
+		} catch (IllegalArgumentException e) {
+
+			e.printStackTrace();
+			log.error("exception while updating beneficiary");
+		}
+
+		catch (Exception e) {
+
+			e.printStackTrace();
+			log.error("exception while updating beneficiary");
+		}
+		return beneficiary.getBeneficiaryId();
+	}
+	
+	public boolean deleteBeneficiary(Beneficiary beneficiary) {
+		try {
+
+		} catch (Exception e) {
+
+		}
+		return false;
+	}
+
+}
