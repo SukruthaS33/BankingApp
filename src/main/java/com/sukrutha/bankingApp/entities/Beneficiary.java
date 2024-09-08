@@ -54,7 +54,7 @@ public class Beneficiary {
 	private String beneficiaryBankName;
 	@Column(name="beneficiary_ISBN")
 	@NotNull
-	private String beneficiaryIFSC;
+	private String beneficiaryISBN;
 	@Column(name="isActive",columnDefinition="BOOLEAN DEFAULT true")
 	private boolean isActive;
 	@Column(name="createdAt")
