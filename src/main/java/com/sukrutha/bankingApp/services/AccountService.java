@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.sukrutha.bankingApp.Repositories.AccountRepository;
+import com.sukrutha.bankingApp.businessLogics.AccountBusinessLogic;
 import com.sukrutha.bankingApp.businessLogics.CustomerBusinessLogic;
 import com.sukrutha.bankingApp.entities.Account;
 import com.sukrutha.bankingApp.entities.Beneficiary;
@@ -35,7 +36,7 @@ public class AccountService {
 	CustomerService customerService;
 
 	@Autowired
-	CustomerBusinessLogic customerBusinessLogic;
+	AccountBusinessLogic accountBusinessLogic;
 
 	public String createAccount(String accountTypeStr, Branch branch, Customer customer) {
 		log.info("AccountService::createAccount");
@@ -45,7 +46,7 @@ public class AccountService {
 
 			Account account = new Account();
 
-			String accountNumber = customerBusinessLogic.generateRandomNumber();
+			String accountNumber = accountBusinessLogic.generateRandomNumber();// rename it
 			account.setAccountNumber(accountNumber);
 			// account.setAccountType(accountType);
 			// account.setBalance(0);
@@ -218,10 +219,6 @@ public class AccountService {
 
 			}
 
-			else if (customerId == null) {
-				return accounts;// accounts will be an empty arraylist
-			}
-
 		}
 
 		catch (Exception e) {
@@ -232,24 +229,74 @@ public class AccountService {
 		return accounts;
 
 	}
-//	
-//	public boolean deposit(String accountNumber,double amount) {
-//	    boolean depositStatus=false;
-//	    
-//	    try {
-//	    	
-//	    }
-//	    catch(Exception e) {
-//	    	
-//	    }
-//	
-//		
-//	}
-//	
-//	
-//	public boolean withdraw(String accountNumber,double amount) {
+
+	public boolean credit(String accountNumber, double amount) {
+
+		log.info("AccountService::credit");
+
+		boolean creditStatus = false;
+
+		try {
+			Account account = this.getAccountByAccountNumber(accountNumber);
+			if (account.isActive()) {
+
+				account.setBalance(account.getBalance() + amount);
+				accountRepository.save(account);
+				creditStatus = true;
+
+			} else {
+				log.error("ACCOUNT NOT ACTIVE");
+			}
+
+		} catch (Exception e) {
+
+		}
+		return creditStatus;
+
+	}
+
+	public boolean debit(String accountNumber, double amount) {
+		log.info("AccountService::debit");
+
+		boolean debitStatus = false;
+
+		try {
+			Account account = this.getAccountByAccountNumber(accountNumber);
+			if (account.isActive()) {
+				if (amount <= account.getBalance()) {
+					account.setBalance(account.getBalance() - amount);
+					accountRepository.save(account);
+					debitStatus = true;
+				} else {
+					log.error("NOT ENOUGH BALANCE IN ACCOUNT!!");
+
+				}
+
+			} else {
+				log.error("ACCOUNT NOT ACTIVE");
+			}
+
+		} catch (Exception e) {
+
+		}
+		return debitStatus;
+	}
+
+	public boolean isBeneficiaryExistsInAccount(String accountNumber, String beneficiaryAccountNumber) {
+		log.info("AcountService::isBeneficiaryExistsInAccount");
+
+		boolean beneficiaryLinked = false;
+		try {
+			beneficiaryLinked=accountRepository.existsBeneficiaryInAccount(accountNumber, beneficiaryAccountNumber);
+		}
+		catch(Exception e) {
+			log.error("error in getting beneficiary linking details");
+			e.printStackTrace();
+		}
+		return beneficiaryLinked;
+	}
+//	public boolean deleteBeneficiaryLinkedToAccount(String accountNumber, Beneficiary beneficiary) {
+//		// TODO Auto-generated method stub
 //		return false;
-//		
-//		
 //	}
 }

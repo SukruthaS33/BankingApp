@@ -3,8 +3,11 @@ package com.sukrutha.bankingApp.entities;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import org.hibernate.resource.transaction.spi.TransactionStatus;
+import org.springframework.data.annotation.LastModifiedDate;
+
 import com.sukrutha.bankingApp.entities.EnumContainer.AccountType;
-import com.sukrutha.bankingApp.entities.EnumContainer.StatusIn;
+import com.sukrutha.bankingApp.entities.EnumContainer.TransactStatus;
 import com.sukrutha.bankingApp.entities.EnumContainer.TransactionType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -43,25 +46,28 @@ public class Transaction {
 	@Column(name = "transaction_id")
 	private String transactionId;
 	@ManyToOne
-	@JoinColumn(name = "source_acct_id")
-	private Account sourceAccountId;
+	@JoinColumn(name = "customer_acct_id")
+	private Account customerAccount;
 	@ManyToOne
-	@JoinColumn(name = "target_account_id")
-	private Beneficiary targetAccountId;
+	@JoinColumn(name = "beneficiary_account_id")
+	private Beneficiary beneficiaryAccount;
 	@Column(name = "amount")
 	@NotNull
 	@Min(value = 1, message = "Please add amount to transfer")
-	private double Amount;
+	private double amount;
 	@Column(name = "transaction_type")
 	@NotNull
 	@Enumerated(EnumType.STRING)
 	private TransactionType transactionType;
 	@NotNull
+	@LastModifiedDate
 	@Column(name = "transaction_date_time")
 	private LocalDateTime transcationTime;
 	@NotNull
 	@Enumerated(EnumType.STRING)
 	@Column(name = "transaction_status")
-	private StatusIn transactionStatus;
+	private TransactStatus transactionStatus;
+	
+	
 
 }
