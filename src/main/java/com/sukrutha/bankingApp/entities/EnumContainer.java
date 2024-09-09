@@ -16,7 +16,7 @@ public class EnumContainer {
     	DEPOSIT,WITHDRAW
     }
     
-    public enum StatusIn{
+    public enum TransactStatus{
     	PENDING,SUCCESS,FAILED
     }
     

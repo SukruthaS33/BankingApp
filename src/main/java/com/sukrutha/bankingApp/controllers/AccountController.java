@@ -139,5 +139,23 @@ public class AccountController {
 //	public boolean deposit(@PathVariable accountNumber, @RequestParam double amount )
 
 	// withdraw method
+	
+//	@PostMapping("/addbeneficiary/{accountNumber}")
+//	public ResponseEntity<Boolean> deleteBeneficiaryLinkedToAccount(@PathVariable String accountNumber,
+//			@RequestBody Beneficiary beneficiary) {
+//		log.info("AccountController::deleteBeneficiaryLinkedToAccount::");
+//		log.info(beneficiary.toString());
+//		try {
+//			if (accountService.deleteBeneficiaryLinkedToAccount(accountNumber, beneficiary)) {
+//				return ResponseEntity.status(HttpStatus.OK).body(true);
+//			}
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//
+//		}
+//
+//		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(false);
+//	}
+//	
 
 }
