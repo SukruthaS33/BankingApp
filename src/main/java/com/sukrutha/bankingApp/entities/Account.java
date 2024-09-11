@@ -62,7 +62,8 @@ public class Account {
 	@NotNull
 	@Min(value = 0, message = "Minimum balance must be more than 0")
 	private double balance;
-	@OneToMany(mappedBy = "sourceAccountId")
+	@OneToMany(mappedBy = "customerAccount")//always map it by field name
+	@JsonIgnore
 	private List<Transaction> transactions;
 	@Column(name = "isActive", columnDefinition = "BOOLEAN DEFAULT false")
 	@NotNull

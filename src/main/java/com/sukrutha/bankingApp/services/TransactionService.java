@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.sukrutha.bankingApp.Repositories.TransactionRepository;
 import com.sukrutha.bankingApp.entities.Account;
+import com.sukrutha.bankingApp.entities.Beneficiary;
 import com.sukrutha.bankingApp.entities.EnumContainer.TransactStatus;
 import com.sukrutha.bankingApp.entities.Transaction;
 
@@ -21,6 +22,9 @@ public class TransactionService {
 
 	@Autowired
 	AccountService accountService;
+
+	@Autowired
+	BeneficiaryService beneficiaryService;
 
 	public List<Transaction> getAllTransactions() {
 		log.info("TransactionService:getAllTransactions");
@@ -57,45 +61,63 @@ public class TransactionService {
 	public Transaction sendMoney(Transaction transaction, String accountNumber, String beneficiaryAccountNumber,
 			double amount) {
 		log.info("TransactionService:sendMoney");
-
+		// we have to set other details like id etc in the return transaction type it
+		// went missing in this ??
+		// TODO add transaction accountno, beneficiaryaccountno etc
 		try {
 			Account customerAccount = accountService.getAccountByAccountNumber(accountNumber);
-			if (customerAccount.isActive()) {
-				// checking if beneficiary is in the same bank
-				Account beneficiaryAccountInSameBank = accountService
-						.getAccountByAccountNumber(beneficiaryAccountNumber);
-				if (beneficiaryAccountInSameBank != null) {// this means beneficiary is in the same bank
-					// checking now if beneficiary is linked to the account
-					if (accountService.isBeneficiaryExistsInAccount(accountNumber, beneficiaryAccountNumber)) {
-						// checking if account has enough balance
+			if (customerAccount != null && customerAccount.isActive()) {
+				log.info("customer accout is active");
+				Beneficiary beneficiary = beneficiaryService
+						.getBeneficiaryByBeneficiaryAccountNumber(beneficiaryAccountNumber);// creating a beneficiary
+																							// object
+				if (beneficiary.isActive()) {// checking if beneficiary is allowed to recieve money (it can be toggled
+												// byadmin)
+					log.info("beneficiary is Active");
+					transaction.setCustomerAccount(customerAccount);
+					transaction.setBeneficiaryAccount(beneficiary);
+					// checking if beneficiary is in the same bank
+					Account beneficiaryAccountInSameBank = accountService
+							.getAccountByAccountNumber(beneficiaryAccountNumber);
+					if (beneficiaryAccountInSameBank != null) {// this means beneficiary is in the same bank
+						log.info("this means beneficiary is in the same bank");
+						// checking now if beneficiary is linked to the account
+						if (accountService.isBeneficiaryExistsInAccount(customerAccount, beneficiary)) {
+							// checking if account has enough balance
+							if (customerAccount.getBalance() >= amount) {
+								transaction.setAmount(amount);
+								// debiting money from customer account
+								accountService.debit(accountNumber, amount);
+								// crediting money to beneficiary account because it is in the same bank
+								accountService.credit(beneficiaryAccountNumber, amount);
+								transaction.setTransactionStatus(TransactStatus.SUCCESS);
+
+							} else {
+								transaction.setTransactionStatus(TransactStatus.FAILED);// TODO REASON FOR FAILURE IF
+																						// YOU
+																						// WANT
+							}
+						} else {
+							transaction.setTransactionStatus(TransactStatus.FAILED);// TODO REASON FOR FAILURE IF YOU
+																					// WANT
+						}
+
+					} else {
+						// Beneficiary is in some other bank
 						if (customerAccount.getBalance() >= amount) {
+							log.info("beneficiary in a different bank");
 							// debiting money from customer account
 							accountService.debit(accountNumber, amount);
-							// crediting money to beneficiary account because it is in the same bank
-							accountService.credit(beneficiaryAccountNumber, amount);
+							// crediting money to beneficiary account by hitting another bank's API call
+							Thread.sleep(5000);// mimicing API call
+							// in real case scenario lookout for rollback request
+
 							transaction.setTransactionStatus(TransactStatus.SUCCESS);
 
 						} else {
 							transaction.setTransactionStatus(TransactStatus.FAILED);// TODO REASON FOR FAILURE IF YOU
 																					// WANT
 						}
-					} else {
-						transaction.setTransactionStatus(TransactStatus.FAILED);// TODO REASON FOR FAILURE IF YOU WANT
-					}
-
-				} else {
-					// Beneficiary is in some other bank
-					if (customerAccount.getBalance() >= amount) {
-						// debiting money from customer account
-						accountService.debit(accountNumber, amount);
-						// crediting money to beneficiary account by hitting another bank's API call
-						Thread.sleep(5000);// mimicing API call
-						// in real case scenario lookout for rollback request
-
-						transaction.setTransactionStatus(TransactStatus.SUCCESS);
-
-					} else {
-						transaction.setTransactionStatus(TransactStatus.FAILED);// TODO REASON FOR FAILURE IF YOU WANT
 					}
 				}
 			} else {
@@ -106,17 +128,63 @@ public class TransactionService {
 			e.printStackTrace();
 
 		}
+		transactionRepository.save(transaction);
 		return transaction;
 	}
 
 	public Transaction receiveMoney(Transaction transaction, String accountNumber, String beneficiaryAccountNumber,
 			double amount) {
 		log.info("TransactionService:receiveMoney");
+
 		try {
+			// Fetch the account of the person requesting money
+			Account customerAccount = accountService.getAccountByAccountNumber(accountNumber);
+			if (customerAccount != null && customerAccount.isActive()) {
+				Beneficiary beneficiary = beneficiaryService
+						.getBeneficiaryByBeneficiaryAccountNumber(beneficiaryAccountNumber);// creating a beneficiary
+																							// object
+				if (beneficiary.isActive()) {// checking if beneficiary is allowed to recieve money (it can be toggled
+												// byadmin)
 
+					transaction.setCustomerAccount(customerAccount);
+					transaction.setBeneficiaryAccount(beneficiary);
+
+					// checking if beneficiary is in the same bank
+					Account beneficiaryAccountInSameBank = accountService
+							.getAccountByAccountNumber(beneficiaryAccountNumber);
+					if (beneficiaryAccountInSameBank != null) {// this means beneficiary is in the same bank
+						// checking if account has enough balance
+						if (beneficiaryAccountInSameBank.getBalance() >= amount) {
+							transaction.setAmount(amount);
+							// debiting money from customer account
+							accountService.debit(beneficiaryAccountNumber, amount);
+							// crediting money to account because it is in the same bank
+							accountService.credit(accountNumber, amount);
+							transaction.setTransactionStatus(TransactStatus.SUCCESS);
+
+						} else {
+							transaction.setTransactionStatus(TransactStatus.FAILED);// TODO REASON FOR FAILURE IF YOU
+																					// WANT
+						}
+
+					} else {
+						log.info("beneficiary not in same bank");
+
+						// debiting money from beneficiary account by hitting another bank's API call
+						Thread.sleep(5000);// mimicing API call
+						// in real case scenario lookout for rollback request
+						accountService.credit(accountNumber, amount);// credit to customer in our bank
+						transaction.setTransactionStatus(TransactStatus.SUCCESS);
+
+					}
+
+				}
+			}
 		} catch (Exception e) {
-
+			log.error("error in crediting money to the beneficiary account");
+			e.printStackTrace();
 		}
+		transactionRepository.save(transaction);
 		return transaction;
 	}
 

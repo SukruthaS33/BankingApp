@@ -54,7 +54,6 @@ public class Customer {
 	@Column(name = "customer_password")
 	@NotNull
 	@NotBlank
-	@JsonIgnore
 	private String customerPassword;
 	@Min(value = 10, message = "Sorry you should be 10 years old to open an account. Go to child's bank")
 	@Max(value = 100, message = "you are 100 years old!")

@@ -13,7 +13,7 @@ public class EnumContainer {
     
     
     public enum TransactionType{
-    	DEPOSIT,WITHDRAW
+    	NEFT,RTGS
     }
     
     public enum TransactStatus{
