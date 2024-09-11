@@ -282,21 +282,43 @@ public class AccountService {
 		return debitStatus;
 	}
 
-	public boolean isBeneficiaryExistsInAccount(String accountNumber, String beneficiaryAccountNumber) {
+	public boolean isBeneficiaryExistsInAccount(Account account, Beneficiary beneficiary) {
 		log.info("AcountService::isBeneficiaryExistsInAccount");
 
 		boolean beneficiaryLinked = false;
 		try {
-			beneficiaryLinked=accountRepository.existsBeneficiaryInAccount(accountNumber, beneficiaryAccountNumber);
-		}
-		catch(Exception e) {
+			beneficiaryLinked = accountRepository.existsBeneficiaryInAccount(account, beneficiary);
+		} catch (Exception e) {
 			log.error("error in getting beneficiary linking details");
 			e.printStackTrace();
 		}
 		return beneficiaryLinked;
 	}
-//	public boolean deleteBeneficiaryLinkedToAccount(String accountNumber, Beneficiary beneficiary) {
-//		// TODO Auto-generated method stub
+
+//	public boolean deleteBeneficiariesLinkedToAccount(String accountNumber, ArrayList<Beneficiary> beneficiaries) {
+//		log.info("AccountService::deleteBeneficiaryLinkedToAccount");
+//		try {
+//			// Fetch the account by accountNumber
+//			Account customerAccount = accountRepository.findById(accountNumber)
+//					.orElseThrow(() -> new Exception("customer account not found"));
+//			// there is no need to check if beneficiary is in beneficiary table or in our
+//			// bank
+//			for (Beneficiary beneficiary : beneficiaries) {
+//				if (accountRepository.existsBeneficiaryInAccount(customerAccount,
+//						beneficiary.getBeneficiaryId())) {
+//					// delete beneficiary using beneficiary service
+//					beneficiaryService.deleteBeneficiary(beneficiary);
+//				}
+//			}
+//
+//		}
+//
+//		catch (Exception e) {
+//			e.getMessage();
+//			log.error("error in deleting a beneficiary");
+//
+//		}
 //		return false;
 //	}
+
 }

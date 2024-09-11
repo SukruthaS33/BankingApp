@@ -41,10 +41,12 @@ public class CustomerService {
 			if (customer != null) {
 				// verifying incoming customer registration
 				if (customerBusinessLogic.verifyRegisteringCustomer(customer)) {
-
+					log.info("customer verified and does not exist ");
+					log.info(" password "+customer.getCustomerPassword());
 					String encryptedPassword = passwordEncoder.encode(customer.getCustomerPassword());
+					log.info(" encrypted password "+encryptedPassword);
 					customer.setCustomerPassword(encryptedPassword);
-
+					
 					log.info(customer.getCustomerName());
 					log.info(customer.getCustomerEmail());
 					log.info(customer.getCustomerPassword());

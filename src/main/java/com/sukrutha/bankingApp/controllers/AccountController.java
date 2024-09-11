@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.ArrayList;
 import java.util.List;
 
 import com.sukrutha.bankingApp.entities.Account;
@@ -140,13 +142,13 @@ public class AccountController {
 
 	// withdraw method
 	
-//	@PostMapping("/addbeneficiary/{accountNumber}")
-//	public ResponseEntity<Boolean> deleteBeneficiaryLinkedToAccount(@PathVariable String accountNumber,
-//			@RequestBody Beneficiary beneficiary) {
+//	@PostMapping("/deletebeneficiary/{accountNumber}")
+//	public ResponseEntity<Boolean> deleteBeneficiariesLinkedToAccount(@PathVariable String accountNumber,
+//			@RequestBody(required = false) ArrayList<Beneficiary> beneficiaries) {
 //		log.info("AccountController::deleteBeneficiaryLinkedToAccount::");
-//		log.info(beneficiary.toString());
+//		
 //		try {
-//			if (accountService.deleteBeneficiaryLinkedToAccount(accountNumber, beneficiary)) {
+//			if (accountService.deleteBeneficiariesLinkedToAccount(accountNumber, beneficiaries)) {
 //				return ResponseEntity.status(HttpStatus.OK).body(true);
 //			}
 //		} catch (Exception e) {
@@ -156,6 +158,6 @@ public class AccountController {
 //
 //		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(false);
 //	}
-//	
+	
 
 }

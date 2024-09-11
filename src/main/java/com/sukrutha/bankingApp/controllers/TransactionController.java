@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.sukrutha.bankingApp.entities.Transaction;
 import com.sukrutha.bankingApp.entities.EnumContainer.TransactStatus;
+import com.sukrutha.bankingApp.entities.EnumContainer.TransactionType;
 import com.sukrutha.bankingApp.services.TransactionService;
 
 import lombok.extern.slf4j.Slf4j;
@@ -26,7 +27,7 @@ public class TransactionController {
 	@Autowired
 	TransactionService transactionService;
 
-	@GetMapping("/{accountNumber}/history")
+	@GetMapping("/")
 	public ResponseEntity<List<Transaction>> getAllTransactions() {
 		log.info("TransactionController::getAllTransactions");
 		List<Transaction> transactions = new ArrayList<Transaction>();
@@ -65,11 +66,14 @@ public class TransactionController {
 
 	@PostMapping("/{accountNumber}/send")
 	public ResponseEntity<Transaction> sendMoney(@PathVariable String accountNumber,
-			@RequestParam String beneficiaryAccountNumber, @RequestParam double amount) {
+			@RequestParam String beneficiaryAccountNumber, @RequestParam double amount,
+			@RequestParam String transactionType) {
 		log.info("TransactionController::sendMoney");
 		Transaction transaction = new Transaction();
 		transaction.setTransactionStatus(TransactStatus.PENDING);
-
+		TransactionType type = TransactionType.valueOf(transactionType.toUpperCase());
+		if (type != null)
+			transaction.setTransactionType(type);
 		try {
 			transaction = transactionService.sendMoney(transaction, accountNumber, beneficiaryAccountNumber, amount);
 			return ResponseEntity.status(HttpStatus.OK).body(transaction);
@@ -81,11 +85,16 @@ public class TransactionController {
 		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(transaction);
 	}
 
+	@PostMapping("{accountNumber}/receive")
 	public ResponseEntity<Transaction> receiveMoney(@PathVariable String accountNumber,
-			@RequestParam String beneficiaryAccountNumber, @RequestParam double amount) {
+			@RequestParam String beneficiaryAccountNumber, @RequestParam double amount,
+			@RequestParam String transactionType) {
 		log.info("TransactionController::receiveMoney");
 		Transaction transaction = new Transaction();
 		transaction.setTransactionStatus(TransactStatus.PENDING);
+		TransactionType type = TransactionType.valueOf(transactionType.toUpperCase());
+		if (type != null)
+			transaction.setTransactionType(type);
 		try {
 			transaction = transactionService.receiveMoney(transaction, accountNumber, beneficiaryAccountNumber, amount);
 			return ResponseEntity.status(HttpStatus.OK).body(transaction);
