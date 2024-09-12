@@ -249,14 +249,13 @@ public class AccountService {
 			}
 
 		} catch (Exception e) {
-
+			log.error("error in crediting money");
 		}
 		return creditStatus;
 
 	}
 
 	public boolean debit(String accountNumber, double amount) {
-		log.info("AccountService::debit");
 
 		boolean debitStatus = false;
 

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
@@ -140,8 +141,46 @@ public class AccountController {
 
 //	public boolean deposit(@PathVariable accountNumber, @RequestParam double amount )
 
-	// withdraw method
-	
+	@PostMapping("deposit/{accountNumber}")
+	public ResponseEntity<Boolean> depositMoneyInCash(@RequestParam String accountNumber, @RequestParam double amount) {
+		log.info("AccountController::depositMoneyInCash");
+		boolean depositStatus = false;
+		try {
+			depositStatus = accountService.credit(accountNumber, amount);
+			if (depositStatus) {
+				return ResponseEntity.status(HttpStatus.OK).body(true);
+			} else {
+				return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(false);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			log.error("error in depositing money");
+		}
+
+		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(false);
+
+	}
+
+//	@PostMapping("deposit/{accountNumber}")
+//	public ResponseEntity<Boolean> withdrawMoneyInCash(@RequestParam String accountNumber, @RequestParam double amount) {
+//		log.info("AccountController::withdrawMoneyInCash");
+//		boolean withdrawStatus = false;
+//		try {
+//			withdrawStatus = accountService.debit(accountNumber, amount);
+//			if (withdrawStatus) {
+//				return ResponseEntity.status(HttpStatus.OK).body(true);
+//			} else {
+//				return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(false);
+//			}
+//
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//			log.error("error in depositing money");
+//		}
+//
+//		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(false);	}
+
 //	@PostMapping("/deletebeneficiary/{accountNumber}")
 //	public ResponseEntity<Boolean> deleteBeneficiariesLinkedToAccount(@PathVariable String accountNumber,
 //			@RequestBody(required = false) ArrayList<Beneficiary> beneficiaries) {
@@ -158,6 +197,5 @@ public class AccountController {
 //
 //		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(false);
 //	}
-	
 
 }

@@ -20,4 +20,9 @@ public class EnumContainer {
     	PENDING,SUCCESS,FAILED
     }
     
+    
+    public enum TransactionDirection {
+        CREDIT, DEBIT
+    }
+    
 }

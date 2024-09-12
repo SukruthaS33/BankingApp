@@ -9,6 +9,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import com.sukrutha.bankingApp.entities.EnumContainer.AccountType;
 import com.sukrutha.bankingApp.entities.EnumContainer.TransactStatus;
+import com.sukrutha.bankingApp.entities.EnumContainer.TransactionDirection;
 import com.sukrutha.bankingApp.entities.EnumContainer.TransactionType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EntityListeners;
@@ -70,6 +71,9 @@ public class Transaction {
 	@Enumerated(EnumType.STRING)
 	@Column(name = "transaction_status",length = 20)
 	private TransactStatus transactionStatus;
+	@Enumerated(EnumType.STRING)
+	@Column(name="transaction_direction")
+	private TransactionDirection transactionDirection;
 	
 	
 

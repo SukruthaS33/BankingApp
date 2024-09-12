@@ -125,21 +125,21 @@ public class TransactionController {
 
 	}
 
-	@PostMapping("/{accountNumber}/withdraw")
-	public ResponseEntity<Boolean> withdrawCash(@PathVariable String accountNumber, @RequestParam double amount) {
-		log.info("TransactionController:withdrawCash");
-		boolean withdrawCashStatus = false;
-		try {
-
-			withdrawCashStatus = TransactionService.withdrawCash(accountNumber, amount);
-			return ResponseEntity.status(HttpStatus.OK).body(withdrawCashStatus);
-		}
-
-		catch (Exception e) {
-			e.printStackTrace();
-		}
-
-		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(withdrawCashStatus);
-	}
+//	@PostMapping("/{accountNumber}/withdraw")
+//	public ResponseEntity<Boolean> withdrawCash(@PathVariable String accountNumber, @RequestParam double amount) {
+//		log.info("TransactionController:withdrawCash");
+//		boolean withdrawCashStatus = false;
+//		try {
+//
+//			withdrawCashStatus = TransactionService.withdrawCash(accountNumber, amount);
+//			return ResponseEntity.status(HttpStatus.OK).body(withdrawCashStatus);
+//		}
+//
+//		catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//
+//		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(withdrawCashStatus);
+//	}
 
 }
