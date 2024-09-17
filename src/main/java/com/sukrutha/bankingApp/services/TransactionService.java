@@ -9,6 +9,7 @@ import com.sukrutha.bankingApp.Repositories.TransactionRepository;
 import com.sukrutha.bankingApp.entities.Account;
 import com.sukrutha.bankingApp.entities.Beneficiary;
 import com.sukrutha.bankingApp.entities.EnumContainer.TransactStatus;
+import com.sukrutha.bankingApp.entities.EnumContainer.TransferType;
 import com.sukrutha.bankingApp.entities.Transaction;
 
 import lombok.extern.slf4j.Slf4j;
@@ -39,15 +40,69 @@ public class TransactionService {
 	}
 
 	public List<Transaction> getAccountTransactionHistory(String accountNumber) {
+		// we need to get both debit and credit transactions happened to an account;
 		log.info("TransactionService:getAccountTransactionHistory");
-		List<Transaction> transactions = new ArrayList<Transaction>();
+		List<Transaction> AlltransactionsForAccount = new ArrayList<Transaction>();
 		try {
+
 			if (accountNumber != null) {
 				Account inputAccount = accountService.getAccountByAccountNumber(accountNumber);
+				Beneficiary beneficiaryAccount = beneficiaryService.getBeneficiaryByBeneficiaryAccountNumber(accountNumber);
 				if (inputAccount == null) {
-					return transactions;
+					return AlltransactionsForAccount;
 				}
-				transactions = transactionRepository.findByCustomerAccount(inputAccount);
+				// we are doing for same account
+				List<Transaction> transactionsUsingCustomerAccount = transactionRepository
+						.findByCustomerAccountAndTransactionStatus(inputAccount, TransactStatus.SUCCESS);
+				
+				List<Transaction> transactionsUsingBeneficiaryAccount = transactionRepository
+						.findByBeneficiaryAccountAndTransactionStatus(beneficiaryAccount, TransactStatus.SUCCESS);
+				
+				
+//we are checking if for a customer in customer_account column if they are ending /recieving the money
+				if (transactionsUsingCustomerAccount.size() > 0) {
+					for (Transaction transaction : transactionsUsingCustomerAccount) {
+						if (transaction.getTransferType().equals(TransferType.SEND_MONEY)) {
+							transaction.setDebitOrCredit(true);// True means debit
+						} else {
+							transaction.setDebitOrCredit(false);
+						}
+					}
+				}
+				log.info("transactionsUsingCustomerAccount");
+				for (Transaction transaction : transactionsUsingCustomerAccount) {
+					log.info(transaction.toString());
+				}
+//we are checking if for a customer in beneficiary_account column if they are ending /recieving the money				
+				if (transactionsUsingBeneficiaryAccount.size() > 0) {
+					for (Transaction transaction : transactionsUsingBeneficiaryAccount) {
+						if (transaction.getTransferType().equals(TransferType.SEND_MONEY)) {
+							transaction.setDebitOrCredit(false);// false means credit
+						} else {
+							transaction.setDebitOrCredit(true);
+						}
+					}
+				}
+				log.info("transactionsUsingBeneficiaryAccount");
+				for (Transaction transaction : transactionsUsingBeneficiaryAccount) {
+					log.info(transaction.toString());
+				}
+				boolean addedCustomerTransactions = AlltransactionsForAccount.addAll(transactionsUsingCustomerAccount);
+				if(transactionsUsingBeneficiaryAccount.size()>0) {
+					boolean addedBeneficiaryTransactions = AlltransactionsForAccount.addAll(transactionsUsingBeneficiaryAccount);
+					log.info(" addedBeneficiaryTransactions "+addedBeneficiaryTransactions);
+				}
+				
+				log.info(" addedCustomerTransactions "+addedCustomerTransactions);
+//				if (!AlltransactionsForAccount.addAll(transactionsUsingCustomerAccount)
+//						|| !AlltransactionsForAccount.addAll(transactionsUsingBeneficiaryAccount)) {
+//					log.error("addition to all transaction list failed!!!!!!!!!!!!!");
+//					return new ArrayList<Transaction>();
+//				}
+				
+				
+				
+
 			}
 
 		}
@@ -55,7 +110,7 @@ public class TransactionService {
 		catch (Exception e) {
 			log.info("error  finding transaction history");
 		}
-		return transactions;
+		return AlltransactionsForAccount;
 	}
 
 	public Transaction sendMoney(Transaction transaction, String accountNumber, String beneficiaryAccountNumber,
@@ -83,6 +138,7 @@ public class TransactionService {
 						log.info("this means beneficiary is in the same bank");
 						// checking now if beneficiary is linked to the account
 						if (accountService.isBeneficiaryExistsInAccount(customerAccount, beneficiary)) {
+							log.info("beneficiary exists for the given account");
 							// checking if account has enough balance
 							if (customerAccount.getBalance() >= amount) {
 								transaction.setAmount(amount);

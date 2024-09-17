@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.sukrutha.bankingApp.entities.Customer;
 import com.sukrutha.bankingApp.services.CustomerService;
 
+import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 
 @RestController
@@ -29,7 +30,7 @@ public class CustomerController {
 	CustomerService customerService;
 
 	@PostMapping("/register")
-	public ResponseEntity<String> register(@RequestBody Customer customer) {
+	public ResponseEntity<String> register(@RequestBody  @Valid Customer customer) {
 		String registeredUserId = "";
 		log.info("CustomerController::register");
 		try {
@@ -70,7 +71,7 @@ public class CustomerController {
 		return ResponseEntity.status(HttpStatus.OK).body("working");
 
 	}
-
+//test this also
 	@GetMapping("/{customerId}")
 	public ResponseEntity<Customer> getCustomerDetailsByCustomerId(@PathVariable String customerId) {
 		log.info("CustomerController::getCustomerDetailsByCustomerId");

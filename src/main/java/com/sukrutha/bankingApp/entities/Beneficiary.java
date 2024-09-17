@@ -6,10 +6,12 @@ import java.time.LocalTime;
 import java.util.List;
 
 import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import com.sukrutha.bankingApp.entities.EnumContainer.AccountType;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.EntityListeners;
 import jakarta.persistence.Table;
 import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
@@ -33,6 +35,7 @@ import lombok.Setter;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@EntityListeners(AuditingEntityListener.class)
 public class Beneficiary {
 
 	@Id
@@ -62,5 +65,6 @@ public class Beneficiary {
 	@Column(name = "last_updated_ts")
 	@LastModifiedDate
 	private LocalDateTime lastUpdatedAt;
+	
 
 }

@@ -12,6 +12,7 @@ import com.sukrutha.bankingApp.entities.EnumContainer.AccountType;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embedded;
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
@@ -41,10 +42,13 @@ public class Branch {
 	@Column(name = "branch_name")
 	private String branchName;
 	@Embedded
+	@Valid
 	private Address branchAddress;
 	@ManyToOne
 	@JoinColumn(name = "bank_id")
 	@JsonIgnore
+	@NotNull
+	@Embedded
 	private Bank bank;
 	@OneToMany(mappedBy = "branch")
 	@JsonIgnore

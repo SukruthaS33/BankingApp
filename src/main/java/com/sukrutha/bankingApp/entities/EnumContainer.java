@@ -20,4 +20,8 @@ public class EnumContainer {
     	PENDING,SUCCESS,FAILED
     }
     
+    public enum TransferType{
+    	SEND_MONEY,RECEIVE_MONEY
+    }
+    
 }
