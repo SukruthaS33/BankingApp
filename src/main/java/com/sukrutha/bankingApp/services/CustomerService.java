@@ -4,17 +4,21 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.sukrutha.bankingApp.Repositories.CustomerRepository;
+import com.sukrutha.bankingApp.Repositories.RoleRepository;
 import com.sukrutha.bankingApp.businessLogics.CustomerBusinessLogic;
 import com.sukrutha.bankingApp.customExceptions.InputException;
 import com.sukrutha.bankingApp.entities.Customer;
+import com.sukrutha.bankingApp.entities.Role;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -31,6 +35,9 @@ public class CustomerService {
 	@Autowired
 	PasswordEncoder passwordEncoder;
 
+	@Autowired
+	RoleService roleService;
+
 	public String register(Customer customer) {
 		log.info("CustomerSerivce:register");
 		String customerId = null;
@@ -42,11 +49,17 @@ public class CustomerService {
 				// verifying incoming customer registration
 				if (customerBusinessLogic.verifyRegisteringCustomer(customer)) {
 					log.info("customer verified and does not exist ");
-					log.info(" password "+customer.getCustomerPassword());
+					log.info(" password " + customer.getCustomerPassword());
 					String encryptedPassword = passwordEncoder.encode(customer.getCustomerPassword());
-					log.info(" encrypted password "+encryptedPassword);
+					log.info(" encrypted password " + encryptedPassword);
 					customer.setCustomerPassword(encryptedPassword);
-					
+
+					// UPDATE:settingRoles
+					Role userRole = roleService.findRoleByName("USER");
+					Set<Role> userRoles = new HashSet<Role>();
+					userRoles.add(userRole);
+					customer.setRoles(userRoles);
+
 					log.info(customer.getCustomerName());
 					log.info(customer.getCustomerEmail());
 					log.info(customer.getCustomerPassword());

@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import com.sukrutha.bankingApp.entities.Customer;
 import com.sukrutha.bankingApp.services.CustomerService;
+import com.sukrutha.bankingApp.services.RoleService;
 
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
@@ -28,12 +29,19 @@ public class CustomerController {
 
 	@Autowired
 	CustomerService customerService;
+	
+	@Autowired
+	RoleService roleService;
+	
+	
 
 	@PostMapping("/register")
 	public ResponseEntity<String> register(@RequestBody  @Valid Customer customer) {
 		String registeredUserId = "";
 		log.info("CustomerController::register");
 		try {
+			//get role here 
+			
 			registeredUserId = customerService.register(customer);
 			if (registeredUserId != null) {
 				return ResponseEntity.status(HttpStatus.OK).body(registeredUserId);
