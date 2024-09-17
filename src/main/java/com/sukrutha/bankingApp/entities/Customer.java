@@ -21,6 +21,8 @@ import jakarta.persistence.Column;
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.GenerationType;
@@ -35,6 +37,7 @@ import jakarta.validation.constraints.Min;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Max;
+import jakarta.persistence.JoinColumn;
 
 @Entity
 @Table(name = "customer")
@@ -81,6 +84,13 @@ public class Customer {
 	@Column(name = "isActive", columnDefinition = "BOOLEAN DEFAULT false")
 	@NotNull
 	private boolean isActive;
+	 @ManyToMany(fetch = FetchType.EAGER)
+	    @JoinTable(
+	        name = "customer_roles",
+	        joinColumns = @JoinColumn(name = "customer_id"),
+	        inverseJoinColumns = @JoinColumn(name = "role_id")
+	    )
+	 private Set<Role> roles;
 	
 
 }
