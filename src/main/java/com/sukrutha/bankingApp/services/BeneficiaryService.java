@@ -1,8 +1,10 @@
 package com.sukrutha.bankingApp.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
+import com.sukrutha.bankingApp.Repositories.AccountRepository;
 import com.sukrutha.bankingApp.Repositories.BeneficiaryRepository;
 import com.sukrutha.bankingApp.controllers.BeneficiaryController;
 import com.sukrutha.bankingApp.entities.Account;
@@ -16,6 +18,10 @@ public class BeneficiaryService {
 
 	@Autowired
 	BeneficiaryRepository beneficiaryRepository;
+
+	@Autowired
+	@Lazy
+	AccountService accountService;
 //	
 //	public <Beneficiary> getBeneficiariesLinkedToACustomerAccount(String accountNumber){
 //		
@@ -33,13 +39,22 @@ public class BeneficiaryService {
 		Beneficiary savedBeneficiary = null;
 		try {
 			// check if beneficiary already exists in table
-			if (this.getBeneficiaryByBeneficiaryAccountNumber(beneficiary.getBeneficiaryAcctNumber()) == null) {
-				savedBeneficiary = beneficiaryRepository.save(beneficiary);
-			}
+			if(this.validateBeneficiaryDetails(beneficiary)) {
+				if (this.getBeneficiaryByBeneficiaryAccountNumber(beneficiary.getBeneficiaryAcctNumber()) == null) {
+					// logic to check if same bank /account number valid can be added here
 
-			else {
-				log.error("beneficiary already exists");
+					savedBeneficiary = beneficiaryRepository.save(beneficiary);
+
+				}
+				else {
+					log.error("beneficiary already exists");
+				}
 			}
+			
+			else {
+				log.error("invalid credentials of beneficiary");
+			}
+			
 
 		} catch (Exception e) {
 			log.error("failed to add beneficiary");
@@ -111,6 +126,38 @@ public class BeneficiaryService {
 
 		}
 		return false;
+	}
+
+	public boolean validateBeneficiaryDetails(Beneficiary beneficiary) {
+		boolean beneficiaryIsACustomer = false;
+		try {
+			String beneficiaryName = beneficiary.getBeneficiaryName();
+			String beneficiaryAccountNumber = beneficiary.getBeneficiaryAcctNumber();
+			String beneficiaryBankName = beneficiary.getBeneficiaryBankName();
+			String beneficiaryIFSCCode = beneficiary.getBeneficiaryIfscCode();
+
+			// assuming beneficiary is in our bank just check if beneficiary details are
+			// valid
+			Account beneficiaryAccount = accountService.getAccountByAccountNumber(beneficiaryAccountNumber);// checking
+																											// if
+																											// account
+																											// is
+																											// present
+
+			if (beneficiaryAccount != null) {
+				if (beneficiaryAccount.getCustomer().getCustomerName().equalsIgnoreCase(beneficiaryName)) {
+					return true;
+				}
+			}
+
+		} catch (Exception e) {
+			log.error("error in validating added beneficiary");
+			e.printStackTrace();
+
+		}
+
+		return false;
+
 	}
 
 }

@@ -287,7 +287,9 @@ public class AccountService {
 
 		boolean beneficiaryLinked = false;
 		try {
-			beneficiaryLinked = accountRepository.existsBeneficiaryInAccount(account, beneficiary);
+			if( accountRepository.existsBeneficiaryInAccount(account.getAccountNumber(), beneficiary.getBeneficiaryId())==1){
+				beneficiaryLinked =true;
+			}
 		} catch (Exception e) {
 			log.error("error in getting beneficiary linking details");
 			e.printStackTrace();

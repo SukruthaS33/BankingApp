@@ -10,11 +10,14 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import com.sukrutha.bankingApp.entities.EnumContainer.AccountType;
 import com.sukrutha.bankingApp.entities.EnumContainer.TransactStatus;
 import com.sukrutha.bankingApp.entities.EnumContainer.TransactionType;
+import com.sukrutha.bankingApp.entities.EnumContainer.TransferType;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.EntityListeners;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -26,6 +29,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.Max;
@@ -39,6 +43,7 @@ import jakarta.persistence.GenerationType;
 @Getter
 @Setter
 @Builder
+@ToString
 @AllArgsConstructor
 @NoArgsConstructor
 @EntityListeners(AuditingEntityListener.class)
@@ -56,7 +61,7 @@ public class Transaction {
 	private Beneficiary beneficiaryAccount;
 	@Column(name = "amount")
 	@NotNull
-	@Min(value = 1, message = "Please add amount to transfer")
+	
 	private double amount;
 	@Column(name = "transaction_type")
 	@NotNull
@@ -70,6 +75,13 @@ public class Transaction {
 	@Enumerated(EnumType.STRING)
 	@Column(name = "transaction_status",length = 20)
 	private TransactStatus transactionStatus;
+	@NotNull
+	@Column(name="transfer_type")
+	@Enumerated(EnumType.STRING)
+	private TransferType transferType;
+	@Transient
+	private boolean debitOrCredit;//if true then debit
+	
 	
 	
 

@@ -25,9 +25,10 @@ public interface AccountRepository extends JpaRepository<Account, String> {
 //	public boolean existsBeneficiaryInAccount3(@Param("account") Account account,
 //			@Param("beneficiary") Beneficiary beneficiary);
 	
-	@Query("SELECT CASE WHEN COUNT(b) > 0 THEN true ELSE false END FROM Account a JOIN a.beneficiaries b WHERE a = :account AND b = :beneficiary")
-	public boolean existsBeneficiaryInAccount(@Param("account") Account account,
-	                                          @Param("beneficiary") Beneficiary beneficiary);
+	@Query(value = "SELECT CASE WHEN COUNT(*) > 0 THEN 1 ELSE 0 END FROM account_beneficiary a WHERE a.account_number = :accountNumber AND a.beneficiary_id = :beneficiaryId", nativeQuery = true)
+	public int existsBeneficiaryInAccount(@Param("accountNumber") String accountNumber,
+	                                           @Param("beneficiaryId") String beneficiaryId);
+
 
 
 }

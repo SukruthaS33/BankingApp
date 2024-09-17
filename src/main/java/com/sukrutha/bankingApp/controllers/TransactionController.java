@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.sukrutha.bankingApp.entities.Transaction;
 import com.sukrutha.bankingApp.entities.EnumContainer.TransactStatus;
 import com.sukrutha.bankingApp.entities.EnumContainer.TransactionType;
+import com.sukrutha.bankingApp.entities.EnumContainer.TransferType;
 import com.sukrutha.bankingApp.services.TransactionService;
 
 import lombok.extern.slf4j.Slf4j;
@@ -71,6 +72,8 @@ public class TransactionController {
 		log.info("TransactionController::sendMoney");
 		Transaction transaction = new Transaction();
 		transaction.setTransactionStatus(TransactStatus.PENDING);
+		transaction.setTransferType(TransferType.SEND_MONEY);
+		transaction.setDebitOrCredit(true);
 		TransactionType type = TransactionType.valueOf(transactionType.toUpperCase());
 		if (type != null)
 			transaction.setTransactionType(type);
@@ -92,6 +95,8 @@ public class TransactionController {
 		log.info("TransactionController::receiveMoney");
 		Transaction transaction = new Transaction();
 		transaction.setTransactionStatus(TransactStatus.PENDING);
+		transaction.setTransferType(TransferType.RECEIVE_MONEY);
+		transaction.setDebitOrCredit(false);
 		TransactionType type = TransactionType.valueOf(transactionType.toUpperCase());
 		if (type != null)
 			transaction.setTransactionType(type);
