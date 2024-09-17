@@ -127,8 +127,9 @@ public class CustomerService {
 	public Customer getCustomerDetailsByCustomerId(String customerId) {
 		Customer customer;
 		try {
-			customer = customerRepository.getReferenceById(customerId);
-
+			customer = customerRepository.findById(customerId).orElseThrow(()->new Exception("error getting customer details"));
+			
+			
 			if (customer != null) {
 				return customer;
 			} else {
