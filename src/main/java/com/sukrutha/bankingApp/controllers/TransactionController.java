@@ -2,6 +2,8 @@ package com.sukrutha.bankingApp.controllers;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import org.hibernate.resource.transaction.spi.TransactionStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -112,39 +114,41 @@ public class TransactionController {
 	}
 
 	@PostMapping("/{accountNumber}/deposit")
-	public ResponseEntity<Boolean> depositCash(@PathVariable String accountNumber, @RequestParam double amount) {
-		log.info("TransactionController:depositCash");
-		boolean depositStatus = false;
-
+	public ResponseEntity<Transaction> depositCash(@PathVariable String accountNumber, @RequestParam double amount) {
+		log.info("TransactionController:withdrawCash");
+		Transaction transaction = new Transaction();
+		transaction.setTransactionStatus(TransactStatus.PENDING);
 		try {
-			depositStatus = transactionService.depositCash(accountNumber, amount);
-			return ResponseEntity.status(HttpStatus.OK).body(depositStatus);
+
+			transaction = transactionService.depositCash(transaction, accountNumber, amount);
+			return ResponseEntity.status(HttpStatus.OK).body(transaction);
 		}
 
 		catch (Exception e) {
 			e.printStackTrace();
-
 		}
 
-		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(depositStatus);
-
+		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(transaction);
 	}
 
+	
+
 	@PostMapping("/{accountNumber}/withdraw")
-	public ResponseEntity<Boolean> withdrawCash(@PathVariable String accountNumber, @RequestParam double amount) {
+	public ResponseEntity<Transaction> withdrawCash(@PathVariable String accountNumber, @RequestParam double amount) {
 		log.info("TransactionController:withdrawCash");
-		boolean withdrawCashStatus = false;
+		Transaction transaction = new Transaction();
+		transaction.setTransactionStatus(TransactStatus.PENDING);
 		try {
 
-			withdrawCashStatus = TransactionService.withdrawCash(accountNumber, amount);
-			return ResponseEntity.status(HttpStatus.OK).body(withdrawCashStatus);
+			transaction = transactionService.withdrawCash(transaction, accountNumber, amount);
+			return ResponseEntity.status(HttpStatus.OK).body(transaction);
 		}
 
 		catch (Exception e) {
 			e.printStackTrace();
 		}
 
-		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(withdrawCashStatus);
+		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(transaction);
 	}
 
 }

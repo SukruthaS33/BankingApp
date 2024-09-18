@@ -287,14 +287,57 @@ public class AccountService {
 
 		boolean beneficiaryLinked = false;
 		try {
-			if( accountRepository.existsBeneficiaryInAccount(account.getAccountNumber(), beneficiary.getBeneficiaryId())==1){
-				beneficiaryLinked =true;
+			if (accountRepository.existsBeneficiaryInAccount(account.getAccountNumber(),
+					beneficiary.getBeneficiaryId()) == 1) {
+				beneficiaryLinked = true;
 			}
 		} catch (Exception e) {
 			log.error("error in getting beneficiary linking details");
 			e.printStackTrace();
 		}
 		return beneficiaryLinked;
+	}
+
+	public boolean pause(String accountNumber, boolean activeStatus) {
+		boolean pauseStatus = false;
+		try {
+
+			Account account = this.getAccountByAccountNumber(accountNumber);
+
+			if (account != null) {
+				if (account.isActive()) {
+					pauseStatus = activeStatus;
+					account.setActive(pauseStatus);
+					accountRepository.save(account);
+				}
+			}
+
+		} catch (Exception e) {
+			log.error("error in pausing account");
+			e.printStackTrace();
+		}
+		return pauseStatus;
+	}
+
+	public boolean enable(String accountNumber, boolean activeStatus) {
+		boolean enableStatus = false;
+		try {
+
+			Account account = this.getAccountByAccountNumber(accountNumber);
+
+			if (account != null) {
+				if (!account.isActive()) {
+					enableStatus = activeStatus;
+					account.setActive(enableStatus);
+					accountRepository.save(account);
+				}
+			}
+
+		} catch (Exception e) {
+			log.error("error in pausing account");
+			e.printStackTrace();
+		}
+		return enableStatus;
 	}
 
 //	public boolean deleteBeneficiariesLinkedToAccount(String accountNumber, ArrayList<Beneficiary> beneficiaries) {
