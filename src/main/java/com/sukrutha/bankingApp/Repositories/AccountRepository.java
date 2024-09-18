@@ -16,7 +16,7 @@ import com.sukrutha.bankingApp.entities.Customer;
 public interface AccountRepository extends JpaRepository<Account, String> {
 
 	public List<Account> findByCustomer(Customer customer);
-	//below is in correct because ..
+	// below is in correct because ..
 //	@Query("SELECT CASE WHEN COUNT(*) > 0 THEN true ELSE false END FROM account_beneficiary a WHERE a.account_number = :accountNumber AND a.beneficiary_id = :beneficiaryId")
 //	public boolean existsBeneficiaryInAccount2(@Param("accountNumber") String accountNumber,
 //			@Param("beneficiaryId") String beneficiaryId);
@@ -24,11 +24,15 @@ public interface AccountRepository extends JpaRepository<Account, String> {
 //	@Query("SELECT CASE WHEN COUNT(*) > 0 THEN true ELSE false END FROM account_beneficiary a WHERE a.account_number = :account AND a.beneficiary_id = :beneficiary")
 //	public boolean existsBeneficiaryInAccount3(@Param("account") Account account,
 //			@Param("beneficiary") Beneficiary beneficiary);
-	
+
 	@Query(value = "SELECT CASE WHEN COUNT(*) > 0 THEN 1 ELSE 0 END FROM account_beneficiary a WHERE a.account_number = :accountNumber AND a.beneficiary_id = :beneficiaryId", nativeQuery = true)
 	public int existsBeneficiaryInAccount(@Param("accountNumber") String accountNumber,
-	                                           @Param("beneficiaryId") String beneficiaryId);
+			@Param("beneficiaryId") String beneficiaryId);
 
+	@Query("SELECT a.beneficiaries FROM Account a WHERE a.accountNumber = :accountNumber")
+	List<Beneficiary> findAllBeneficiariesInAccount(@Param("accountNumber") String accountNumber);
+	
 
+	
 
 }

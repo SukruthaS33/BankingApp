@@ -20,7 +20,8 @@ public class SecurityConfig {
 								// (Optional)
 				.authorizeHttpRequests()
 				//.requestMatchers("/api/v1/customer/register", "/api/v1/customer/login", "/api/v1/accounts/{customerId}")
-				.requestMatchers("/api/v1/customer/**").permitAll() // Allow unauthenticated access to register
+				//.requestMatchers("/api/v1/customer/**").permitAll() // Allow unauthenticated access to register
+				.requestMatchers("/api/v1/**").permitAll()
 				.anyRequest().authenticated()// Protect other endpoints
 				.and()
 				.formLogin()
@@ -36,14 +37,5 @@ public class SecurityConfig {
 		return new BCryptPasswordEncoder();
 	}
 	
-	 // Define an in-memory user with BCrypt encoded password
-    @Bean
-    public UserDetailsService userDetailsService(PasswordEncoder passwordEncoder) {
-        UserDetails admin = User.withUsername("admin")
-                .password(passwordEncoder.encode("password")) // Encode the password using BCrypt
-                .roles("admin")
-                .build();
-        
-        return new InMemoryUserDetailsManager(admin);
-    }
+	
 }

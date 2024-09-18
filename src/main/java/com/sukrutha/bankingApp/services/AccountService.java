@@ -340,6 +340,20 @@ public class AccountService {
 		return enableStatus;
 	}
 
+	public List<Beneficiary> findAllBeneficiariesInAccount(String accountNumber) {
+		
+		List<Beneficiary> beneficiariesOfAccount = new ArrayList<Beneficiary>();
+		try {
+			log.info("account number"+accountNumber);
+			beneficiariesOfAccount = accountRepository.findAllBeneficiariesInAccount(accountNumber);
+
+		} catch (Exception e) {
+			log.error("error in getting all beneficiaries linked to account");
+			e.printStackTrace();
+		}
+		return beneficiariesOfAccount;
+	}
+
 //	public boolean deleteBeneficiariesLinkedToAccount(String accountNumber, ArrayList<Beneficiary> beneficiaries) {
 //		log.info("AccountService::deleteBeneficiaryLinkedToAccount");
 //		try {

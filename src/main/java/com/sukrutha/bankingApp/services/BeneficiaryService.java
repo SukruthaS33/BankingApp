@@ -1,5 +1,8 @@
 package com.sukrutha.bankingApp.services;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
@@ -22,16 +25,20 @@ public class BeneficiaryService {
 	@Autowired
 	@Lazy
 	AccountService accountService;
-//	
-//	public <Beneficiary> getBeneficiariesLinkedToACustomerAccount(String accountNumber){
-//		
-//		try {
-//			return null;
-//		}
-//		catch(Exception e) {
-//			
-//		}
-//	}
+
+	public List<Beneficiary> getBeneficiariesLinkedToACustomerAccount(String accountNumber) {
+		log.info("BeneficiaryService::getBeneficiariesLinkedToACustomerAccount");
+		List<Beneficiary> beneficiariesOfAccount = new ArrayList<Beneficiary>();
+		try {
+
+			beneficiariesOfAccount = accountService.findAllBeneficiariesInAccount(accountNumber);
+
+		} catch (Exception e) {
+			log.error("error in getting all beneficiaries linked to account");
+			e.printStackTrace();
+		}
+		return beneficiariesOfAccount;
+	}
 
 	public Beneficiary addBeneficiary(Beneficiary beneficiary) {
 		log.info("BeneficiaryService::addBeneficiary");
@@ -39,22 +46,20 @@ public class BeneficiaryService {
 		Beneficiary savedBeneficiary = null;
 		try {
 			// check if beneficiary already exists in table
-			if(this.validateBeneficiaryDetails(beneficiary)) {
+			if (this.validateBeneficiaryDetails(beneficiary)) {
 				if (this.getBeneficiaryByBeneficiaryAccountNumber(beneficiary.getBeneficiaryAcctNumber()) == null) {
 					// logic to check if same bank /account number valid can be added here
 
 					savedBeneficiary = beneficiaryRepository.save(beneficiary);
 
-				}
-				else {
+				} else {
 					log.error("beneficiary already exists");
 				}
 			}
-			
+
 			else {
 				log.error("invalid credentials of beneficiary");
 			}
-			
 
 		} catch (Exception e) {
 			log.error("failed to add beneficiary");

@@ -1,6 +1,7 @@
 package com.sukrutha.bankingApp.controllers;
 
 import java.util.Map;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,18 +25,19 @@ public class BeneficiaryController {
 	@Autowired
 	BeneficiaryService beneficiaryService;
 
-//	@GetMapping("/{accountNumber}")
-//	public ResponseEntity<List<Beneficiary>> getAllBeneficiaries(@PathVariable String accountNumber){
-//		List<Beneficiary> beneficiaries;
-//		try {
-//			beneficiaries= beneficiaryService.getAllBeneficiaries(accountNumber);
-//			return ResponseEntity.status(HttpStatus.OK).body(beneficiaries);
-//			
-//		}
-//		catch(Exception e) {
-//			e.printStackTrace()
-//;		}
-//	}
+	@GetMapping("/{accountNumber}")
+	public ResponseEntity<List<Beneficiary>> getAllBeneficiariesLinkedToCustomerAccount(@PathVariable String accountNumber){
+		List<Beneficiary> beneficiariesLinkedToCustomerAccount= new ArrayList<Beneficiary>();
+		try {
+			beneficiariesLinkedToCustomerAccount= beneficiaryService.getBeneficiariesLinkedToACustomerAccount(accountNumber);
+			return ResponseEntity.status(HttpStatus.OK).body(beneficiariesLinkedToCustomerAccount);
+			
+		}
+		catch(Exception e) {
+			e.printStackTrace()
+;		}
+		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(beneficiariesLinkedToCustomerAccount);
+	}
 
 //	@PostMapping("/")//add beneficiary should be in accountController not in beneficiaryController
 //	public ResponseEntity<Beneficiary>addBeneficiary(@RequestBody Beneficiary beneficiary){

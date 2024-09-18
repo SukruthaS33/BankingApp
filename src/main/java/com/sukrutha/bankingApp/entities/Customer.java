@@ -7,12 +7,15 @@ import jakarta.persistence.Table;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -84,13 +87,8 @@ public class Customer {
 	@Column(name = "isActive", columnDefinition = "BOOLEAN DEFAULT false")
 	@NotNull
 	private boolean isActive;
-	 @ManyToMany(fetch = FetchType.EAGER)
-	    @JoinTable(
-	        name = "customer_roles",
-	        joinColumns = @JoinColumn(name = "customer_id"),
-	        inverseJoinColumns = @JoinColumn(name = "role_id")
-	    )
-	 private Set<Role> roles;
-	
+	@ManyToMany(fetch = FetchType.EAGER)
+	@JoinTable(name = "customer_roles", joinColumns = @JoinColumn(name = "customer_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
+	private Set<Role> roles;
 
 }
