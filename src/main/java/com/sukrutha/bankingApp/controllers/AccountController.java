@@ -138,26 +138,47 @@ public class AccountController {
 //		
 //	
 
-//	public boolean deposit(@PathVariable accountNumber, @RequestParam double amount )
-
-	// withdraw method
-	
-//	@PostMapping("/deletebeneficiary/{accountNumber}")
-//	public ResponseEntity<Boolean> deleteBeneficiariesLinkedToAccount(@PathVariable String accountNumber,
-//			@RequestBody(required = false) ArrayList<Beneficiary> beneficiaries) {
-//		log.info("AccountController::deleteBeneficiaryLinkedToAccount::");
-//		
+//	@PostMapping("/pause/{accountNumber}")
+//	public ResponseEntity<Boolean> pauseAccount(@PathVariable String accountNumber) {
+//
+//		boolean paused = false;
+//
 //		try {
-//			if (accountService.deleteBeneficiariesLinkedToAccount(accountNumber, beneficiaries)) {
-//				return ResponseEntity.status(HttpStatus.OK).body(true);
+//			paused = accountService.pause(accountNumber);
+//			if (paused) {
+//				return ResponseEntity.status(HttpStatus.OK).body(paused);
 //			}
+//
 //		} catch (Exception e) {
 //			e.printStackTrace();
 //
 //		}
+//		return ResponseEntity.status(HttpStatus.OK).body(paused);
 //
-//		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(false);
 //	}
-	
 
+	@PostMapping("/activeStatus/{accountNumber}")
+	public ResponseEntity<Boolean> enableOrDisableAccount(@PathVariable String accountNumber,
+			@RequestParam boolean accountActiveStatus) {
+
+		boolean changeAccountStatus = false;
+
+		try {
+			if (accountActiveStatus == false) {
+				changeAccountStatus = accountService.pause(accountNumber, accountActiveStatus);
+			}
+
+			else {
+				changeAccountStatus = accountService.enable(accountNumber, accountActiveStatus);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+
+		}
+		return ResponseEntity.status(HttpStatus.OK).body(changeAccountStatus);
+
+	}
+	
+	   
 }

@@ -47,18 +47,18 @@ public class TransactionService {
 
 			if (accountNumber != null) {
 				Account inputAccount = accountService.getAccountByAccountNumber(accountNumber);
-				Beneficiary beneficiaryAccount = beneficiaryService.getBeneficiaryByBeneficiaryAccountNumber(accountNumber);
+				Beneficiary beneficiaryAccount = beneficiaryService
+						.getBeneficiaryByBeneficiaryAccountNumber(accountNumber);
 				if (inputAccount == null) {
 					return AlltransactionsForAccount;
 				}
 				// we are doing for same account
 				List<Transaction> transactionsUsingCustomerAccount = transactionRepository
 						.findByCustomerAccountAndTransactionStatus(inputAccount, TransactStatus.SUCCESS);
-				
+
 				List<Transaction> transactionsUsingBeneficiaryAccount = transactionRepository
 						.findByBeneficiaryAccountAndTransactionStatus(beneficiaryAccount, TransactStatus.SUCCESS);
-				
-				
+
 //we are checking if for a customer in customer_account column if they are ending /recieving the money
 				if (transactionsUsingCustomerAccount.size() > 0) {
 					for (Transaction transaction : transactionsUsingCustomerAccount) {
@@ -88,20 +88,18 @@ public class TransactionService {
 					log.info(transaction.toString());
 				}
 				boolean addedCustomerTransactions = AlltransactionsForAccount.addAll(transactionsUsingCustomerAccount);
-				if(transactionsUsingBeneficiaryAccount.size()>0) {
-					boolean addedBeneficiaryTransactions = AlltransactionsForAccount.addAll(transactionsUsingBeneficiaryAccount);
-					log.info(" addedBeneficiaryTransactions "+addedBeneficiaryTransactions);
+				if (transactionsUsingBeneficiaryAccount.size() > 0) {
+					boolean addedBeneficiaryTransactions = AlltransactionsForAccount
+							.addAll(transactionsUsingBeneficiaryAccount);
+					log.info(" addedBeneficiaryTransactions " + addedBeneficiaryTransactions);
 				}
-				
-				log.info(" addedCustomerTransactions "+addedCustomerTransactions);
+
+				log.info(" addedCustomerTransactions " + addedCustomerTransactions);
 //				if (!AlltransactionsForAccount.addAll(transactionsUsingCustomerAccount)
 //						|| !AlltransactionsForAccount.addAll(transactionsUsingBeneficiaryAccount)) {
 //					log.error("addition to all transaction list failed!!!!!!!!!!!!!");
 //					return new ArrayList<Transaction>();
 //				}
-				
-				
-				
 
 			}
 
@@ -244,24 +242,69 @@ public class TransactionService {
 		return transaction;
 	}
 
-	public boolean depositCash(String accountNumber, double amount) {
+	public Transaction depositCash(Transaction transaction, String accountNumber, double amount) {
 		log.info("TransactionService:depositCash");
+
 		try {
 
-		} catch (Exception e) {
+			// check if accountNumber is valid
+			Account customerAccount = accountService.getAccountByAccountNumber(accountNumber);
+			if (customerAccount != null) {
+				if (customerAccount.isActive()) {
+					transaction.setCustomerAccount(customerAccount);
+					transaction.setAmount(amount);
+					if (accountService.credit(accountNumber, amount)) {
+						transaction.setTransactionStatus(TransactStatus.SUCCESS);
+					}
 
+					else {
+						transaction.setTransactionStatus(TransactStatus.FAILED);
+					}
+				} else {
+					transaction.setTransactionStatus(TransactStatus.FAILED);
+				}
+
+			}
+
+		} catch (Exception e) {
+			transaction.setTransactionStatus(TransactStatus.FAILED);
+			log.error("error in getting customer account");
+			e.printStackTrace();
 		}
-		return false;
+		return transaction;
 	}
 
-	public static boolean withdrawCash(String accountNumber, double amount) {
+	public Transaction withdrawCash(Transaction transaction, String accountNumber, double amount) {
 		log.info("TransactionService:withdrawCash");
+
 		try {
 
-		} catch (Exception e) {
+			// check if accountNumber is valid
+			Account customerAccount = accountService.getAccountByAccountNumber(accountNumber);
+			if (customerAccount != null) {
+				if (customerAccount.isActive()) {
+					transaction.setCustomerAccount(customerAccount);
+					transaction.setAmount(amount);
 
+					if (accountService.debit(accountNumber, amount)) {
+						transaction.setTransactionStatus(TransactStatus.SUCCESS);
+					}
+
+					else {
+						transaction.setTransactionStatus(TransactStatus.FAILED);
+					}
+				} else {
+					transaction.setTransactionStatus(TransactStatus.FAILED);
+				}
+
+			}
+
+		} catch (Exception e) {
+			transaction.setTransactionStatus(TransactStatus.FAILED);
+			log.error("error in getting customer account");
+			e.printStackTrace();
 		}
-		return false;
+		return transaction;
 	}
 
 }
