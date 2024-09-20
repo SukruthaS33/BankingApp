@@ -88,10 +88,11 @@ public class CustomerService {
 	}
 
 	// front-end required change
-	public String login(String customerEmail, String password) {
+	public Customer login(String customerEmail, String password) {
 		log.info("CustomerService::login");
 		// boolean loggedIn = false;
-		String customerId = null;
+		Customer customer =null;
+		
 		try {
 			if (customerEmail == null || customerEmail.trim().isEmpty() || password == null
 					|| password.trim().isEmpty()) {
@@ -99,18 +100,19 @@ public class CustomerService {
 			}
 
 			Optional<Customer> customerOptional = customerRepository.findByCustomerEmail(customerEmail);
-			Customer customer = customerOptional.orElseThrow(() -> new Exception("Customer not found"));
+			 customer = customerOptional.orElseThrow(() -> new Exception("Customer not found"));
 
 			// Corrected the argument order here
-			if (passwordEncoder.matches(password, customer.getCustomerPassword()) && customer.isActive()) {
-				return customer.getCustomerId();
+			if (passwordEncoder.matches(password, customer.getCustomerPassword())) {
+				return customer;
 			}
 
 		} catch (Exception e) {
 			e.printStackTrace();
 
 		}
-		return customerId;
+		log.info("customer "+customer);
+		return customer;
 	}
 
 	public List<Customer> getAllCustomers() {

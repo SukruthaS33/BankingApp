@@ -29,6 +29,8 @@ import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonProperty.Access;
 import com.sukrutha.bankingApp.entities.EnumContainer.AccountType;
 
 @Entity
@@ -45,31 +47,29 @@ public class Account {
 	private String accountNumber;
 	@Column(name = "account_type")
 	@Enumerated(EnumType.STRING)
-	@JsonIgnore
 	private AccountType accountType;
-	@JsonIgnore
+	@JsonProperty(access = Access.WRITE_ONLY)
 	@ManyToOne
 	@JoinColumn(name = "branch_id")//can be named as per wish
 	private Branch branch;
 	@ManyToOne
 	@JoinColumn(name = "customer_id")
-	@JsonIgnore
+	@JsonProperty(access = Access.WRITE_ONLY)
 	private Customer customer;
 	
 	@ManyToMany
 	@JoinTable(name = "account_beneficiary", joinColumns = @JoinColumn(name = "account_number"), inverseJoinColumns = @JoinColumn(name = "beneficiary_id"))
-	@JsonIgnore
+	@JsonProperty(access = Access.WRITE_ONLY)
 	private List<Beneficiary> beneficiaries;
 	@Column(name = "balance", columnDefinition = "DECIMAL(10,2) DEFAULT '0.00'")
 	@NotNull
 	@Min(value = 0, message = "Minimum balance must be more than 0")
 	private double balance;
 	@OneToMany(mappedBy = "customerAccount")//always map it by field name
-	@JsonIgnore
+	@JsonProperty(access = Access.WRITE_ONLY)
 	private List<Transaction> transactions;
 	@Column(name = "isActive", columnDefinition = "BOOLEAN DEFAULT false")
 	@NotNull
-	@JsonIgnore
 	private boolean isActive;
 
 }

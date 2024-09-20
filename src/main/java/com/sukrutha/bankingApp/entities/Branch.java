@@ -8,6 +8,8 @@ import jakarta.persistence.OneToMany;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonProperty.Access;
 import com.sukrutha.bankingApp.entities.EnumContainer.AccountType;
 
 import jakarta.persistence.Column;
@@ -46,12 +48,12 @@ public class Branch {
 	private Address branchAddress;
 	@ManyToOne
 	@JoinColumn(name = "bank_id")//this can be renamed as you wish to suit
-	@JsonIgnore
+	@JsonProperty(access = Access.WRITE_ONLY)
 	@NotNull
 	@Embedded
 	private Bank bank;
 	@OneToMany(mappedBy = "branch")//owning side  branch owns accounts and this branch is a field in Accounts
-	@JsonIgnore
+	@JsonProperty(access = Access.WRITE_ONLY)
 	private List<Account> accounts;
 	@NotNull
 	@NotBlank

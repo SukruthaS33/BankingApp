@@ -9,6 +9,8 @@ import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonProperty.Access;
 import com.sukrutha.bankingApp.entities.EnumContainer.AccountType;
 
 import jakarta.persistence.Entity;
@@ -44,7 +46,7 @@ public class Beneficiary {
 	@Column(name = "beneficiary_id")
 	@NotNull
 	private String beneficiaryId;
-	@JsonIgnore//added to get list of beneficiaries associated to an account otherwise accounts related to particular beneficiary was also coming
+	@JsonProperty(access = Access.WRITE_ONLY)//added to get list of beneficiaries associated to an account otherwise accounts related to particular beneficiary was also coming
 	@ManyToMany(mappedBy = "beneficiaries")
 	private List<Account> account;
 	@Column(name = "beneficiary_name")
