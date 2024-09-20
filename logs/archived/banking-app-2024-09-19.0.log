@@ -1,0 +1,58 @@
+>19-09-2024 10:52:13 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Starting BankingAppApplication using Java 21.0.3 with PID 33044 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp) Starting BankingAppApplication using Java 21.0.3 with PID 33044 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp)
+>19-09-2024 10:52:13 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> No active profile set, falling back to 1 default profile: "default" No active profile set, falling back to 1 default profile: "default"
+>19-09-2024 10:52:13 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor ::-> Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+>19-09-2024 10:52:13 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor ::-> For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+>19-09-2024 10:52:13 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Bootstrapping Spring Data JPA repositories in DEFAULT mode. Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+>19-09-2024 10:52:14 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Finished Spring Data repository scanning in 102 ms. Found 7 JPA repository interfaces. Finished Spring Data repository scanning in 102 ms. Found 7 JPA repository interfaces.
+>19-09-2024 10:52:14 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat initialized with port 8081 (http) Tomcat initialized with port 8081 (http)
+>19-09-2024 10:52:14 [restartedMain] INFO  o.apache.catalina.core.StandardService   ::-> Starting service [Tomcat] Starting service [Tomcat]
+>19-09-2024 10:52:14 [restartedMain] INFO  org.apache.catalina.core.StandardEngine  ::-> Starting Servlet engine: [Apache Tomcat/10.1.28] Starting Servlet engine: [Apache Tomcat/10.1.28]
+>19-09-2024 10:52:14 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/bankingapp]    ::-> Initializing Spring embedded WebApplicationContext Initializing Spring embedded WebApplicationContext
+>19-09-2024 10:52:14 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext ::-> Root WebApplicationContext: initialization completed in 1593 ms Root WebApplicationContext: initialization completed in 1593 ms
+>19-09-2024 10:52:14 [restartedMain] INFO  o.hibernate.jpa.internal.util.LogHelper  ::-> HHH000204: Processing PersistenceUnitInfo [name: default] HHH000204: Processing PersistenceUnitInfo [name: default]
+>19-09-2024 10:52:15 [restartedMain] INFO  org.hibernate.Version                    ::-> HHH000412: Hibernate ORM core version 6.5.2.Final HHH000412: Hibernate ORM core version 6.5.2.Final
+>19-09-2024 10:52:15 [restartedMain] INFO  o.h.c.internal.RegionFactoryInitiator    ::-> HHH000026: Second-level cache disabled HHH000026: Second-level cache disabled
+>19-09-2024 10:52:15 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      ::-> No LoadTimeWeaver setup: ignoring JPA class transformer No LoadTimeWeaver setup: ignoring JPA class transformer
+>19-09-2024 10:52:15 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Starting... HikariPool-1 - Starting...
+>19-09-2024 10:52:15 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@300d9144 HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@300d9144
+>19-09-2024 10:52:15 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Start completed. HikariPool-1 - Start completed.
+>19-09-2024 10:52:15 [restartedMain] WARN  org.hibernate.orm.deprecation            ::-> HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+>19-09-2024 10:52:16 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       ::-> HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+>19-09-2024 10:52:16 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Initialized JPA EntityManagerFactory for persistence unit 'default' Initialized JPA EntityManagerFactory for persistence unit 'default'
+>19-09-2024 10:52:17 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory     ::-> Hibernate is in classpath; If applicable, HQL parser will be used. Hibernate is in classpath; If applicable, HQL parser will be used.
+>19-09-2024 10:52:17 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ::-> spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+>19-09-2024 10:52:17 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration ::-> 
+
+Using generated security password: a5c8dece-a2d9-46fc-992e-cbf326bac615
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+ 
+
+Using generated security password: a5c8dece-a2d9-46fc-992e-cbf326bac615
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+>19-09-2024 10:52:17 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ::-> Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+>19-09-2024 10:52:18 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer       ::-> LiveReload server is running on port 35729 LiveReload server is running on port 35729
+>19-09-2024 10:52:18 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat started on port 8081 (http) with context path '/bankingapp' Tomcat started on port 8081 (http) with context path '/bankingapp'
+>19-09-2024 10:52:18 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Started BankingAppApplication in 5.286 seconds (process running for 6.061) Started BankingAppApplication in 5.286 seconds (process running for 6.061)
+>19-09-2024 10:52:18 [restartedMain] INFO  c.s.bankingApp.bootstrap.RoleSeeder      ::-> RoleSeeder::run RoleSeeder::run
+>19-09-2024 10:52:18 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>19-09-2024 10:52:18 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> banking app started! banking app started!
+>19-09-2024 10:52:18 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>19-09-2024 10:52:23 [http-nio-8081-exec-3] INFO  o.a.c.c.C.[.[localhost].[/bankingapp]    ::-> Initializing Spring DispatcherServlet 'dispatcherServlet' Initializing Spring DispatcherServlet 'dispatcherServlet'
+>19-09-2024 10:52:23 [http-nio-8081-exec-3] INFO  o.s.web.servlet.DispatcherServlet        ::-> Initializing Servlet 'dispatcherServlet' Initializing Servlet 'dispatcherServlet'
+>19-09-2024 10:52:23 [http-nio-8081-exec-3] INFO  o.s.web.servlet.DispatcherServlet        ::-> Completed initialization in 1 ms Completed initialization in 1 ms
+>19-09-2024 10:52:24 [http-nio-8081-exec-3] INFO  c.s.b.controllers.CustomerController     ::-> CustomerController::login CustomerController::login
+>19-09-2024 10:52:24 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.CustomerService  ::-> CustomerService::login CustomerService::login
+>19-09-2024 10:52:37 [http-nio-8081-exec-2] INFO  c.s.b.controllers.CustomerController     ::-> CustomerController::register CustomerController::register
+>19-09-2024 10:52:37 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.CustomerService  ::-> CustomerSerivce:register CustomerSerivce:register
+>19-09-2024 10:52:37 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.CustomerService  ::-> inside try of service inside try of service
+>19-09-2024 10:52:37 [http-nio-8081-exec-2] INFO  c.s.b.b.CustomerBusinessLogic            ::-> CustomerBusinessLogic::verifyRegisteringCustomer CustomerBusinessLogic::verifyRegisteringCustomer
+>19-09-2024 10:52:37 [http-nio-8081-exec-2] ERROR c.s.bankingApp.services.CustomerService  ::-> error encountered while registering the customer error encountered while registering the customer
+>19-09-2024 10:52:41 [http-nio-8081-exec-5] INFO  c.s.b.controllers.BankController         ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>19-09-2024 10:52:41 [http-nio-8081-exec-5] INFO  c.s.bankingApp.services.BankService      ::-> BankService::getBankDetails BankService::getBankDetails
+>19-09-2024 10:53:13 [RMI TCP Connection(9)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin ::-> Application shutdown requested. Application shutdown requested.
+>19-09-2024 10:53:13 [RMI TCP Connection(9)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Closing JPA EntityManagerFactory for persistence unit 'default' Closing JPA EntityManagerFactory for persistence unit 'default'
+>19-09-2024 10:53:13 [RMI TCP Connection(9)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Shutdown initiated... HikariPool-1 - Shutdown initiated...
+>19-09-2024 10:53:13 [RMI TCP Connection(9)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Shutdown completed. HikariPool-1 - Shutdown completed.

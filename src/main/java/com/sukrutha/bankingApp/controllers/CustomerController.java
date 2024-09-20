@@ -58,18 +58,22 @@ public class CustomerController {
 	// after login we need to get customer id in order to load corresponding details
 	// so we must not return boolean for a success login(usually)
 	@PostMapping("/login")
-	public ResponseEntity<String> login(@RequestParam String customerEmail, @RequestParam String customerPassword) {
+	public ResponseEntity<Customer> login(@RequestParam String customerEmail, @RequestParam String customerPassword) {
 		log.info("CustomerController::login");
-		String customerId =null;
+		Customer customer = null;
 		try {
-				customerId = customerService.login(customerEmail, customerPassword);
-				return ResponseEntity.status(HttpStatus.OK).body(customerId);
-			 
+			customer = customerService.login(customerEmail, customerPassword);
+			if (customer != null) {
+				return ResponseEntity.status(HttpStatus.OK).body(customer);
+			}
+
 		} catch (Exception e) {
 			e.printStackTrace();
 			// Return an error response in case of exception
-			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("An error occurred during login.");
+
 		}
+
+		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(customer);
 	}
 
 	@GetMapping("/test")

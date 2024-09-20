@@ -61,7 +61,6 @@ public class Transaction {
 	private Beneficiary beneficiaryAccount;
 	@Column(name = "amount")
 	@NotNull
-	
 	private double amount;
 	@Column(name = "transaction_type")
 	@NotNull
@@ -73,16 +72,13 @@ public class Transaction {
 	private LocalDateTime transcationTime;
 	@NotNull
 	@Enumerated(EnumType.STRING)
-	@Column(name = "transaction_status",length = 20)
+	@Column(name = "transaction_status", length = 20)
 	private TransactStatus transactionStatus;
 	@NotNull
-	@Column(name="transfer_type")
+	@Column(name = "transfer_type")
 	@Enumerated(EnumType.STRING)
 	private TransferType transferType;
 	@Transient
-	private boolean debitOrCredit;//if true then debit
-	
-	
-	
+	private boolean debitOrCredit;// if true then debit
 
 }

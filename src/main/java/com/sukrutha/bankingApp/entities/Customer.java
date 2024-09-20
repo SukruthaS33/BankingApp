@@ -84,11 +84,11 @@ public class Customer {
 	private List<Account> accounts;
 	@Column(name = "created_at")
 	@CreatedDate
-	@JsonIgnore
+	@JsonProperty(access = Access.WRITE_ONLY)
 	private LocalDateTime createdAt;
 	@Column(name = "last_updated_at")
 	@LastModifiedDate
-	@JsonIgnore
+	@JsonProperty(access = Access.WRITE_ONLY)
 	private LocalDateTime LastUpdatedAt;
 	@Column(name = "isActive", columnDefinition = "BOOLEAN DEFAULT false")
 	@NotNull
