@@ -115,6 +115,23 @@ public class AccountController {
 
 		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(false);
 	}
+	
+	@PostMapping("/deletebeneficiary/{accountNumber}/{beneficiaryId}")
+	public ResponseEntity<Boolean> deleteBeneficiaryFromAccount(@PathVariable String accountNumber,
+			@PathVariable String beneficiaryId) {
+		log.info("AccountController::deleteBeneficiaryFromAccount::");
+		log.info(beneficiaryId);
+		try {
+			if (accountService.deleteBeneficiaryFromAccount(accountNumber, beneficiaryId)) {
+				return ResponseEntity.status(HttpStatus.OK).body(true);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+
+		}
+
+		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(false);
+	}
 //	@PostMapping("/delete/{accountNumber}")
 //	public ResponseEntity<Boolean> deleteAccount(@PathVariable String accountNumber){
 //	
