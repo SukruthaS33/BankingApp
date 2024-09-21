@@ -59,14 +59,14 @@ public class Account {
 	
 	@ManyToMany
 	@JoinTable(name = "account_beneficiary", joinColumns = @JoinColumn(name = "account_number"), inverseJoinColumns = @JoinColumn(name = "beneficiary_id"))
-	@JsonProperty(access = Access.WRITE_ONLY)
+	//@JsonProperty(access = Access.WRITE_ONLY)
 	private List<Beneficiary> beneficiaries;
 	@Column(name = "balance", columnDefinition = "DECIMAL(10,2) DEFAULT '0.00'")
 	@NotNull
 	@Min(value = 0, message = "Minimum balance must be more than 0")
 	private double balance;
 	@OneToMany(mappedBy = "customerAccount")//always map it by field name
-	@JsonProperty(access = Access.WRITE_ONLY)
+	//@JsonProperty(access = Access.WRITE_ONLY)
 	private List<Transaction> transactions;
 	@Column(name = "isActive", columnDefinition = "BOOLEAN DEFAULT false")
 	@NotNull

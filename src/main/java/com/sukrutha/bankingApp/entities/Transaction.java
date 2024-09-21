@@ -7,6 +7,8 @@ import org.hibernate.resource.transaction.spi.TransactionStatus;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonProperty.Access;
 import com.sukrutha.bankingApp.entities.EnumContainer.AccountType;
 import com.sukrutha.bankingApp.entities.EnumContainer.TransactStatus;
 import com.sukrutha.bankingApp.entities.EnumContainer.TransactionType;
@@ -53,6 +55,7 @@ public class Transaction {
 	@NotNull
 	@Column(name = "transaction_id")
 	private String transactionId;
+	@JsonProperty(access = Access.WRITE_ONLY)
 	@ManyToOne
 	@JoinColumn(name = "customer_acct_id")
 	private Account customerAccount;
