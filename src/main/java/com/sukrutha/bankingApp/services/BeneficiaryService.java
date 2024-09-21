@@ -71,17 +71,19 @@ public class BeneficiaryService {
 	}
 
 	public Beneficiary getBeneficiaryById(String beneficiaryId) {
-
-		log.info("BeneficiaryService::getBeneficiaryById");
+		
+		log.info("BeneficiaryService::getBeneficiaryById "+beneficiaryId);
 		Beneficiary beneficiary = null;
 		try {
 			beneficiary = beneficiaryRepository.findById(beneficiaryId)
 					.orElseThrow(() -> new Exception("beneficiary is not found"));
+			
 		} catch (Exception e) {
 			log.error("error getting beneficiary");
 			e.printStackTrace();
 
 		}
+		System.out.println(beneficiary);
 		return beneficiary;
 	}
 
@@ -123,16 +125,7 @@ public class BeneficiaryService {
 		return beneficiary.getBeneficiaryId();
 	}
 
-	public boolean deleteBeneficiary(Beneficiary beneficiary) {
-		log.info("BeneficiaryService::deleteBeneficiary");
-		try {
-
-		} catch (Exception e) {
-
-		}
-		return false;
-	}
-
+	
 	public boolean validateBeneficiaryDetails(Beneficiary beneficiary) {
 		boolean beneficiaryIsACustomer = false;
 		try {

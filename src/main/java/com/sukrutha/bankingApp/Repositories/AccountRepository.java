@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
@@ -11,6 +12,8 @@ import org.springframework.stereotype.Repository;
 import com.sukrutha.bankingApp.entities.Account;
 import com.sukrutha.bankingApp.entities.Beneficiary;
 import com.sukrutha.bankingApp.entities.Customer;
+
+import jakarta.transaction.Transactional;
 
 @Repository
 public interface AccountRepository extends JpaRepository<Account, String> {
@@ -32,6 +35,11 @@ public interface AccountRepository extends JpaRepository<Account, String> {
 	@Query("SELECT a.beneficiaries FROM Account a WHERE a.accountNumber = :accountNumber")
 	List<Beneficiary> findAllBeneficiariesInAccount(@Param("accountNumber") String accountNumber);
 	
+	@Modifying
+	@Query(value = "DELETE FROM account_beneficiary WHERE account_number = :accountNumber AND beneficiary_id = :beneficiaryId", nativeQuery = true)
+	public int deleteBeneficiaryLinkedToAccount(@Param("accountNumber") String accountNumber,
+	        @Param("beneficiaryId") String beneficiaryId);
+
 
 	
 

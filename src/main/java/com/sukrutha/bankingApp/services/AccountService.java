@@ -17,6 +17,7 @@ import com.sukrutha.bankingApp.entities.Customer;
 import com.sukrutha.bankingApp.entities.EnumContainer;
 import com.sukrutha.bankingApp.entities.EnumContainer.AccountType;
 
+import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
 
 @Service
@@ -341,10 +342,10 @@ public class AccountService {
 	}
 
 	public List<Beneficiary> findAllBeneficiariesInAccount(String accountNumber) {
-		
+
 		List<Beneficiary> beneficiariesOfAccount = new ArrayList<Beneficiary>();
 		try {
-			log.info("account number"+accountNumber);
+			log.info("account number" + accountNumber);
 			beneficiariesOfAccount = accountRepository.findAllBeneficiariesInAccount(accountNumber);
 
 		} catch (Exception e) {
@@ -352,6 +353,43 @@ public class AccountService {
 			e.printStackTrace();
 		}
 		return beneficiariesOfAccount;
+	}
+	@Transactional
+	public boolean deleteBeneficiaryFromAccount(String accountNumber, String beneficiaryId) {
+
+		log.info("AccountService::addBeneficiaryToAccount");
+		boolean deleteBenificiaryFromAcctStatus = false;
+		try {
+
+			// Step1
+
+			// getting account from AccountNumber;
+
+			Account account = this.getAccountByAccountNumber(accountNumber);
+			if (account == null || !account.isActive()) {// if account is not active user cannot add any beneficiary
+				return false;
+			}
+
+			// checking if beneficiary exists in beneficiary table
+			Beneficiary existingBeneficiary = beneficiaryService.getBeneficiaryById(beneficiaryId);
+			if (existingBeneficiary == null) {
+				return false;
+			}
+			// Step2
+			// check if beneficiary is linked to account
+			if (this.isBeneficiaryExistsInAccount(account, existingBeneficiary))
+				log.info("beneficiary exists in account");
+				if (accountRepository.deleteBeneficiaryLinkedToAccount(accountNumber, beneficiaryId) == 1) {
+					log.info("beneficiary deleted successfully from account");
+					deleteBenificiaryFromAcctStatus = true;
+					return deleteBenificiaryFromAcctStatus;
+				}
+
+		} catch (Exception e) {
+			log.error("error deleting beneficiary");
+			e.printStackTrace();
+		}
+		return deleteBenificiaryFromAcctStatus;
 	}
 
 //	public boolean deleteBeneficiariesLinkedToAccount(String accountNumber, ArrayList<Beneficiary> beneficiaries) {
@@ -363,8 +401,7 @@ public class AccountService {
 //			// there is no need to check if beneficiary is in beneficiary table or in our
 //			// bank
 //			for (Beneficiary beneficiary : beneficiaries) {
-//				if (accountRepository.existsBeneficiaryInAccount(customerAccount,
-//						beneficiary.getBeneficiaryId())) {
+//				if (accountRepository.existsBeneficiaryInAccount(customerAccount, beneficiary.getBeneficiaryId())) {
 //					// delete beneficiary using beneficiary service
 //					beneficiaryService.deleteBeneficiary(beneficiary);
 //				}
