@@ -379,7 +379,7 @@ public class AccountService {
 			// check if beneficiary is linked to account
 			if (this.isBeneficiaryExistsInAccount(account, existingBeneficiary))
 				log.info("beneficiary exists in account");
-				if (accountRepository.deleteBeneficiaryLinkedToAccount(accountNumber, beneficiaryId) == 1) {
+				if (accountRepository.deleteBeneficiaryLinkedToAccount(accountNumber, beneficiaryId) >= 1) {//in real case only one exists but we have not provided enough checks to ensure beneficiary is not already linked to an account
 					log.info("beneficiary deleted successfully from account");
 					deleteBenificiaryFromAcctStatus = true;
 					return deleteBenificiaryFromAcctStatus;

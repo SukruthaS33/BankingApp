@@ -123,7 +123,8 @@ public class TransactionService {
 				log.info("customer accout is active");
 				Beneficiary beneficiary = beneficiaryService
 						.getBeneficiaryByBeneficiaryAccountNumber(beneficiaryAccountNumber);// creating a beneficiary
-																							// object
+				
+				// object
 				if (beneficiary.isActive()) {// checking if beneficiary is allowed to recieve money (it can be toggled
 												// byadmin)
 					log.info("beneficiary is Active");
@@ -139,6 +140,7 @@ public class TransactionService {
 							log.info("beneficiary exists for the given account");
 							// checking if account has enough balance
 							if (customerAccount.getBalance() >= amount) {
+								log.info("customer has enough balance");
 								transaction.setAmount(amount);
 								// debiting money from customer account
 								accountService.debit(accountNumber, amount);
