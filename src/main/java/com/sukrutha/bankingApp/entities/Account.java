@@ -50,24 +50,25 @@ public class Account {
 	private AccountType accountType;
 	@JsonProperty(access = Access.WRITE_ONLY)
 	@ManyToOne
-	@JoinColumn(name = "branch_id")//can be named as per wish
+	@JoinColumn(name = "branch_id") // can be named as per wish
 	private Branch branch;
 	@ManyToOne
 	@JoinColumn(name = "customer_id")
 	@JsonProperty(access = Access.WRITE_ONLY)
 	private Customer customer;
-	
 	@ManyToMany
 	@JoinTable(name = "account_beneficiary", joinColumns = @JoinColumn(name = "account_number"), inverseJoinColumns = @JoinColumn(name = "beneficiary_id"))
-	//@JsonProperty(access = Access.WRITE_ONLY)
+	// @JsonProperty(access = Access.WRITE_ONLY)
 	private List<Beneficiary> beneficiaries;
 	@Column(name = "balance", columnDefinition = "DECIMAL(10,2) DEFAULT '0.00'")
 	@NotNull
 	@Min(value = 0, message = "Minimum balance must be more than 0")
 	private double balance;
-	@OneToMany(mappedBy = "customerAccount")//always map it by field name
-	//@JsonProperty(access = Access.WRITE_ONLY)
+	@OneToMany(mappedBy = "customerAccount") // always map it by field name
+	// @JsonProperty(access = Access.WRITE_ONLY)
 	private List<Transaction> transactions;
+	@OneToMany(mappedBy = "beneficiaryAccount")
+	private List<Transaction> beneficiaryTransactions;
 	@Column(name = "isActive", columnDefinition = "BOOLEAN DEFAULT false")
 	@NotNull
 	private boolean isActive;

@@ -47,12 +47,12 @@ public class TransactionService {
 
 			if (accountNumber != null) {
 				Account inputAccount = accountService.getAccountByAccountNumber(accountNumber);
-				Beneficiary beneficiaryAccount = beneficiaryService
-						.getBeneficiaryByBeneficiaryAccountNumber(accountNumber);
+				Account beneficiaryAccount = accountService.getAccountByAccountNumber(accountNumber);
 				if (inputAccount == null) {
 					return AlltransactionsForAccount;
 				}
 				// we are doing for same account
+				log.info(beneficiaryAccount.getAccountNumber()+" "+inputAccount.getAccountNumber()+"bunch of account numbers");
 				List<Transaction> transactionsUsingCustomerAccount = transactionRepository
 						.findByCustomerAccountAndTransactionStatus(inputAccount, TransactStatus.SUCCESS);
 

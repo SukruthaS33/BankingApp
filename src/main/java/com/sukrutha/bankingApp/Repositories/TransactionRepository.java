@@ -16,7 +16,7 @@ public interface TransactionRepository extends JpaRepository<Transaction, String
 
 	public List<Transaction> findByCustomerAccountAndTransactionStatus(Account account,TransactStatus transactionStatus);
 	
-	public List<Transaction> findByBeneficiaryAccountAndTransactionStatus(Beneficiary account, TransactStatus transactionStatus);
+	public List<Transaction> findByBeneficiaryAccountAndTransactionStatus(Account account, TransactStatus transactionStatus);
 
 	
 	
