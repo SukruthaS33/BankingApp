@@ -16,6 +16,7 @@ import com.sukrutha.bankingApp.entities.Branch;
 import com.sukrutha.bankingApp.entities.Customer;
 import com.sukrutha.bankingApp.entities.EnumContainer;
 import com.sukrutha.bankingApp.entities.EnumContainer.AccountType;
+import com.sukrutha.bankingApp.entities.Transaction;
 
 import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
@@ -49,7 +50,7 @@ public class AccountService {
 
 			String accountNumber = accountBusinessLogic.generateRandomNumber();// rename it
 			account.setAccountNumber(accountNumber);
-			// account.setAccountType(accountType);
+			 account.setAccountType(accountType);
 			// account.setBalance(0);
 			account.setActive(true);
 			account.setBranch(branch);
@@ -136,6 +137,10 @@ public class AccountService {
 
 			account = accountRepository.findById(accountNumber)
 					.orElseThrow(() -> new Exception("account does not exist"));
+			log.info("account number "+account.getAccountNumber());
+			
+			
+			
 
 		} catch (Exception e) {
 			log.error("error finding the account");
@@ -169,6 +174,7 @@ public class AccountService {
 			if (existingBeneficiary == null) {
 				// if beneficiary does not exist in beneficiary table saving the new beneficiary
 				// in the table
+				beneficiary.setActive(true);
 				existingBeneficiary = beneficiaryService.addBeneficiary(beneficiary);// after adding the person becomes
 																						// existing beneficiary
 				if (existingBeneficiary == null) {

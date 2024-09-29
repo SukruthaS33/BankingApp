@@ -1,0 +1,650 @@
+>24-09-2024 06:37:12 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Starting BankingAppApplication using Java 21.0.3 with PID 6596 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp) Starting BankingAppApplication using Java 21.0.3 with PID 6596 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp)
+>24-09-2024 06:37:12 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> No active profile set, falling back to 1 default profile: "default" No active profile set, falling back to 1 default profile: "default"
+>24-09-2024 06:37:12 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor ::-> Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+>24-09-2024 06:37:12 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor ::-> For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+>24-09-2024 06:37:13 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Bootstrapping Spring Data JPA repositories in DEFAULT mode. Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+>24-09-2024 06:37:13 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Finished Spring Data repository scanning in 60 ms. Found 7 JPA repository interfaces. Finished Spring Data repository scanning in 60 ms. Found 7 JPA repository interfaces.
+>24-09-2024 06:37:14 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat initialized with port 8081 (http) Tomcat initialized with port 8081 (http)
+>24-09-2024 06:37:14 [restartedMain] INFO  o.apache.catalina.core.StandardService   ::-> Starting service [Tomcat] Starting service [Tomcat]
+>24-09-2024 06:37:14 [restartedMain] INFO  org.apache.catalina.core.StandardEngine  ::-> Starting Servlet engine: [Apache Tomcat/10.1.28] Starting Servlet engine: [Apache Tomcat/10.1.28]
+>24-09-2024 06:37:14 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/bankingapp]    ::-> Initializing Spring embedded WebApplicationContext Initializing Spring embedded WebApplicationContext
+>24-09-2024 06:37:14 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext ::-> Root WebApplicationContext: initialization completed in 1945 ms Root WebApplicationContext: initialization completed in 1945 ms
+>24-09-2024 06:37:14 [restartedMain] INFO  o.hibernate.jpa.internal.util.LogHelper  ::-> HHH000204: Processing PersistenceUnitInfo [name: default] HHH000204: Processing PersistenceUnitInfo [name: default]
+>24-09-2024 06:37:14 [restartedMain] INFO  org.hibernate.Version                    ::-> HHH000412: Hibernate ORM core version 6.5.2.Final HHH000412: Hibernate ORM core version 6.5.2.Final
+>24-09-2024 06:37:14 [restartedMain] INFO  o.h.c.internal.RegionFactoryInitiator    ::-> HHH000026: Second-level cache disabled HHH000026: Second-level cache disabled
+>24-09-2024 06:37:15 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      ::-> No LoadTimeWeaver setup: ignoring JPA class transformer No LoadTimeWeaver setup: ignoring JPA class transformer
+>24-09-2024 06:37:15 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Starting... HikariPool-1 - Starting...
+>24-09-2024 06:37:15 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6a303873 HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6a303873
+>24-09-2024 06:37:15 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Start completed. HikariPool-1 - Start completed.
+>24-09-2024 06:37:15 [restartedMain] WARN  org.hibernate.orm.deprecation            ::-> HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+>24-09-2024 06:37:16 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       ::-> HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+>24-09-2024 06:37:16 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Initialized JPA EntityManagerFactory for persistence unit 'default' Initialized JPA EntityManagerFactory for persistence unit 'default'
+>24-09-2024 06:37:17 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory     ::-> Hibernate is in classpath; If applicable, HQL parser will be used. Hibernate is in classpath; If applicable, HQL parser will be used.
+>24-09-2024 06:37:17 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ::-> spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+>24-09-2024 06:37:17 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration ::-> 
+
+Using generated security password: 982580c3-1ecc-4664-8076-d484248da5c1
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+ 
+
+Using generated security password: 982580c3-1ecc-4664-8076-d484248da5c1
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+>24-09-2024 06:37:17 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ::-> Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+>24-09-2024 06:37:18 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer       ::-> LiveReload server is running on port 35729 LiveReload server is running on port 35729
+>24-09-2024 06:37:18 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat started on port 8081 (http) with context path '/bankingapp' Tomcat started on port 8081 (http) with context path '/bankingapp'
+>24-09-2024 06:37:18 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Started BankingAppApplication in 6.146 seconds (process running for 6.968) Started BankingAppApplication in 6.146 seconds (process running for 6.968)
+>24-09-2024 06:37:18 [restartedMain] INFO  c.s.bankingApp.bootstrap.RoleSeeder      ::-> RoleSeeder::run RoleSeeder::run
+>24-09-2024 06:37:18 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>24-09-2024 06:37:18 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> banking app started! banking app started!
+>24-09-2024 06:37:18 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>24-09-2024 06:40:01 [http-nio-8081-exec-3] INFO  o.a.c.c.C.[.[localhost].[/bankingapp]    ::-> Initializing Spring DispatcherServlet 'dispatcherServlet' Initializing Spring DispatcherServlet 'dispatcherServlet'
+>24-09-2024 06:40:01 [http-nio-8081-exec-3] INFO  o.s.web.servlet.DispatcherServlet        ::-> Initializing Servlet 'dispatcherServlet' Initializing Servlet 'dispatcherServlet'
+>24-09-2024 06:40:01 [http-nio-8081-exec-3] INFO  o.s.web.servlet.DispatcherServlet        ::-> Completed initialization in 2 ms Completed initialization in 2 ms
+>24-09-2024 06:40:01 [http-nio-8081-exec-1] INFO  c.s.b.controllers.BankController         ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 06:40:01 [http-nio-8081-exec-1] INFO  c.s.bankingApp.services.BankService      ::-> BankService::getBankDetails BankService::getBankDetails
+>24-09-2024 06:40:01 [http-nio-8081-exec-2] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 06:40:01 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 06:40:01 [http-nio-8081-exec-3] INFO  c.s.b.controllers.CustomerController     ::-> CustomerController::getCustomerDetailsByCustomerId CustomerController::getCustomerDetailsByCustomerId
+>24-09-2024 06:40:42 [http-nio-8081-exec-6] INFO  c.s.b.controllers.CustomerController     ::-> CustomerController::getCustomerDetailsByCustomerId CustomerController::getCustomerDetailsByCustomerId
+>24-09-2024 06:40:42 [http-nio-8081-exec-9] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 06:40:42 [http-nio-8081-exec-9] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 06:40:42 [http-nio-8081-exec-8] INFO  c.s.b.controllers.BankController         ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 06:40:42 [http-nio-8081-exec-8] INFO  c.s.bankingApp.services.BankService      ::-> BankService::getBankDetails BankService::getBankDetails
+>24-09-2024 06:40:54 [http-nio-8081-exec-10] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>24-09-2024 06:40:54 [http-nio-8081-exec-10] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>24-09-2024 06:40:54 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 06:40:54 [http-nio-8081-exec-10] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>24-09-2024 06:40:54 [http-nio-8081-exec-10] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>24-09-2024 06:40:54 [http-nio-8081-exec-10] WARN  o.h.engine.jdbc.spi.SqlExceptionHelper   ::-> SQL Error: 3819, SQLState: HY000 SQL Error: 3819, SQLState: HY000
+>24-09-2024 06:40:54 [http-nio-8081-exec-10] ERROR o.h.engine.jdbc.spi.SqlExceptionHelper   ::-> Check constraint 'transactions_chk_1' is violated. Check constraint 'transactions_chk_1' is violated.
+>24-09-2024 06:42:47 [http-nio-8081-exec-4] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 06:42:47 [http-nio-8081-exec-7] INFO  c.s.b.controllers.CustomerController     ::-> CustomerController::getCustomerDetailsByCustomerId CustomerController::getCustomerDetailsByCustomerId
+>24-09-2024 06:42:47 [http-nio-8081-exec-3] INFO  c.s.b.controllers.BankController         ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 06:42:47 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.BankService      ::-> BankService::getBankDetails BankService::getBankDetails
+>24-09-2024 06:42:47 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 06:43:00 [http-nio-8081-exec-9] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>24-09-2024 06:43:00 [http-nio-8081-exec-9] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>24-09-2024 06:43:00 [http-nio-8081-exec-9] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 06:43:00 [http-nio-8081-exec-9] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>24-09-2024 06:43:00 [http-nio-8081-exec-9] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>24-09-2024 06:43:00 [http-nio-8081-exec-9] WARN  o.h.engine.jdbc.spi.SqlExceptionHelper   ::-> SQL Error: 3819, SQLState: HY000 SQL Error: 3819, SQLState: HY000
+>24-09-2024 06:43:00 [http-nio-8081-exec-9] ERROR o.h.engine.jdbc.spi.SqlExceptionHelper   ::-> Check constraint 'transactions_chk_1' is violated. Check constraint 'transactions_chk_1' is violated.
+>24-09-2024 06:43:16 [http-nio-8081-exec-8] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>24-09-2024 06:43:16 [http-nio-8081-exec-8] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>24-09-2024 06:43:16 [http-nio-8081-exec-8] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 06:43:16 [http-nio-8081-exec-8] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>24-09-2024 06:43:16 [http-nio-8081-exec-8] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>24-09-2024 06:43:16 [http-nio-8081-exec-8] WARN  o.h.engine.jdbc.spi.SqlExceptionHelper   ::-> SQL Error: 3819, SQLState: HY000 SQL Error: 3819, SQLState: HY000
+>24-09-2024 06:43:16 [http-nio-8081-exec-8] ERROR o.h.engine.jdbc.spi.SqlExceptionHelper   ::-> Check constraint 'transactions_chk_1' is violated. Check constraint 'transactions_chk_1' is violated.
+>24-09-2024 06:45:03 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener ::-> Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+>24-09-2024 06:45:03 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Closing JPA EntityManagerFactory for persistence unit 'default' Closing JPA EntityManagerFactory for persistence unit 'default'
+>24-09-2024 06:45:03 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Shutdown initiated... HikariPool-1 - Shutdown initiated...
+>24-09-2024 06:45:03 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Shutdown completed. HikariPool-1 - Shutdown completed.
+>24-09-2024 06:45:03 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Starting BankingAppApplication using Java 21.0.3 with PID 6596 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp) Starting BankingAppApplication using Java 21.0.3 with PID 6596 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp)
+>24-09-2024 06:45:03 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> No active profile set, falling back to 1 default profile: "default" No active profile set, falling back to 1 default profile: "default"
+>24-09-2024 06:45:04 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Bootstrapping Spring Data JPA repositories in DEFAULT mode. Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+>24-09-2024 06:45:04 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Finished Spring Data repository scanning in 37 ms. Found 7 JPA repository interfaces. Finished Spring Data repository scanning in 37 ms. Found 7 JPA repository interfaces.
+>24-09-2024 06:45:05 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat initialized with port 8081 (http) Tomcat initialized with port 8081 (http)
+>24-09-2024 06:45:05 [restartedMain] INFO  o.apache.catalina.core.StandardService   ::-> Starting service [Tomcat] Starting service [Tomcat]
+>24-09-2024 06:45:05 [restartedMain] INFO  org.apache.catalina.core.StandardEngine  ::-> Starting Servlet engine: [Apache Tomcat/10.1.28] Starting Servlet engine: [Apache Tomcat/10.1.28]
+>24-09-2024 06:45:05 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/bankingapp]    ::-> Initializing Spring embedded WebApplicationContext Initializing Spring embedded WebApplicationContext
+>24-09-2024 06:45:05 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext ::-> Root WebApplicationContext: initialization completed in 1120 ms Root WebApplicationContext: initialization completed in 1120 ms
+>24-09-2024 06:45:05 [restartedMain] INFO  o.hibernate.jpa.internal.util.LogHelper  ::-> HHH000204: Processing PersistenceUnitInfo [name: default] HHH000204: Processing PersistenceUnitInfo [name: default]
+>24-09-2024 06:45:05 [restartedMain] INFO  o.h.c.internal.RegionFactoryInitiator    ::-> HHH000026: Second-level cache disabled HHH000026: Second-level cache disabled
+>24-09-2024 06:45:05 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      ::-> No LoadTimeWeaver setup: ignoring JPA class transformer No LoadTimeWeaver setup: ignoring JPA class transformer
+>24-09-2024 06:45:05 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-2 - Starting... HikariPool-2 - Starting...
+>24-09-2024 06:45:05 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2b447a39 HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2b447a39
+>24-09-2024 06:45:05 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-2 - Start completed. HikariPool-2 - Start completed.
+>24-09-2024 06:45:05 [restartedMain] WARN  org.hibernate.orm.deprecation            ::-> HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+>24-09-2024 06:45:05 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       ::-> HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+>24-09-2024 06:45:05 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Initialized JPA EntityManagerFactory for persistence unit 'default' Initialized JPA EntityManagerFactory for persistence unit 'default'
+>24-09-2024 06:45:05 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ::-> spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+>24-09-2024 06:45:05 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration ::-> 
+
+Using generated security password: 5df92df8-6324-4c24-8f46-dfd1c3660215
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+ 
+
+Using generated security password: 5df92df8-6324-4c24-8f46-dfd1c3660215
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+>24-09-2024 06:45:05 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ::-> Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+>24-09-2024 06:45:06 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer       ::-> LiveReload server is running on port 35729 LiveReload server is running on port 35729
+>24-09-2024 06:45:06 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat started on port 8081 (http) with context path '/bankingapp' Tomcat started on port 8081 (http) with context path '/bankingapp'
+>24-09-2024 06:45:06 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Started BankingAppApplication in 2.209 seconds (process running for 474.875) Started BankingAppApplication in 2.209 seconds (process running for 474.875)
+>24-09-2024 06:45:06 [restartedMain] INFO  c.s.bankingApp.bootstrap.RoleSeeder      ::-> RoleSeeder::run RoleSeeder::run
+>24-09-2024 06:45:06 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener ::-> Condition evaluation unchanged Condition evaluation unchanged
+>24-09-2024 06:45:06 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>24-09-2024 06:45:06 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> banking app started! banking app started!
+>24-09-2024 06:45:06 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>24-09-2024 06:45:08 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener ::-> Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications) Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+>24-09-2024 06:45:08 [Thread-7] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Closing JPA EntityManagerFactory for persistence unit 'default' Closing JPA EntityManagerFactory for persistence unit 'default'
+>24-09-2024 06:45:08 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-2 - Shutdown initiated... HikariPool-2 - Shutdown initiated...
+>24-09-2024 06:45:08 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-2 - Shutdown completed. HikariPool-2 - Shutdown completed.
+>24-09-2024 06:45:08 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Starting BankingAppApplication using Java 21.0.3 with PID 6596 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp) Starting BankingAppApplication using Java 21.0.3 with PID 6596 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp)
+>24-09-2024 06:45:08 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> No active profile set, falling back to 1 default profile: "default" No active profile set, falling back to 1 default profile: "default"
+>24-09-2024 06:45:08 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Bootstrapping Spring Data JPA repositories in DEFAULT mode. Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+>24-09-2024 06:45:08 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Finished Spring Data repository scanning in 30 ms. Found 7 JPA repository interfaces. Finished Spring Data repository scanning in 30 ms. Found 7 JPA repository interfaces.
+>24-09-2024 06:45:09 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat initialized with port 8081 (http) Tomcat initialized with port 8081 (http)
+>24-09-2024 06:45:09 [restartedMain] INFO  o.apache.catalina.core.StandardService   ::-> Starting service [Tomcat] Starting service [Tomcat]
+>24-09-2024 06:45:09 [restartedMain] INFO  org.apache.catalina.core.StandardEngine  ::-> Starting Servlet engine: [Apache Tomcat/10.1.28] Starting Servlet engine: [Apache Tomcat/10.1.28]
+>24-09-2024 06:45:09 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/bankingapp]    ::-> Initializing Spring embedded WebApplicationContext Initializing Spring embedded WebApplicationContext
+>24-09-2024 06:45:09 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext ::-> Root WebApplicationContext: initialization completed in 357 ms Root WebApplicationContext: initialization completed in 357 ms
+>24-09-2024 06:45:09 [restartedMain] INFO  o.hibernate.jpa.internal.util.LogHelper  ::-> HHH000204: Processing PersistenceUnitInfo [name: default] HHH000204: Processing PersistenceUnitInfo [name: default]
+>24-09-2024 06:45:09 [restartedMain] INFO  o.h.c.internal.RegionFactoryInitiator    ::-> HHH000026: Second-level cache disabled HHH000026: Second-level cache disabled
+>24-09-2024 06:45:09 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      ::-> No LoadTimeWeaver setup: ignoring JPA class transformer No LoadTimeWeaver setup: ignoring JPA class transformer
+>24-09-2024 06:45:09 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-3 - Starting... HikariPool-3 - Starting...
+>24-09-2024 06:45:09 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@66ddd0d1 HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@66ddd0d1
+>24-09-2024 06:45:09 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-3 - Start completed. HikariPool-3 - Start completed.
+>24-09-2024 06:45:09 [restartedMain] WARN  org.hibernate.orm.deprecation            ::-> HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+>24-09-2024 06:45:09 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       ::-> HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+>24-09-2024 06:45:09 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Initialized JPA EntityManagerFactory for persistence unit 'default' Initialized JPA EntityManagerFactory for persistence unit 'default'
+>24-09-2024 06:45:09 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ::-> spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+>24-09-2024 06:45:09 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration ::-> 
+
+Using generated security password: 8b329f62-245f-4049-ad6c-13bd725b1b54
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+ 
+
+Using generated security password: 8b329f62-245f-4049-ad6c-13bd725b1b54
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+>24-09-2024 06:45:09 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ::-> Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+>24-09-2024 06:45:09 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer       ::-> LiveReload server is running on port 35729 LiveReload server is running on port 35729
+>24-09-2024 06:45:09 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat started on port 8081 (http) with context path '/bankingapp' Tomcat started on port 8081 (http) with context path '/bankingapp'
+>24-09-2024 06:45:09 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Started BankingAppApplication in 0.998 seconds (process running for 478.371) Started BankingAppApplication in 0.998 seconds (process running for 478.371)
+>24-09-2024 06:45:09 [restartedMain] INFO  c.s.bankingApp.bootstrap.RoleSeeder      ::-> RoleSeeder::run RoleSeeder::run
+>24-09-2024 06:45:09 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener ::-> Condition evaluation unchanged Condition evaluation unchanged
+>24-09-2024 06:45:09 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>24-09-2024 06:45:09 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> banking app started! banking app started!
+>24-09-2024 06:45:09 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>24-09-2024 06:46:01 [http-nio-8081-exec-2] INFO  o.a.c.c.C.[.[localhost].[/bankingapp]    ::-> Initializing Spring DispatcherServlet 'dispatcherServlet' Initializing Spring DispatcherServlet 'dispatcherServlet'
+>24-09-2024 06:46:01 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet        ::-> Initializing Servlet 'dispatcherServlet' Initializing Servlet 'dispatcherServlet'
+>24-09-2024 06:46:01 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet        ::-> Completed initialization in 1 ms Completed initialization in 1 ms
+>24-09-2024 06:46:01 [http-nio-8081-exec-2] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>24-09-2024 06:46:01 [http-nio-8081-exec-2] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>24-09-2024 06:46:01 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 06:46:01 [http-nio-8081-exec-2] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>24-09-2024 06:46:01 [http-nio-8081-exec-2] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>24-09-2024 06:46:01 [http-nio-8081-exec-2] WARN  o.h.engine.jdbc.spi.SqlExceptionHelper   ::-> SQL Error: 3819, SQLState: HY000 SQL Error: 3819, SQLState: HY000
+>24-09-2024 06:46:01 [http-nio-8081-exec-2] ERROR o.h.engine.jdbc.spi.SqlExceptionHelper   ::-> Check constraint 'transactions_chk_1' is violated. Check constraint 'transactions_chk_1' is violated.
+>24-09-2024 06:47:59 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener ::-> Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+>24-09-2024 06:47:59 [Thread-11] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Closing JPA EntityManagerFactory for persistence unit 'default' Closing JPA EntityManagerFactory for persistence unit 'default'
+>24-09-2024 06:47:59 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-3 - Shutdown initiated... HikariPool-3 - Shutdown initiated...
+>24-09-2024 06:47:59 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-3 - Shutdown completed. HikariPool-3 - Shutdown completed.
+>24-09-2024 06:47:59 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Starting BankingAppApplication using Java 21.0.3 with PID 6596 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp) Starting BankingAppApplication using Java 21.0.3 with PID 6596 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp)
+>24-09-2024 06:47:59 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> No active profile set, falling back to 1 default profile: "default" No active profile set, falling back to 1 default profile: "default"
+>24-09-2024 06:48:00 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Bootstrapping Spring Data JPA repositories in DEFAULT mode. Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+>24-09-2024 06:48:00 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Finished Spring Data repository scanning in 13 ms. Found 7 JPA repository interfaces. Finished Spring Data repository scanning in 13 ms. Found 7 JPA repository interfaces.
+>24-09-2024 06:48:00 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat initialized with port 8081 (http) Tomcat initialized with port 8081 (http)
+>24-09-2024 06:48:00 [restartedMain] INFO  o.apache.catalina.core.StandardService   ::-> Starting service [Tomcat] Starting service [Tomcat]
+>24-09-2024 06:48:00 [restartedMain] INFO  org.apache.catalina.core.StandardEngine  ::-> Starting Servlet engine: [Apache Tomcat/10.1.28] Starting Servlet engine: [Apache Tomcat/10.1.28]
+>24-09-2024 06:48:00 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/bankingapp]    ::-> Initializing Spring embedded WebApplicationContext Initializing Spring embedded WebApplicationContext
+>24-09-2024 06:48:00 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext ::-> Root WebApplicationContext: initialization completed in 257 ms Root WebApplicationContext: initialization completed in 257 ms
+>24-09-2024 06:48:00 [restartedMain] INFO  o.hibernate.jpa.internal.util.LogHelper  ::-> HHH000204: Processing PersistenceUnitInfo [name: default] HHH000204: Processing PersistenceUnitInfo [name: default]
+>24-09-2024 06:48:00 [restartedMain] INFO  o.h.c.internal.RegionFactoryInitiator    ::-> HHH000026: Second-level cache disabled HHH000026: Second-level cache disabled
+>24-09-2024 06:48:00 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      ::-> No LoadTimeWeaver setup: ignoring JPA class transformer No LoadTimeWeaver setup: ignoring JPA class transformer
+>24-09-2024 06:48:00 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-4 - Starting... HikariPool-4 - Starting...
+>24-09-2024 06:48:00 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@26aace04 HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@26aace04
+>24-09-2024 06:48:00 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-4 - Start completed. HikariPool-4 - Start completed.
+>24-09-2024 06:48:00 [restartedMain] WARN  org.hibernate.orm.deprecation            ::-> HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+>24-09-2024 06:48:00 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       ::-> HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+>24-09-2024 06:48:00 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Initialized JPA EntityManagerFactory for persistence unit 'default' Initialized JPA EntityManagerFactory for persistence unit 'default'
+>24-09-2024 06:48:00 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ::-> spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+>24-09-2024 06:48:00 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration ::-> 
+
+Using generated security password: e145e9ff-e344-42f4-b13b-4cc727a83238
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+ 
+
+Using generated security password: e145e9ff-e344-42f4-b13b-4cc727a83238
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+>24-09-2024 06:48:00 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ::-> Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+>24-09-2024 06:48:00 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer       ::-> LiveReload server is running on port 35729 LiveReload server is running on port 35729
+>24-09-2024 06:48:00 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat started on port 8081 (http) with context path '/bankingapp' Tomcat started on port 8081 (http) with context path '/bankingapp'
+>24-09-2024 06:48:00 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Started BankingAppApplication in 0.862 seconds (process running for 649.491) Started BankingAppApplication in 0.862 seconds (process running for 649.491)
+>24-09-2024 06:48:00 [restartedMain] INFO  c.s.bankingApp.bootstrap.RoleSeeder      ::-> RoleSeeder::run RoleSeeder::run
+>24-09-2024 06:48:00 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener ::-> Condition evaluation unchanged Condition evaluation unchanged
+>24-09-2024 06:48:00 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>24-09-2024 06:48:00 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> banking app started! banking app started!
+>24-09-2024 06:48:00 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>24-09-2024 06:48:13 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener ::-> Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+>24-09-2024 06:48:13 [Thread-15] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Closing JPA EntityManagerFactory for persistence unit 'default' Closing JPA EntityManagerFactory for persistence unit 'default'
+>24-09-2024 06:48:13 [Thread-15] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-4 - Shutdown initiated... HikariPool-4 - Shutdown initiated...
+>24-09-2024 06:48:13 [Thread-15] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-4 - Shutdown completed. HikariPool-4 - Shutdown completed.
+>24-09-2024 06:48:13 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Starting BankingAppApplication using Java 21.0.3 with PID 6596 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp) Starting BankingAppApplication using Java 21.0.3 with PID 6596 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp)
+>24-09-2024 06:48:13 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> No active profile set, falling back to 1 default profile: "default" No active profile set, falling back to 1 default profile: "default"
+>24-09-2024 06:48:13 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Bootstrapping Spring Data JPA repositories in DEFAULT mode. Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+>24-09-2024 06:48:13 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Finished Spring Data repository scanning in 24 ms. Found 7 JPA repository interfaces. Finished Spring Data repository scanning in 24 ms. Found 7 JPA repository interfaces.
+>24-09-2024 06:48:13 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat initialized with port 8081 (http) Tomcat initialized with port 8081 (http)
+>24-09-2024 06:48:13 [restartedMain] INFO  o.apache.catalina.core.StandardService   ::-> Starting service [Tomcat] Starting service [Tomcat]
+>24-09-2024 06:48:13 [restartedMain] INFO  org.apache.catalina.core.StandardEngine  ::-> Starting Servlet engine: [Apache Tomcat/10.1.28] Starting Servlet engine: [Apache Tomcat/10.1.28]
+>24-09-2024 06:48:14 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/bankingapp]    ::-> Initializing Spring embedded WebApplicationContext Initializing Spring embedded WebApplicationContext
+>24-09-2024 06:48:14 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext ::-> Root WebApplicationContext: initialization completed in 253 ms Root WebApplicationContext: initialization completed in 253 ms
+>24-09-2024 06:48:14 [restartedMain] INFO  o.hibernate.jpa.internal.util.LogHelper  ::-> HHH000204: Processing PersistenceUnitInfo [name: default] HHH000204: Processing PersistenceUnitInfo [name: default]
+>24-09-2024 06:48:14 [restartedMain] INFO  o.h.c.internal.RegionFactoryInitiator    ::-> HHH000026: Second-level cache disabled HHH000026: Second-level cache disabled
+>24-09-2024 06:48:14 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      ::-> No LoadTimeWeaver setup: ignoring JPA class transformer No LoadTimeWeaver setup: ignoring JPA class transformer
+>24-09-2024 06:48:14 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-5 - Starting... HikariPool-5 - Starting...
+>24-09-2024 06:48:14 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@67d6a0d9 HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@67d6a0d9
+>24-09-2024 06:48:14 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-5 - Start completed. HikariPool-5 - Start completed.
+>24-09-2024 06:48:14 [restartedMain] WARN  org.hibernate.orm.deprecation            ::-> HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+>24-09-2024 06:48:14 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       ::-> HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+>24-09-2024 06:48:14 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Initialized JPA EntityManagerFactory for persistence unit 'default' Initialized JPA EntityManagerFactory for persistence unit 'default'
+>24-09-2024 06:48:14 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ::-> spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+>24-09-2024 06:48:14 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration ::-> 
+
+Using generated security password: 84472208-d6f7-4165-944b-8fb2c47f53fe
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+ 
+
+Using generated security password: 84472208-d6f7-4165-944b-8fb2c47f53fe
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+>24-09-2024 06:48:14 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ::-> Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+>24-09-2024 06:48:14 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer       ::-> LiveReload server is running on port 35729 LiveReload server is running on port 35729
+>24-09-2024 06:48:14 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat started on port 8081 (http) with context path '/bankingapp' Tomcat started on port 8081 (http) with context path '/bankingapp'
+>24-09-2024 06:48:14 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Started BankingAppApplication in 0.771 seconds (process running for 663.207) Started BankingAppApplication in 0.771 seconds (process running for 663.207)
+>24-09-2024 06:48:14 [restartedMain] INFO  c.s.bankingApp.bootstrap.RoleSeeder      ::-> RoleSeeder::run RoleSeeder::run
+>24-09-2024 06:48:14 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener ::-> Condition evaluation unchanged Condition evaluation unchanged
+>24-09-2024 06:48:14 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>24-09-2024 06:48:14 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> banking app started! banking app started!
+>24-09-2024 06:48:14 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>24-09-2024 06:49:56 [http-nio-8081-exec-2] INFO  o.a.c.c.C.[.[localhost].[/bankingapp]    ::-> Initializing Spring DispatcherServlet 'dispatcherServlet' Initializing Spring DispatcherServlet 'dispatcherServlet'
+>24-09-2024 06:49:56 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet        ::-> Initializing Servlet 'dispatcherServlet' Initializing Servlet 'dispatcherServlet'
+>24-09-2024 06:49:56 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet        ::-> Completed initialization in 2 ms Completed initialization in 2 ms
+>24-09-2024 06:49:56 [http-nio-8081-exec-2] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>24-09-2024 06:49:56 [http-nio-8081-exec-2] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>24-09-2024 06:49:56 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 06:49:56 [http-nio-8081-exec-2] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>24-09-2024 06:49:56 [http-nio-8081-exec-2] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>24-09-2024 06:49:56 [http-nio-8081-exec-2] INFO  c.s.b.services.TransactionService        ::-> beneficiary is Active beneficiary is Active
+>24-09-2024 06:49:56 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 06:49:56 [http-nio-8081-exec-2] INFO  c.s.b.services.TransactionService        ::-> this means beneficiary is in the same bank this means beneficiary is in the same bank
+>24-09-2024 06:49:56 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>24-09-2024 06:49:56 [http-nio-8081-exec-2] INFO  c.s.b.services.TransactionService        ::-> beneficiary exists for the given account beneficiary exists for the given account
+>24-09-2024 06:49:56 [http-nio-8081-exec-2] INFO  c.s.b.services.TransactionService        ::-> customer has enough balance customer has enough balance
+>24-09-2024 06:49:56 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>24-09-2024 06:49:56 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 06:49:56 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>24-09-2024 06:49:56 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 06:50:41 [http-nio-8081-exec-3] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>24-09-2024 06:50:41 [http-nio-8081-exec-3] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>24-09-2024 06:50:41 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 06:50:41 [http-nio-8081-exec-3] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>24-09-2024 06:50:41 [http-nio-8081-exec-3] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>24-09-2024 06:50:41 [http-nio-8081-exec-3] INFO  c.s.b.services.TransactionService        ::-> beneficiary is Active beneficiary is Active
+>24-09-2024 06:50:41 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 06:50:41 [http-nio-8081-exec-3] INFO  c.s.b.services.TransactionService        ::-> this means beneficiary is in the same bank this means beneficiary is in the same bank
+>24-09-2024 06:50:41 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>24-09-2024 06:50:41 [http-nio-8081-exec-3] INFO  c.s.b.services.TransactionService        ::-> beneficiary exists for the given account beneficiary exists for the given account
+>24-09-2024 06:50:41 [http-nio-8081-exec-3] INFO  c.s.b.services.TransactionService        ::-> customer has enough balance customer has enough balance
+>24-09-2024 06:50:41 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>24-09-2024 06:50:41 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 06:50:41 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>24-09-2024 06:50:41 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 06:50:45 [http-nio-8081-exec-4] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 06:50:45 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:17:32 [HikariPool-5 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=4m17s516ms36µs300ns). HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=4m17s516ms36µs300ns).
+>24-09-2024 07:38:37 [http-nio-8081-exec-7] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 07:38:37 [http-nio-8081-exec-7] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:38:38 [http-nio-8081-exec-8] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 07:38:38 [http-nio-8081-exec-8] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:38:45 [http-nio-8081-exec-10] INFO  c.s.b.controllers.AccountController      ::-> AccountController::deleteBeneficiaryFromAccount:: AccountController::deleteBeneficiaryFromAccount::
+>24-09-2024 07:38:45 [http-nio-8081-exec-10] INFO  c.s.b.controllers.AccountController      ::-> 468d951a-ea7f-4e9b-a503-0a9a0328295a 468d951a-ea7f-4e9b-a503-0a9a0328295a
+>24-09-2024 07:38:45 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::addBeneficiaryToAccount AccountService::addBeneficiaryToAccount
+>24-09-2024 07:38:45 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:38:45 [http-nio-8081-exec-10] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryById 468d951a-ea7f-4e9b-a503-0a9a0328295a BeneficiaryService::getBeneficiaryById 468d951a-ea7f-4e9b-a503-0a9a0328295a
+>24-09-2024 07:38:45 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>24-09-2024 07:38:45 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> beneficiary exists in account beneficiary exists in account
+>24-09-2024 07:38:45 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> beneficiary deleted successfully from account beneficiary deleted successfully from account
+>24-09-2024 07:38:47 [http-nio-8081-exec-1] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 07:38:47 [http-nio-8081-exec-1] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:38:56 [http-nio-8081-exec-3] INFO  c.s.b.controllers.AccountController      ::-> AccountController::addBeneficiaryToAccount:: AccountController::addBeneficiaryToAccount::
+>24-09-2024 07:38:56 [http-nio-8081-exec-3] INFO  c.s.b.controllers.AccountController      ::-> com.sukrutha.bankingApp.entities.Beneficiary@5ea8f2c4 com.sukrutha.bankingApp.entities.Beneficiary@5ea8f2c4
+>24-09-2024 07:38:56 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::addBeneficiaryToAccount AccountService::addBeneficiaryToAccount
+>24-09-2024 07:38:56 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:38:56 [http-nio-8081-exec-3] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>24-09-2024 07:38:56 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService:updateAccount AccountService:updateAccount
+>24-09-2024 07:38:56 [http-nio-8081-exec-3] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService updateBeneficiary BeneficiaryService updateBeneficiary
+>24-09-2024 07:38:56 [http-nio-8081-exec-4] INFO  c.s.b.controllers.BankController         ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 07:38:56 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.BankService      ::-> BankService::getBankDetails BankService::getBankDetails
+>24-09-2024 07:38:56 [http-nio-8081-exec-6] INFO  c.s.b.controllers.CustomerController     ::-> CustomerController::getCustomerDetailsByCustomerId CustomerController::getCustomerDetailsByCustomerId
+>24-09-2024 07:38:56 [http-nio-8081-exec-5] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 07:38:56 [http-nio-8081-exec-5] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:43:29 [http-nio-8081-exec-10] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 07:43:29 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:43:29 [http-nio-8081-exec-10] ERROR c.s.bankingApp.services.AccountService   ::-> error finding the account error finding the account
+>24-09-2024 07:43:30 [http-nio-8081-exec-1] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 07:43:30 [http-nio-8081-exec-1] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:43:30 [http-nio-8081-exec-1] ERROR c.s.bankingApp.services.AccountService   ::-> error finding the account error finding the account
+>24-09-2024 07:43:48 [http-nio-8081-exec-2] INFO  c.s.b.controllers.BankController         ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 07:43:48 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.BankService      ::-> BankService::getBankDetails BankService::getBankDetails
+>24-09-2024 07:43:48 [http-nio-8081-exec-3] INFO  c.s.b.controllers.CustomerController     ::-> CustomerController::getCustomerDetailsByCustomerId CustomerController::getCustomerDetailsByCustomerId
+>24-09-2024 07:43:48 [http-nio-8081-exec-4] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 07:43:48 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:43:48 [http-nio-8081-exec-4] ERROR c.s.bankingApp.services.AccountService   ::-> error finding the account error finding the account
+>24-09-2024 07:43:55 [http-nio-8081-exec-5] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 07:43:55 [http-nio-8081-exec-5] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:43:56 [http-nio-8081-exec-6] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 07:43:56 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:46:42 [http-nio-8081-exec-10] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 07:46:42 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:46:42 [http-nio-8081-exec-1] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 07:46:42 [http-nio-8081-exec-1] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:46:55 [http-nio-8081-exec-2] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>24-09-2024 07:46:55 [http-nio-8081-exec-2] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>24-09-2024 07:46:55 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:46:55 [http-nio-8081-exec-2] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>24-09-2024 07:46:55 [http-nio-8081-exec-2] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>24-09-2024 07:46:55 [http-nio-8081-exec-2] INFO  c.s.b.services.TransactionService        ::-> beneficiary is Active beneficiary is Active
+>24-09-2024 07:46:55 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:46:55 [http-nio-8081-exec-2] INFO  c.s.b.services.TransactionService        ::-> this means beneficiary is in the same bank this means beneficiary is in the same bank
+>24-09-2024 07:46:55 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>24-09-2024 07:46:55 [http-nio-8081-exec-2] INFO  c.s.b.services.TransactionService        ::-> beneficiary exists for the given account beneficiary exists for the given account
+>24-09-2024 07:46:55 [http-nio-8081-exec-2] INFO  c.s.b.services.TransactionService        ::-> customer has enough balance customer has enough balance
+>24-09-2024 07:46:55 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>24-09-2024 07:46:55 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:46:55 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>24-09-2024 07:46:55 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:46:56 [http-nio-8081-exec-4] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 07:46:56 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:47:00 [http-nio-8081-exec-3] INFO  c.s.b.controllers.BankController         ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 07:47:00 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.BankService      ::-> BankService::getBankDetails BankService::getBankDetails
+>24-09-2024 07:47:00 [http-nio-8081-exec-5] INFO  c.s.b.controllers.CustomerController     ::-> CustomerController::getCustomerDetailsByCustomerId CustomerController::getCustomerDetailsByCustomerId
+>24-09-2024 07:47:00 [http-nio-8081-exec-6] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 07:47:00 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:54:10 [http-nio-8081-exec-10] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 07:54:10 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:54:11 [http-nio-8081-exec-1] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 07:54:11 [http-nio-8081-exec-1] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:54:21 [http-nio-8081-exec-2] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>24-09-2024 07:54:21 [http-nio-8081-exec-2] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>24-09-2024 07:54:21 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:54:21 [http-nio-8081-exec-2] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>24-09-2024 07:54:21 [http-nio-8081-exec-2] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>24-09-2024 07:54:21 [http-nio-8081-exec-2] INFO  c.s.b.services.TransactionService        ::-> beneficiary is Active beneficiary is Active
+>24-09-2024 07:54:21 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:54:21 [http-nio-8081-exec-2] INFO  c.s.b.services.TransactionService        ::-> this means beneficiary is in the same bank this means beneficiary is in the same bank
+>24-09-2024 07:54:21 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>24-09-2024 07:54:21 [http-nio-8081-exec-2] INFO  c.s.b.services.TransactionService        ::-> beneficiary exists for the given account beneficiary exists for the given account
+>24-09-2024 07:54:21 [http-nio-8081-exec-2] INFO  c.s.b.services.TransactionService        ::-> customer has enough balance customer has enough balance
+>24-09-2024 07:54:21 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>24-09-2024 07:54:21 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:54:21 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>24-09-2024 07:54:21 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:54:22 [http-nio-8081-exec-4] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 07:54:22 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:54:31 [http-nio-8081-exec-3] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>24-09-2024 07:54:31 [http-nio-8081-exec-3] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>24-09-2024 07:54:31 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:54:31 [http-nio-8081-exec-3] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>24-09-2024 07:54:31 [http-nio-8081-exec-3] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>24-09-2024 07:54:31 [http-nio-8081-exec-3] INFO  c.s.b.services.TransactionService        ::-> beneficiary is Active beneficiary is Active
+>24-09-2024 07:54:31 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:54:31 [http-nio-8081-exec-3] INFO  c.s.b.services.TransactionService        ::-> this means beneficiary is in the same bank this means beneficiary is in the same bank
+>24-09-2024 07:54:31 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>24-09-2024 07:54:31 [http-nio-8081-exec-3] INFO  c.s.b.services.TransactionService        ::-> beneficiary exists for the given account beneficiary exists for the given account
+>24-09-2024 07:54:31 [http-nio-8081-exec-3] INFO  c.s.b.services.TransactionService        ::-> customer has enough balance customer has enough balance
+>24-09-2024 07:54:31 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>24-09-2024 07:54:31 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:54:31 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>24-09-2024 07:54:31 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:54:33 [http-nio-8081-exec-6] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 07:54:33 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:55:37 [http-nio-8081-exec-9] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 07:55:37 [http-nio-8081-exec-9] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:55:38 [http-nio-8081-exec-7] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 07:55:38 [http-nio-8081-exec-7] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:58:03 [http-nio-8081-exec-10] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>24-09-2024 07:58:03 [http-nio-8081-exec-10] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>24-09-2024 07:58:03 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:58:03 [http-nio-8081-exec-10] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>24-09-2024 07:58:03 [http-nio-8081-exec-10] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>24-09-2024 07:58:03 [http-nio-8081-exec-10] INFO  c.s.b.services.TransactionService        ::-> beneficiary is Active beneficiary is Active
+>24-09-2024 07:58:03 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:58:03 [http-nio-8081-exec-10] INFO  c.s.b.services.TransactionService        ::-> this means beneficiary is in the same bank this means beneficiary is in the same bank
+>24-09-2024 07:58:03 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>24-09-2024 07:58:03 [http-nio-8081-exec-10] INFO  c.s.b.services.TransactionService        ::-> beneficiary exists for the given account beneficiary exists for the given account
+>24-09-2024 07:58:03 [http-nio-8081-exec-10] INFO  c.s.b.services.TransactionService        ::-> customer has enough balance customer has enough balance
+>24-09-2024 07:58:03 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>24-09-2024 07:58:03 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:58:04 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>24-09-2024 07:58:04 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:58:05 [http-nio-8081-exec-1] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 07:58:05 [http-nio-8081-exec-1] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:59:24 [http-nio-8081-exec-4] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 07:59:24 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 07:59:25 [http-nio-8081-exec-3] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 07:59:25 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 08:02:39 [http-nio-8081-exec-5] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>24-09-2024 08:02:39 [http-nio-8081-exec-5] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>24-09-2024 08:02:39 [http-nio-8081-exec-5] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 08:02:39 [http-nio-8081-exec-5] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>24-09-2024 08:02:39 [http-nio-8081-exec-5] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>24-09-2024 08:02:39 [http-nio-8081-exec-5] INFO  c.s.b.services.TransactionService        ::-> beneficiary is Active beneficiary is Active
+>24-09-2024 08:02:39 [http-nio-8081-exec-5] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 08:02:39 [http-nio-8081-exec-5] INFO  c.s.b.services.TransactionService        ::-> this means beneficiary is in the same bank this means beneficiary is in the same bank
+>24-09-2024 08:02:39 [http-nio-8081-exec-5] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>24-09-2024 08:02:39 [http-nio-8081-exec-5] INFO  c.s.b.services.TransactionService        ::-> beneficiary exists for the given account beneficiary exists for the given account
+>24-09-2024 08:02:39 [http-nio-8081-exec-5] INFO  c.s.b.services.TransactionService        ::-> customer has enough balance customer has enough balance
+>24-09-2024 08:02:39 [http-nio-8081-exec-5] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>24-09-2024 08:02:39 [http-nio-8081-exec-5] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 08:02:39 [http-nio-8081-exec-5] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>24-09-2024 08:02:39 [http-nio-8081-exec-5] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 08:02:40 [http-nio-8081-exec-9] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 08:02:40 [http-nio-8081-exec-9] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 08:16:26 [http-nio-8081-exec-8] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>24-09-2024 08:16:26 [http-nio-8081-exec-8] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>24-09-2024 08:16:26 [http-nio-8081-exec-8] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 08:16:26 [http-nio-8081-exec-8] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>24-09-2024 08:16:26 [http-nio-8081-exec-8] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>24-09-2024 08:16:26 [http-nio-8081-exec-8] INFO  c.s.b.services.TransactionService        ::-> beneficiary is Active beneficiary is Active
+>24-09-2024 08:16:26 [http-nio-8081-exec-8] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 08:16:26 [http-nio-8081-exec-8] INFO  c.s.b.services.TransactionService        ::-> this means beneficiary is in the same bank this means beneficiary is in the same bank
+>24-09-2024 08:16:26 [http-nio-8081-exec-8] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>24-09-2024 08:16:26 [http-nio-8081-exec-8] INFO  c.s.b.services.TransactionService        ::-> beneficiary exists for the given account beneficiary exists for the given account
+>24-09-2024 08:16:26 [http-nio-8081-exec-8] INFO  c.s.b.services.TransactionService        ::-> customer has enough balance customer has enough balance
+>24-09-2024 08:16:26 [http-nio-8081-exec-8] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>24-09-2024 08:16:26 [http-nio-8081-exec-8] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 08:16:26 [http-nio-8081-exec-8] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>24-09-2024 08:16:26 [http-nio-8081-exec-8] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 08:16:45 [http-nio-8081-exec-10] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>24-09-2024 08:16:45 [http-nio-8081-exec-10] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>24-09-2024 08:16:45 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 08:16:45 [http-nio-8081-exec-10] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>24-09-2024 08:16:45 [http-nio-8081-exec-10] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>24-09-2024 08:16:45 [http-nio-8081-exec-10] INFO  c.s.b.services.TransactionService        ::-> beneficiary is Active beneficiary is Active
+>24-09-2024 08:16:45 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 08:16:45 [http-nio-8081-exec-10] INFO  c.s.b.services.TransactionService        ::-> this means beneficiary is in the same bank this means beneficiary is in the same bank
+>24-09-2024 08:16:45 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>24-09-2024 08:16:45 [http-nio-8081-exec-10] INFO  c.s.b.services.TransactionService        ::-> beneficiary exists for the given account beneficiary exists for the given account
+>24-09-2024 08:16:45 [http-nio-8081-exec-10] INFO  c.s.b.services.TransactionService        ::-> customer has enough balance customer has enough balance
+>24-09-2024 08:16:45 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>24-09-2024 08:16:45 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 08:16:45 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>24-09-2024 08:16:45 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 08:16:58 [http-nio-8081-exec-1] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>24-09-2024 08:16:58 [http-nio-8081-exec-1] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>24-09-2024 08:16:58 [http-nio-8081-exec-1] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 08:16:58 [http-nio-8081-exec-1] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>24-09-2024 08:16:58 [http-nio-8081-exec-1] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>24-09-2024 08:16:58 [http-nio-8081-exec-1] INFO  c.s.b.services.TransactionService        ::-> beneficiary is Active beneficiary is Active
+>24-09-2024 08:16:58 [http-nio-8081-exec-1] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 08:16:58 [http-nio-8081-exec-1] INFO  c.s.b.services.TransactionService        ::-> this means beneficiary is in the same bank this means beneficiary is in the same bank
+>24-09-2024 08:16:58 [http-nio-8081-exec-1] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>24-09-2024 08:16:58 [http-nio-8081-exec-1] INFO  c.s.b.services.TransactionService        ::-> beneficiary exists for the given account beneficiary exists for the given account
+>24-09-2024 08:16:58 [http-nio-8081-exec-1] INFO  c.s.b.services.TransactionService        ::-> customer has enough balance customer has enough balance
+>24-09-2024 08:16:58 [http-nio-8081-exec-1] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>24-09-2024 08:16:58 [http-nio-8081-exec-1] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 08:16:58 [http-nio-8081-exec-1] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>24-09-2024 08:16:58 [http-nio-8081-exec-1] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 08:17:09 [http-nio-8081-exec-2] INFO  c.s.b.controllers.BankController         ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 08:17:09 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.BankService      ::-> BankService::getBankDetails BankService::getBankDetails
+>24-09-2024 08:17:09 [http-nio-8081-exec-4] INFO  c.s.b.controllers.CustomerController     ::-> CustomerController::getCustomerDetailsByCustomerId CustomerController::getCustomerDetailsByCustomerId
+>24-09-2024 08:17:09 [http-nio-8081-exec-3] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 08:17:09 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 08:18:56 [http-nio-8081-exec-7] INFO  c.s.b.controllers.BankController         ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 08:18:56 [http-nio-8081-exec-7] INFO  c.s.bankingApp.services.BankService      ::-> BankService::getBankDetails BankService::getBankDetails
+>24-09-2024 08:18:56 [http-nio-8081-exec-7] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 08:18:56 [http-nio-8081-exec-7] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 08:18:57 [http-nio-8081-exec-8] INFO  c.s.b.controllers.CustomerController     ::-> CustomerController::getCustomerDetailsByCustomerId CustomerController::getCustomerDetailsByCustomerId
+>24-09-2024 08:21:43 [http-nio-8081-exec-4] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>24-09-2024 08:21:43 [http-nio-8081-exec-4] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>24-09-2024 08:21:43 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 08:21:43 [http-nio-8081-exec-4] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>24-09-2024 08:21:43 [http-nio-8081-exec-4] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>24-09-2024 08:21:43 [http-nio-8081-exec-4] INFO  c.s.b.services.TransactionService        ::-> beneficiary is Active beneficiary is Active
+>24-09-2024 08:21:43 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 08:21:43 [http-nio-8081-exec-4] INFO  c.s.b.services.TransactionService        ::-> this means beneficiary is in the same bank this means beneficiary is in the same bank
+>24-09-2024 08:21:43 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>24-09-2024 08:21:43 [http-nio-8081-exec-4] INFO  c.s.b.services.TransactionService        ::-> beneficiary exists for the given account beneficiary exists for the given account
+>24-09-2024 08:21:43 [http-nio-8081-exec-4] INFO  c.s.b.services.TransactionService        ::-> customer has enough balance customer has enough balance
+>24-09-2024 08:21:43 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>24-09-2024 08:21:43 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 08:21:43 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>24-09-2024 08:21:43 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 08:49:50 [HikariPool-5 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=16m14s147ms723µs). HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=16m14s147ms723µs).
+>24-09-2024 09:12:49 [HikariPool-5 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=1m28s920ms153µs100ns). HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=1m28s920ms153µs100ns).
+>24-09-2024 09:31:06 [HikariPool-5 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=10m46s704ms150µs). HikariPool-5 - Thread starvation or clock leap detected (housekeeper delta=10m46s704ms150µs).
+>24-09-2024 09:32:12 [http-nio-8081-exec-5] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 09:32:12 [http-nio-8081-exec-5] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 09:33:49 [http-nio-8081-exec-7] INFO  c.s.b.controllers.BankController         ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 09:33:49 [http-nio-8081-exec-10] INFO  c.s.b.controllers.CustomerController     ::-> CustomerController::getCustomerDetailsByCustomerId CustomerController::getCustomerDetailsByCustomerId
+>24-09-2024 09:33:49 [http-nio-8081-exec-7] INFO  c.s.bankingApp.services.BankService      ::-> BankService::getBankDetails BankService::getBankDetails
+>24-09-2024 09:33:49 [http-nio-8081-exec-8] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 09:33:49 [http-nio-8081-exec-8] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 09:34:01 [http-nio-8081-exec-1] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>24-09-2024 09:34:01 [http-nio-8081-exec-1] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>24-09-2024 09:34:01 [http-nio-8081-exec-1] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 09:34:01 [http-nio-8081-exec-1] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>24-09-2024 09:34:01 [http-nio-8081-exec-1] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>24-09-2024 09:34:01 [http-nio-8081-exec-1] INFO  c.s.b.services.TransactionService        ::-> beneficiary is Active beneficiary is Active
+>24-09-2024 09:34:01 [http-nio-8081-exec-1] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 09:34:01 [http-nio-8081-exec-1] INFO  c.s.b.services.TransactionService        ::-> this means beneficiary is in the same bank this means beneficiary is in the same bank
+>24-09-2024 09:34:01 [http-nio-8081-exec-1] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>24-09-2024 09:34:01 [http-nio-8081-exec-1] INFO  c.s.b.services.TransactionService        ::-> beneficiary exists for the given account beneficiary exists for the given account
+>24-09-2024 09:34:01 [http-nio-8081-exec-1] INFO  c.s.b.services.TransactionService        ::-> customer has enough balance customer has enough balance
+>24-09-2024 09:34:01 [http-nio-8081-exec-1] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>24-09-2024 09:34:01 [http-nio-8081-exec-1] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 09:34:01 [http-nio-8081-exec-1] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>24-09-2024 09:34:01 [http-nio-8081-exec-1] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 10:14:18 [RMI TCP Connection(203)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin ::-> Application shutdown requested. Application shutdown requested.
+>24-09-2024 10:14:18 [RMI TCP Connection(203)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Closing JPA EntityManagerFactory for persistence unit 'default' Closing JPA EntityManagerFactory for persistence unit 'default'
+>24-09-2024 10:14:18 [RMI TCP Connection(203)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-5 - Shutdown initiated... HikariPool-5 - Shutdown initiated...
+>24-09-2024 10:14:18 [RMI TCP Connection(203)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-5 - Shutdown completed. HikariPool-5 - Shutdown completed.
+>24-09-2024 10:20:21 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Starting BankingAppApplication using Java 21.0.3 with PID 6484 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp) Starting BankingAppApplication using Java 21.0.3 with PID 6484 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp)
+>24-09-2024 10:20:21 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> No active profile set, falling back to 1 default profile: "default" No active profile set, falling back to 1 default profile: "default"
+>24-09-2024 10:20:21 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor ::-> Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+>24-09-2024 10:20:21 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor ::-> For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+>24-09-2024 10:20:22 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Bootstrapping Spring Data JPA repositories in DEFAULT mode. Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+>24-09-2024 10:20:22 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Finished Spring Data repository scanning in 51 ms. Found 7 JPA repository interfaces. Finished Spring Data repository scanning in 51 ms. Found 7 JPA repository interfaces.
+>24-09-2024 10:20:23 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat initialized with port 8081 (http) Tomcat initialized with port 8081 (http)
+>24-09-2024 10:20:23 [restartedMain] INFO  o.apache.catalina.core.StandardService   ::-> Starting service [Tomcat] Starting service [Tomcat]
+>24-09-2024 10:20:23 [restartedMain] INFO  org.apache.catalina.core.StandardEngine  ::-> Starting Servlet engine: [Apache Tomcat/10.1.28] Starting Servlet engine: [Apache Tomcat/10.1.28]
+>24-09-2024 10:20:23 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/bankingapp]    ::-> Initializing Spring embedded WebApplicationContext Initializing Spring embedded WebApplicationContext
+>24-09-2024 10:20:23 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext ::-> Root WebApplicationContext: initialization completed in 1521 ms Root WebApplicationContext: initialization completed in 1521 ms
+>24-09-2024 10:20:23 [restartedMain] INFO  o.hibernate.jpa.internal.util.LogHelper  ::-> HHH000204: Processing PersistenceUnitInfo [name: default] HHH000204: Processing PersistenceUnitInfo [name: default]
+>24-09-2024 10:20:23 [restartedMain] INFO  org.hibernate.Version                    ::-> HHH000412: Hibernate ORM core version 6.5.2.Final HHH000412: Hibernate ORM core version 6.5.2.Final
+>24-09-2024 10:20:23 [restartedMain] INFO  o.h.c.internal.RegionFactoryInitiator    ::-> HHH000026: Second-level cache disabled HHH000026: Second-level cache disabled
+>24-09-2024 10:20:23 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      ::-> No LoadTimeWeaver setup: ignoring JPA class transformer No LoadTimeWeaver setup: ignoring JPA class transformer
+>24-09-2024 10:20:23 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Starting... HikariPool-1 - Starting...
+>24-09-2024 10:20:24 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@431d88ed HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@431d88ed
+>24-09-2024 10:20:24 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Start completed. HikariPool-1 - Start completed.
+>24-09-2024 10:20:24 [restartedMain] WARN  org.hibernate.orm.deprecation            ::-> HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+>24-09-2024 10:20:25 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       ::-> HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+>24-09-2024 10:20:25 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Initialized JPA EntityManagerFactory for persistence unit 'default' Initialized JPA EntityManagerFactory for persistence unit 'default'
+>24-09-2024 10:20:25 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory     ::-> Hibernate is in classpath; If applicable, HQL parser will be used. Hibernate is in classpath; If applicable, HQL parser will be used.
+>24-09-2024 10:20:25 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ::-> spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+>24-09-2024 10:20:25 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration ::-> 
+
+Using generated security password: 17e95298-3fbb-4a37-9a63-77be2c0fc595
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+ 
+
+Using generated security password: 17e95298-3fbb-4a37-9a63-77be2c0fc595
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+>24-09-2024 10:20:25 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ::-> Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+>24-09-2024 10:20:26 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer       ::-> LiveReload server is running on port 35729 LiveReload server is running on port 35729
+>24-09-2024 10:20:26 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat started on port 8081 (http) with context path '/bankingapp' Tomcat started on port 8081 (http) with context path '/bankingapp'
+>24-09-2024 10:20:26 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Started BankingAppApplication in 4.862 seconds (process running for 5.618) Started BankingAppApplication in 4.862 seconds (process running for 5.618)
+>24-09-2024 10:20:26 [restartedMain] INFO  c.s.bankingApp.bootstrap.RoleSeeder      ::-> RoleSeeder::run RoleSeeder::run
+>24-09-2024 10:20:26 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>24-09-2024 10:20:26 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> banking app started! banking app started!
+>24-09-2024 10:20:26 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>24-09-2024 10:21:44 [http-nio-8081-exec-2] INFO  o.a.c.c.C.[.[localhost].[/bankingapp]    ::-> Initializing Spring DispatcherServlet 'dispatcherServlet' Initializing Spring DispatcherServlet 'dispatcherServlet'
+>24-09-2024 10:21:44 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet        ::-> Initializing Servlet 'dispatcherServlet' Initializing Servlet 'dispatcherServlet'
+>24-09-2024 10:21:44 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet        ::-> Completed initialization in 2 ms Completed initialization in 2 ms
+>24-09-2024 10:21:44 [http-nio-8081-exec-2] INFO  c.s.b.controllers.BankController         ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 10:21:44 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.BankService      ::-> BankService::getBankDetails BankService::getBankDetails
+>24-09-2024 10:21:44 [http-nio-8081-exec-4] INFO  c.s.b.controllers.CustomerController     ::-> CustomerController::getCustomerDetailsByCustomerId CustomerController::getCustomerDetailsByCustomerId
+>24-09-2024 10:21:44 [http-nio-8081-exec-1] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 10:21:44 [http-nio-8081-exec-1] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 10:22:05 [http-nio-8081-exec-3] INFO  c.s.b.controllers.BankController         ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 10:22:05 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.BankService      ::-> BankService::getBankDetails BankService::getBankDetails
+>24-09-2024 10:22:05 [http-nio-8081-exec-5] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>24-09-2024 10:22:05 [http-nio-8081-exec-6] INFO  c.s.b.controllers.CustomerController     ::-> CustomerController::getCustomerDetailsByCustomerId CustomerController::getCustomerDetailsByCustomerId
+>24-09-2024 10:22:05 [http-nio-8081-exec-5] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 10:22:22 [http-nio-8081-exec-7] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>24-09-2024 10:22:22 [http-nio-8081-exec-7] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>24-09-2024 10:22:22 [http-nio-8081-exec-7] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 10:22:22 [http-nio-8081-exec-7] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>24-09-2024 10:22:22 [http-nio-8081-exec-7] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>24-09-2024 10:22:22 [http-nio-8081-exec-7] INFO  c.s.b.services.TransactionService        ::-> beneficiary is Active beneficiary is Active
+>24-09-2024 10:22:22 [http-nio-8081-exec-7] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 10:22:22 [http-nio-8081-exec-7] INFO  c.s.b.services.TransactionService        ::-> this means beneficiary is in the same bank this means beneficiary is in the same bank
+>24-09-2024 10:22:22 [http-nio-8081-exec-7] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>24-09-2024 10:22:22 [http-nio-8081-exec-7] INFO  c.s.b.services.TransactionService        ::-> beneficiary exists for the given account beneficiary exists for the given account
+>24-09-2024 10:22:22 [http-nio-8081-exec-7] INFO  c.s.b.services.TransactionService        ::-> customer has enough balance customer has enough balance
+>24-09-2024 10:22:22 [http-nio-8081-exec-7] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>24-09-2024 10:22:22 [http-nio-8081-exec-7] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 10:22:22 [http-nio-8081-exec-7] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>24-09-2024 10:22:22 [http-nio-8081-exec-7] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 10:23:09 [http-nio-8081-exec-4] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>24-09-2024 10:23:09 [http-nio-8081-exec-4] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>24-09-2024 10:23:09 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 10:23:09 [http-nio-8081-exec-4] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>24-09-2024 10:23:09 [http-nio-8081-exec-4] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>24-09-2024 10:23:09 [http-nio-8081-exec-4] INFO  c.s.b.services.TransactionService        ::-> beneficiary is Active beneficiary is Active
+>24-09-2024 10:23:09 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 10:23:09 [http-nio-8081-exec-4] INFO  c.s.b.services.TransactionService        ::-> this means beneficiary is in the same bank this means beneficiary is in the same bank
+>24-09-2024 10:23:09 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>24-09-2024 10:23:09 [http-nio-8081-exec-4] INFO  c.s.b.services.TransactionService        ::-> beneficiary exists for the given account beneficiary exists for the given account
+>24-09-2024 10:23:09 [http-nio-8081-exec-4] INFO  c.s.b.services.TransactionService        ::-> customer has enough balance customer has enough balance
+>24-09-2024 10:23:09 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>24-09-2024 10:23:09 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 10:23:09 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>24-09-2024 10:23:09 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 10:23:32 [http-nio-8081-exec-3] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>24-09-2024 10:23:32 [http-nio-8081-exec-3] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>24-09-2024 10:23:32 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 10:23:32 [http-nio-8081-exec-3] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>24-09-2024 10:23:32 [http-nio-8081-exec-3] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>24-09-2024 10:23:32 [http-nio-8081-exec-3] INFO  c.s.b.services.TransactionService        ::-> beneficiary is Active beneficiary is Active
+>24-09-2024 10:23:32 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 10:23:32 [http-nio-8081-exec-3] INFO  c.s.b.services.TransactionService        ::-> this means beneficiary is in the same bank this means beneficiary is in the same bank
+>24-09-2024 10:23:32 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>24-09-2024 10:23:32 [http-nio-8081-exec-3] INFO  c.s.b.services.TransactionService        ::-> beneficiary exists for the given account beneficiary exists for the given account
+>24-09-2024 10:23:32 [http-nio-8081-exec-3] INFO  c.s.b.services.TransactionService        ::-> customer has enough balance customer has enough balance
+>24-09-2024 10:23:32 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>24-09-2024 10:23:32 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 10:23:32 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>24-09-2024 10:23:32 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>24-09-2024 10:30:44 [RMI TCP Connection(18)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin ::-> Application shutdown requested. Application shutdown requested.
+>24-09-2024 10:30:44 [RMI TCP Connection(18)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Closing JPA EntityManagerFactory for persistence unit 'default' Closing JPA EntityManagerFactory for persistence unit 'default'
+>24-09-2024 10:30:44 [RMI TCP Connection(18)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Shutdown initiated... HikariPool-1 - Shutdown initiated...
+>24-09-2024 10:30:44 [RMI TCP Connection(18)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Shutdown completed. HikariPool-1 - Shutdown completed.

@@ -20,6 +20,7 @@ import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.Table;
 import jakarta.persistence.Transient;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -37,6 +38,7 @@ import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.Max;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.GenerationType;
 
@@ -61,7 +63,8 @@ public class Transaction {
 	private Account customerAccount;
 	@ManyToOne
 	@JoinColumn(name = "beneficiary_account_id")
-	private Beneficiary beneficiaryAccount;
+	@JsonProperty(access = Access.WRITE_ONLY)
+	private Account beneficiaryAccount;
 	@Column(name = "amount")
 	@NotNull
 	private double amount;
@@ -83,5 +86,5 @@ public class Transaction {
 	private TransferType transferType;
 	@Transient
 	private boolean debitOrCredit;// if true then debit
-
+	
 }

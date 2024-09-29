@@ -123,13 +123,14 @@ public class TransactionService {
 				log.info("customer accout is active");
 				Beneficiary beneficiary = beneficiaryService
 						.getBeneficiaryByBeneficiaryAccountNumber(beneficiaryAccountNumber);// creating a beneficiary
-				
+				Account beneficiaryAccount = accountService.getAccountByAccountNumber(beneficiaryAccountNumber);
 				// object
 				if (beneficiary.isActive()) {// checking if beneficiary is allowed to recieve money (it can be toggled
 												// byadmin)
 					log.info("beneficiary is Active");
 					transaction.setCustomerAccount(customerAccount);
-					transaction.setBeneficiaryAccount(beneficiary);
+					transaction.setBeneficiaryAccount(beneficiaryAccount);
+					log.info(beneficiaryAccountNumber);
 					// checking if beneficiary is in the same bank
 					Account beneficiaryAccountInSameBank = accountService
 							.getAccountByAccountNumber(beneficiaryAccountNumber);
@@ -184,7 +185,19 @@ public class TransactionService {
 			e.printStackTrace();
 
 		}
-		transactionRepository.save(transaction);
+		log.info("saving transaction");
+	
+		try {
+			
+			transactionRepository.save(transaction);
+             log.info(transaction.getTransactionId());
+			log.info("after save");
+		}
+		
+		catch(Exception e) {
+			log.error("error in saving :::::::::");
+		}
+		
 		return transaction;
 	}
 
@@ -198,12 +211,12 @@ public class TransactionService {
 			if (customerAccount != null && customerAccount.isActive()) {
 				Beneficiary beneficiary = beneficiaryService
 						.getBeneficiaryByBeneficiaryAccountNumber(beneficiaryAccountNumber);// creating a beneficiary
-																							// object
+				Account beneficiaryAccount = accountService.getAccountByAccountNumber(beneficiaryAccountNumber);																	// object
 				if (beneficiary.isActive()) {// checking if beneficiary is allowed to recieve money (it can be toggled
 												// byadmin)
 
 					transaction.setCustomerAccount(customerAccount);
-					transaction.setBeneficiaryAccount(beneficiary);
+					transaction.setBeneficiaryAccount(beneficiaryAccount);
 
 					// checking if beneficiary is in the same bank
 					Account beneficiaryAccountInSameBank = accountService

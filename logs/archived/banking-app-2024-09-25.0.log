@@ -1,0 +1,627 @@
+>25-09-2024 09:18:12 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Starting BankingAppApplication using Java 21.0.3 with PID 23652 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp) Starting BankingAppApplication using Java 21.0.3 with PID 23652 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp)
+>25-09-2024 09:18:12 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> No active profile set, falling back to 1 default profile: "default" No active profile set, falling back to 1 default profile: "default"
+>25-09-2024 09:18:13 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor ::-> Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+>25-09-2024 09:18:13 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor ::-> For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+>25-09-2024 09:18:14 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Bootstrapping Spring Data JPA repositories in DEFAULT mode. Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+>25-09-2024 09:18:14 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Finished Spring Data repository scanning in 76 ms. Found 7 JPA repository interfaces. Finished Spring Data repository scanning in 76 ms. Found 7 JPA repository interfaces.
+>25-09-2024 09:18:14 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat initialized with port 8081 (http) Tomcat initialized with port 8081 (http)
+>25-09-2024 09:18:14 [restartedMain] INFO  o.apache.catalina.core.StandardService   ::-> Starting service [Tomcat] Starting service [Tomcat]
+>25-09-2024 09:18:14 [restartedMain] INFO  org.apache.catalina.core.StandardEngine  ::-> Starting Servlet engine: [Apache Tomcat/10.1.28] Starting Servlet engine: [Apache Tomcat/10.1.28]
+>25-09-2024 09:18:15 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/bankingapp]    ::-> Initializing Spring embedded WebApplicationContext Initializing Spring embedded WebApplicationContext
+>25-09-2024 09:18:15 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext ::-> Root WebApplicationContext: initialization completed in 2010 ms Root WebApplicationContext: initialization completed in 2010 ms
+>25-09-2024 09:18:15 [restartedMain] INFO  o.hibernate.jpa.internal.util.LogHelper  ::-> HHH000204: Processing PersistenceUnitInfo [name: default] HHH000204: Processing PersistenceUnitInfo [name: default]
+>25-09-2024 09:18:15 [restartedMain] INFO  org.hibernate.Version                    ::-> HHH000412: Hibernate ORM core version 6.5.2.Final HHH000412: Hibernate ORM core version 6.5.2.Final
+>25-09-2024 09:18:15 [restartedMain] INFO  o.h.c.internal.RegionFactoryInitiator    ::-> HHH000026: Second-level cache disabled HHH000026: Second-level cache disabled
+>25-09-2024 09:18:15 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      ::-> No LoadTimeWeaver setup: ignoring JPA class transformer No LoadTimeWeaver setup: ignoring JPA class transformer
+>25-09-2024 09:18:15 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Starting... HikariPool-1 - Starting...
+>25-09-2024 09:18:16 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f3c9247 HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f3c9247
+>25-09-2024 09:18:16 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Start completed. HikariPool-1 - Start completed.
+>25-09-2024 09:18:16 [restartedMain] WARN  org.hibernate.orm.deprecation            ::-> HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+>25-09-2024 09:18:17 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       ::-> HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+>25-09-2024 09:18:17 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Initialized JPA EntityManagerFactory for persistence unit 'default' Initialized JPA EntityManagerFactory for persistence unit 'default'
+>25-09-2024 09:18:18 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory     ::-> Hibernate is in classpath; If applicable, HQL parser will be used. Hibernate is in classpath; If applicable, HQL parser will be used.
+>25-09-2024 09:18:18 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ::-> spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+>25-09-2024 09:18:19 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration ::-> 
+
+Using generated security password: a5e19b0d-8cd6-44f5-88d5-2469dcc7a4e6
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+ 
+
+Using generated security password: a5e19b0d-8cd6-44f5-88d5-2469dcc7a4e6
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+>25-09-2024 09:18:19 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ::-> Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+>25-09-2024 09:18:19 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer       ::-> LiveReload server is running on port 35729 LiveReload server is running on port 35729
+>25-09-2024 09:18:19 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat started on port 8081 (http) with context path '/bankingapp' Tomcat started on port 8081 (http) with context path '/bankingapp'
+>25-09-2024 09:18:19 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Started BankingAppApplication in 7.118 seconds (process running for 7.988) Started BankingAppApplication in 7.118 seconds (process running for 7.988)
+>25-09-2024 09:18:19 [restartedMain] INFO  c.s.bankingApp.bootstrap.RoleSeeder      ::-> RoleSeeder::run RoleSeeder::run
+>25-09-2024 09:18:19 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>25-09-2024 09:18:19 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> banking app started! banking app started!
+>25-09-2024 09:18:19 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>25-09-2024 10:57:41 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h27m24s589ms915µs201ns). HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h27m24s589ms915µs201ns).
+>25-09-2024 11:14:10 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m29s441ms672µs200ns). HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m29s441ms672µs200ns).
+>25-09-2024 11:26:43 [http-nio-8081-exec-10] INFO  o.a.c.c.C.[.[localhost].[/bankingapp]    ::-> Initializing Spring DispatcherServlet 'dispatcherServlet' Initializing Spring DispatcherServlet 'dispatcherServlet'
+>25-09-2024 11:26:43 [http-nio-8081-exec-10] INFO  o.s.web.servlet.DispatcherServlet        ::-> Initializing Servlet 'dispatcherServlet' Initializing Servlet 'dispatcherServlet'
+>25-09-2024 11:26:43 [http-nio-8081-exec-10] INFO  o.s.web.servlet.DispatcherServlet        ::-> Completed initialization in 2 ms Completed initialization in 2 ms
+>25-09-2024 11:26:43 [http-nio-8081-exec-3] INFO  c.s.b.controllers.BankController         ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 11:26:43 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.BankService      ::-> BankService::getBankDetails BankService::getBankDetails
+>25-09-2024 11:26:43 [http-nio-8081-exec-10] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 11:26:43 [http-nio-8081-exec-2] INFO  c.s.b.controllers.CustomerController     ::-> CustomerController::getCustomerDetailsByCustomerId CustomerController::getCustomerDetailsByCustomerId
+>25-09-2024 11:26:43 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 11:29:57 [http-nio-8081-exec-8] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 11:29:57 [http-nio-8081-exec-8] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 11:30:07 [http-nio-8081-exec-6] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>25-09-2024 11:30:07 [http-nio-8081-exec-6] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>25-09-2024 11:30:07 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 11:30:07 [http-nio-8081-exec-6] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>25-09-2024 11:30:07 [http-nio-8081-exec-6] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>25-09-2024 11:30:07 [http-nio-8081-exec-6] INFO  c.s.b.services.TransactionService        ::-> beneficiary is Active beneficiary is Active
+>25-09-2024 11:30:07 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 11:30:07 [http-nio-8081-exec-6] INFO  c.s.b.services.TransactionService        ::-> this means beneficiary is in the same bank this means beneficiary is in the same bank
+>25-09-2024 11:30:07 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>25-09-2024 11:30:07 [http-nio-8081-exec-6] INFO  c.s.b.services.TransactionService        ::-> beneficiary exists for the given account beneficiary exists for the given account
+>25-09-2024 11:30:07 [http-nio-8081-exec-6] INFO  c.s.b.services.TransactionService        ::-> customer has enough balance customer has enough balance
+>25-09-2024 11:30:07 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>25-09-2024 11:30:07 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 11:30:07 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>25-09-2024 11:30:07 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 11:30:12 [http-nio-8081-exec-5] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>25-09-2024 11:30:12 [http-nio-8081-exec-5] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>25-09-2024 11:30:12 [http-nio-8081-exec-5] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 11:30:12 [http-nio-8081-exec-5] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>25-09-2024 11:30:12 [http-nio-8081-exec-5] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>25-09-2024 11:30:12 [http-nio-8081-exec-5] INFO  c.s.b.services.TransactionService        ::-> beneficiary is Active beneficiary is Active
+>25-09-2024 11:30:12 [http-nio-8081-exec-5] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 11:30:12 [http-nio-8081-exec-5] INFO  c.s.b.services.TransactionService        ::-> this means beneficiary is in the same bank this means beneficiary is in the same bank
+>25-09-2024 11:30:12 [http-nio-8081-exec-5] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>25-09-2024 11:30:12 [http-nio-8081-exec-5] INFO  c.s.b.services.TransactionService        ::-> beneficiary exists for the given account beneficiary exists for the given account
+>25-09-2024 11:30:12 [http-nio-8081-exec-5] INFO  c.s.b.services.TransactionService        ::-> customer has enough balance customer has enough balance
+>25-09-2024 11:30:12 [http-nio-8081-exec-5] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>25-09-2024 11:30:12 [http-nio-8081-exec-5] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 11:30:12 [http-nio-8081-exec-5] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>25-09-2024 11:30:12 [http-nio-8081-exec-5] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 11:33:04 [http-nio-8081-exec-3] INFO  c.s.b.controllers.BankController         ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 11:33:04 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.BankService      ::-> BankService::getBankDetails BankService::getBankDetails
+>25-09-2024 11:33:04 [http-nio-8081-exec-10] INFO  c.s.b.controllers.CustomerController     ::-> CustomerController::getCustomerDetailsByCustomerId CustomerController::getCustomerDetailsByCustomerId
+>25-09-2024 11:33:04 [http-nio-8081-exec-2] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 11:33:04 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 11:41:50 [http-nio-8081-exec-8] INFO  c.s.b.controllers.CustomerController     ::-> CustomerController::getCustomerDetailsByCustomerId CustomerController::getCustomerDetailsByCustomerId
+>25-09-2024 11:41:50 [http-nio-8081-exec-9] INFO  c.s.b.controllers.BankController         ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 11:41:50 [http-nio-8081-exec-9] INFO  c.s.bankingApp.services.BankService      ::-> BankService::getBankDetails BankService::getBankDetails
+>25-09-2024 11:41:50 [http-nio-8081-exec-6] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 11:41:50 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 11:45:31 [http-nio-8081-exec-3] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>25-09-2024 11:45:31 [http-nio-8081-exec-3] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>25-09-2024 11:45:31 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 11:45:32 [http-nio-8081-exec-3] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>25-09-2024 11:45:32 [http-nio-8081-exec-3] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>25-09-2024 11:45:32 [http-nio-8081-exec-3] INFO  c.s.b.services.TransactionService        ::-> beneficiary is Active beneficiary is Active
+>25-09-2024 11:45:32 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 11:45:32 [http-nio-8081-exec-3] INFO  c.s.b.services.TransactionService        ::-> this means beneficiary is in the same bank this means beneficiary is in the same bank
+>25-09-2024 11:45:32 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>25-09-2024 11:45:32 [http-nio-8081-exec-3] INFO  c.s.b.services.TransactionService        ::-> beneficiary exists for the given account beneficiary exists for the given account
+>25-09-2024 11:45:32 [http-nio-8081-exec-3] INFO  c.s.b.services.TransactionService        ::-> customer has enough balance customer has enough balance
+>25-09-2024 11:45:32 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>25-09-2024 11:45:32 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 11:45:32 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>25-09-2024 11:45:32 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 12:27:22 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=38m11s26ms155µs100ns). HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=38m11s26ms155µs100ns).
+>25-09-2024 12:45:04 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m42s756ms440µs600ns). HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m42s756ms440µs600ns).
+>25-09-2024 01:07:34 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=59s490ms697µs700ns). HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=59s490ms697µs700ns).
+>25-09-2024 01:46:11 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=33m36s839ms595µs200ns). HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=33m36s839ms595µs200ns).
+>25-09-2024 01:46:37 [http-nio-8081-exec-10] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 01:46:37 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 01:46:49 [http-nio-8081-exec-4] INFO  c.s.b.controllers.BankController         ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 01:46:49 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.BankService      ::-> BankService::getBankDetails BankService::getBankDetails
+>25-09-2024 01:46:49 [http-nio-8081-exec-1] INFO  c.s.b.controllers.CustomerController     ::-> CustomerController::getCustomerDetailsByCustomerId CustomerController::getCustomerDetailsByCustomerId
+>25-09-2024 01:46:49 [http-nio-8081-exec-9] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 01:46:49 [http-nio-8081-exec-9] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 01:46:54 [http-nio-8081-exec-6] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>25-09-2024 01:46:54 [http-nio-8081-exec-6] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>25-09-2024 01:46:54 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 01:46:54 [http-nio-8081-exec-6] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>25-09-2024 01:46:54 [http-nio-8081-exec-6] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>25-09-2024 01:46:54 [http-nio-8081-exec-6] INFO  c.s.b.services.TransactionService        ::-> beneficiary is Active beneficiary is Active
+>25-09-2024 01:46:54 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 01:46:54 [http-nio-8081-exec-6] INFO  c.s.b.services.TransactionService        ::-> this means beneficiary is in the same bank this means beneficiary is in the same bank
+>25-09-2024 01:46:54 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>25-09-2024 01:46:54 [http-nio-8081-exec-6] INFO  c.s.b.services.TransactionService        ::-> beneficiary exists for the given account beneficiary exists for the given account
+>25-09-2024 01:46:54 [http-nio-8081-exec-6] INFO  c.s.b.services.TransactionService        ::-> customer has enough balance customer has enough balance
+>25-09-2024 01:46:54 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>25-09-2024 01:46:54 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 01:46:54 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>25-09-2024 01:46:54 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 01:47:33 [http-nio-8081-exec-8] INFO  c.s.b.controllers.BankController         ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 01:47:33 [http-nio-8081-exec-5] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 01:47:33 [http-nio-8081-exec-8] INFO  c.s.bankingApp.services.BankService      ::-> BankService::getBankDetails BankService::getBankDetails
+>25-09-2024 01:47:33 [http-nio-8081-exec-5] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 01:47:33 [http-nio-8081-exec-7] INFO  c.s.b.controllers.CustomerController     ::-> CustomerController::getCustomerDetailsByCustomerId CustomerController::getCustomerDetailsByCustomerId
+>25-09-2024 01:47:52 [http-nio-8081-exec-4] INFO  c.s.b.controllers.BankController         ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 01:47:52 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.BankService      ::-> BankService::getBankDetails BankService::getBankDetails
+>25-09-2024 01:47:52 [http-nio-8081-exec-9] INFO  c.s.b.controllers.CustomerController     ::-> CustomerController::getCustomerDetailsByCustomerId CustomerController::getCustomerDetailsByCustomerId
+>25-09-2024 01:47:52 [http-nio-8081-exec-1] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 01:47:52 [http-nio-8081-exec-1] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 01:48:03 [http-nio-8081-exec-6] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>25-09-2024 01:48:03 [http-nio-8081-exec-6] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>25-09-2024 01:48:03 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 01:48:03 [http-nio-8081-exec-6] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>25-09-2024 01:48:03 [http-nio-8081-exec-6] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>25-09-2024 01:48:03 [http-nio-8081-exec-6] INFO  c.s.b.services.TransactionService        ::-> beneficiary is Active beneficiary is Active
+>25-09-2024 01:48:03 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 01:48:03 [http-nio-8081-exec-6] INFO  c.s.b.services.TransactionService        ::-> this means beneficiary is in the same bank this means beneficiary is in the same bank
+>25-09-2024 01:48:03 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>25-09-2024 01:48:03 [http-nio-8081-exec-6] INFO  c.s.b.services.TransactionService        ::-> beneficiary exists for the given account beneficiary exists for the given account
+>25-09-2024 01:48:03 [http-nio-8081-exec-6] INFO  c.s.b.services.TransactionService        ::-> customer has enough balance customer has enough balance
+>25-09-2024 01:48:03 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>25-09-2024 01:48:03 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 01:48:03 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>25-09-2024 01:48:03 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 01:49:09 [http-nio-8081-exec-10] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>25-09-2024 01:49:09 [http-nio-8081-exec-10] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>25-09-2024 01:49:09 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 01:49:09 [http-nio-8081-exec-10] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>25-09-2024 01:49:09 [http-nio-8081-exec-10] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>25-09-2024 01:49:09 [http-nio-8081-exec-10] INFO  c.s.b.services.TransactionService        ::-> beneficiary is Active beneficiary is Active
+>25-09-2024 01:49:09 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 01:49:09 [http-nio-8081-exec-10] INFO  c.s.b.services.TransactionService        ::-> this means beneficiary is in the same bank this means beneficiary is in the same bank
+>25-09-2024 01:49:09 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>25-09-2024 01:49:09 [http-nio-8081-exec-10] INFO  c.s.b.services.TransactionService        ::-> beneficiary exists for the given account beneficiary exists for the given account
+>25-09-2024 01:49:09 [http-nio-8081-exec-10] INFO  c.s.b.services.TransactionService        ::-> customer has enough balance customer has enough balance
+>25-09-2024 01:49:09 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>25-09-2024 01:49:09 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 01:49:09 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>25-09-2024 01:49:09 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 01:50:18 [http-nio-8081-exec-3] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>25-09-2024 01:50:18 [http-nio-8081-exec-3] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>25-09-2024 01:50:18 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 01:50:18 [http-nio-8081-exec-3] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>25-09-2024 01:50:18 [http-nio-8081-exec-3] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>25-09-2024 01:50:18 [http-nio-8081-exec-3] INFO  c.s.b.services.TransactionService        ::-> beneficiary is Active beneficiary is Active
+>25-09-2024 01:50:18 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 01:50:18 [http-nio-8081-exec-3] INFO  c.s.b.services.TransactionService        ::-> this means beneficiary is in the same bank this means beneficiary is in the same bank
+>25-09-2024 01:50:18 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>25-09-2024 01:50:18 [http-nio-8081-exec-3] INFO  c.s.b.services.TransactionService        ::-> beneficiary exists for the given account beneficiary exists for the given account
+>25-09-2024 01:50:18 [http-nio-8081-exec-3] INFO  c.s.b.services.TransactionService        ::-> customer has enough balance customer has enough balance
+>25-09-2024 01:50:18 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>25-09-2024 01:50:18 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 01:50:18 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>25-09-2024 01:50:18 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 01:51:06 [http-nio-8081-exec-4] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>25-09-2024 01:51:06 [http-nio-8081-exec-4] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>25-09-2024 01:51:06 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 01:51:06 [http-nio-8081-exec-4] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>25-09-2024 01:51:06 [http-nio-8081-exec-4] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>25-09-2024 01:51:06 [http-nio-8081-exec-4] INFO  c.s.b.services.TransactionService        ::-> beneficiary is Active beneficiary is Active
+>25-09-2024 01:51:06 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 01:51:06 [http-nio-8081-exec-4] INFO  c.s.b.services.TransactionService        ::-> this means beneficiary is in the same bank this means beneficiary is in the same bank
+>25-09-2024 01:51:06 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>25-09-2024 01:51:06 [http-nio-8081-exec-4] INFO  c.s.b.services.TransactionService        ::-> beneficiary exists for the given account beneficiary exists for the given account
+>25-09-2024 01:51:06 [http-nio-8081-exec-4] INFO  c.s.b.services.TransactionService        ::-> customer has enough balance customer has enough balance
+>25-09-2024 01:51:06 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>25-09-2024 01:51:06 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 01:51:06 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>25-09-2024 01:51:06 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 01:51:07 [http-nio-8081-exec-1] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 01:51:07 [http-nio-8081-exec-1] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 01:51:11 [http-nio-8081-exec-9] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>25-09-2024 01:51:11 [http-nio-8081-exec-9] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>25-09-2024 01:51:11 [http-nio-8081-exec-9] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 01:51:11 [http-nio-8081-exec-9] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>25-09-2024 01:51:11 [http-nio-8081-exec-9] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>25-09-2024 01:51:11 [http-nio-8081-exec-9] INFO  c.s.b.services.TransactionService        ::-> beneficiary is Active beneficiary is Active
+>25-09-2024 01:51:11 [http-nio-8081-exec-9] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 01:51:11 [http-nio-8081-exec-9] INFO  c.s.b.services.TransactionService        ::-> this means beneficiary is in the same bank this means beneficiary is in the same bank
+>25-09-2024 01:51:11 [http-nio-8081-exec-9] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>25-09-2024 01:51:11 [http-nio-8081-exec-9] INFO  c.s.b.services.TransactionService        ::-> beneficiary exists for the given account beneficiary exists for the given account
+>25-09-2024 01:51:11 [http-nio-8081-exec-9] INFO  c.s.b.services.TransactionService        ::-> customer has enough balance customer has enough balance
+>25-09-2024 01:51:11 [http-nio-8081-exec-9] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>25-09-2024 01:51:11 [http-nio-8081-exec-9] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 01:51:11 [http-nio-8081-exec-9] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>25-09-2024 01:51:11 [http-nio-8081-exec-9] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 01:51:12 [http-nio-8081-exec-6] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 01:51:12 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 02:12:03 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m51s500ms294µs900ns). HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m51s500ms294µs900ns).
+>25-09-2024 02:27:36 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m3s124ms323µs). HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m3s124ms323µs).
+>25-09-2024 04:25:08 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h54m31s520ms188µs200ns). HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h54m31s520ms188µs200ns).
+>25-09-2024 04:36:29 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m20s938ms812µs300ns). HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m20s938ms812µs300ns).
+>25-09-2024 05:26:29 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46m29s862ms824µs600ns). HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46m29s862ms824µs600ns).
+>25-09-2024 05:35:26 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m57s462ms988µs999ns). HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m57s462ms988µs999ns).
+>25-09-2024 06:02:18 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=21m51s901ms995µs101ns). HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=21m51s901ms995µs101ns).
+>25-09-2024 06:28:23 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=20m4s696ms288µs600ns). HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=20m4s696ms288µs600ns).
+>25-09-2024 07:17:37 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46m14s114ms153µs600ns). HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46m14s114ms153µs600ns).
+>25-09-2024 07:27:09 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m32s162ms502µs100ns). HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m32s162ms502µs100ns).
+>25-09-2024 07:34:28 [http-nio-8081-exec-5] INFO  c.s.b.controllers.BankController         ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 07:34:28 [http-nio-8081-exec-5] INFO  c.s.bankingApp.services.BankService      ::-> BankService::getBankDetails BankService::getBankDetails
+>25-09-2024 07:34:28 [http-nio-8081-exec-7] INFO  c.s.b.controllers.CustomerController     ::-> CustomerController::getCustomerDetailsByCustomerId CustomerController::getCustomerDetailsByCustomerId
+>25-09-2024 07:34:28 [http-nio-8081-exec-10] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 07:34:28 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:36:28 [http-nio-8081-exec-1] INFO  c.s.b.controllers.BankController         ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 07:36:28 [http-nio-8081-exec-1] INFO  c.s.bankingApp.services.BankService      ::-> BankService::getBankDetails BankService::getBankDetails
+>25-09-2024 07:36:28 [http-nio-8081-exec-9] INFO  c.s.b.controllers.CustomerController     ::-> CustomerController::getCustomerDetailsByCustomerId CustomerController::getCustomerDetailsByCustomerId
+>25-09-2024 07:36:28 [http-nio-8081-exec-6] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 07:36:28 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:36:37 [http-nio-8081-exec-8] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>25-09-2024 07:36:37 [http-nio-8081-exec-8] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>25-09-2024 07:36:37 [http-nio-8081-exec-8] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:36:37 [http-nio-8081-exec-8] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>25-09-2024 07:36:37 [http-nio-8081-exec-8] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>25-09-2024 07:36:37 [http-nio-8081-exec-8] INFO  c.s.b.services.TransactionService        ::-> beneficiary is Active beneficiary is Active
+>25-09-2024 07:36:37 [http-nio-8081-exec-8] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:36:37 [http-nio-8081-exec-8] INFO  c.s.b.services.TransactionService        ::-> this means beneficiary is in the same bank this means beneficiary is in the same bank
+>25-09-2024 07:36:37 [http-nio-8081-exec-8] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>25-09-2024 07:36:37 [http-nio-8081-exec-8] INFO  c.s.b.services.TransactionService        ::-> beneficiary exists for the given account beneficiary exists for the given account
+>25-09-2024 07:36:37 [http-nio-8081-exec-8] INFO  c.s.b.services.TransactionService        ::-> customer has enough balance customer has enough balance
+>25-09-2024 07:36:37 [http-nio-8081-exec-8] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>25-09-2024 07:36:37 [http-nio-8081-exec-8] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:36:37 [http-nio-8081-exec-8] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>25-09-2024 07:36:37 [http-nio-8081-exec-8] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:36:38 [http-nio-8081-exec-5] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 07:36:38 [http-nio-8081-exec-5] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:36:54 [http-nio-8081-exec-10] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>25-09-2024 07:36:54 [http-nio-8081-exec-10] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>25-09-2024 07:36:54 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:36:54 [http-nio-8081-exec-10] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>25-09-2024 07:36:54 [http-nio-8081-exec-10] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>25-09-2024 07:36:54 [http-nio-8081-exec-10] INFO  c.s.b.services.TransactionService        ::-> beneficiary is Active beneficiary is Active
+>25-09-2024 07:36:54 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:36:54 [http-nio-8081-exec-10] INFO  c.s.b.services.TransactionService        ::-> this means beneficiary is in the same bank this means beneficiary is in the same bank
+>25-09-2024 07:36:54 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>25-09-2024 07:36:54 [http-nio-8081-exec-10] INFO  c.s.b.services.TransactionService        ::-> beneficiary exists for the given account beneficiary exists for the given account
+>25-09-2024 07:36:54 [http-nio-8081-exec-10] INFO  c.s.b.services.TransactionService        ::-> customer has enough balance customer has enough balance
+>25-09-2024 07:36:54 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>25-09-2024 07:36:54 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:36:54 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>25-09-2024 07:36:54 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:36:55 [http-nio-8081-exec-7] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 07:36:55 [http-nio-8081-exec-7] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:37:30 [http-nio-8081-exec-4] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>25-09-2024 07:37:30 [http-nio-8081-exec-4] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>25-09-2024 07:37:30 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:37:30 [http-nio-8081-exec-4] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>25-09-2024 07:37:30 [http-nio-8081-exec-4] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>25-09-2024 07:37:30 [http-nio-8081-exec-4] INFO  c.s.b.services.TransactionService        ::-> beneficiary is Active beneficiary is Active
+>25-09-2024 07:37:30 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:37:30 [http-nio-8081-exec-4] INFO  c.s.b.services.TransactionService        ::-> this means beneficiary is in the same bank this means beneficiary is in the same bank
+>25-09-2024 07:37:30 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>25-09-2024 07:37:30 [http-nio-8081-exec-4] INFO  c.s.b.services.TransactionService        ::-> beneficiary exists for the given account beneficiary exists for the given account
+>25-09-2024 07:37:30 [http-nio-8081-exec-4] INFO  c.s.b.services.TransactionService        ::-> customer has enough balance customer has enough balance
+>25-09-2024 07:37:30 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>25-09-2024 07:37:30 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:37:30 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>25-09-2024 07:37:30 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:37:30 [http-nio-8081-exec-1] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 07:37:30 [http-nio-8081-exec-1] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:37:31 [http-nio-8081-exec-6] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>25-09-2024 07:37:31 [http-nio-8081-exec-6] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>25-09-2024 07:37:31 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:37:31 [http-nio-8081-exec-6] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>25-09-2024 07:37:31 [http-nio-8081-exec-6] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>25-09-2024 07:37:31 [http-nio-8081-exec-6] INFO  c.s.b.services.TransactionService        ::-> beneficiary is Active beneficiary is Active
+>25-09-2024 07:37:31 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:37:31 [http-nio-8081-exec-6] INFO  c.s.b.services.TransactionService        ::-> this means beneficiary is in the same bank this means beneficiary is in the same bank
+>25-09-2024 07:37:31 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>25-09-2024 07:37:31 [http-nio-8081-exec-6] INFO  c.s.b.services.TransactionService        ::-> beneficiary exists for the given account beneficiary exists for the given account
+>25-09-2024 07:37:31 [http-nio-8081-exec-6] INFO  c.s.b.services.TransactionService        ::-> customer has enough balance customer has enough balance
+>25-09-2024 07:37:31 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>25-09-2024 07:37:31 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:37:31 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>25-09-2024 07:37:31 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:37:31 [http-nio-8081-exec-9] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 07:37:31 [http-nio-8081-exec-9] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:37:31 [http-nio-8081-exec-8] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>25-09-2024 07:37:31 [http-nio-8081-exec-8] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>25-09-2024 07:37:31 [http-nio-8081-exec-8] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:37:31 [http-nio-8081-exec-8] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>25-09-2024 07:37:31 [http-nio-8081-exec-8] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>25-09-2024 07:37:31 [http-nio-8081-exec-8] INFO  c.s.b.services.TransactionService        ::-> beneficiary is Active beneficiary is Active
+>25-09-2024 07:37:31 [http-nio-8081-exec-8] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:37:31 [http-nio-8081-exec-8] INFO  c.s.b.services.TransactionService        ::-> this means beneficiary is in the same bank this means beneficiary is in the same bank
+>25-09-2024 07:37:31 [http-nio-8081-exec-8] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>25-09-2024 07:37:31 [http-nio-8081-exec-8] INFO  c.s.b.services.TransactionService        ::-> beneficiary exists for the given account beneficiary exists for the given account
+>25-09-2024 07:37:31 [http-nio-8081-exec-8] INFO  c.s.b.services.TransactionService        ::-> customer has enough balance customer has enough balance
+>25-09-2024 07:37:31 [http-nio-8081-exec-8] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>25-09-2024 07:37:31 [http-nio-8081-exec-8] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:37:31 [http-nio-8081-exec-8] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>25-09-2024 07:37:31 [http-nio-8081-exec-8] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:37:31 [http-nio-8081-exec-5] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 07:37:31 [http-nio-8081-exec-5] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:37:31 [http-nio-8081-exec-10] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>25-09-2024 07:37:31 [http-nio-8081-exec-10] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>25-09-2024 07:37:31 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:37:31 [http-nio-8081-exec-10] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>25-09-2024 07:37:31 [http-nio-8081-exec-10] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>25-09-2024 07:37:31 [http-nio-8081-exec-10] INFO  c.s.b.services.TransactionService        ::-> beneficiary is Active beneficiary is Active
+>25-09-2024 07:37:31 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:37:31 [http-nio-8081-exec-10] INFO  c.s.b.services.TransactionService        ::-> this means beneficiary is in the same bank this means beneficiary is in the same bank
+>25-09-2024 07:37:31 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>25-09-2024 07:37:31 [http-nio-8081-exec-10] INFO  c.s.b.services.TransactionService        ::-> beneficiary exists for the given account beneficiary exists for the given account
+>25-09-2024 07:37:31 [http-nio-8081-exec-10] INFO  c.s.b.services.TransactionService        ::-> customer has enough balance customer has enough balance
+>25-09-2024 07:37:31 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>25-09-2024 07:37:31 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:37:32 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>25-09-2024 07:37:32 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:37:32 [http-nio-8081-exec-7] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 07:37:32 [http-nio-8081-exec-7] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:37:53 [http-nio-8081-exec-2] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>25-09-2024 07:37:53 [http-nio-8081-exec-2] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>25-09-2024 07:37:53 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:37:53 [http-nio-8081-exec-2] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>25-09-2024 07:37:53 [http-nio-8081-exec-2] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>25-09-2024 07:37:53 [http-nio-8081-exec-2] INFO  c.s.b.services.TransactionService        ::-> beneficiary is Active beneficiary is Active
+>25-09-2024 07:37:53 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:37:53 [http-nio-8081-exec-2] INFO  c.s.b.services.TransactionService        ::-> this means beneficiary is in the same bank this means beneficiary is in the same bank
+>25-09-2024 07:37:53 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>25-09-2024 07:37:53 [http-nio-8081-exec-2] INFO  c.s.b.services.TransactionService        ::-> beneficiary exists for the given account beneficiary exists for the given account
+>25-09-2024 07:37:53 [http-nio-8081-exec-2] INFO  c.s.b.services.TransactionService        ::-> customer has enough balance customer has enough balance
+>25-09-2024 07:37:53 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>25-09-2024 07:37:53 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:37:53 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>25-09-2024 07:37:53 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:37:54 [http-nio-8081-exec-3] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 07:37:54 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:37:58 [http-nio-8081-exec-4] INFO  c.s.b.controllers.BankController         ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 07:37:58 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.BankService      ::-> BankService::getBankDetails BankService::getBankDetails
+>25-09-2024 07:37:58 [http-nio-8081-exec-1] INFO  c.s.b.controllers.CustomerController     ::-> CustomerController::getCustomerDetailsByCustomerId CustomerController::getCustomerDetailsByCustomerId
+>25-09-2024 07:37:58 [http-nio-8081-exec-6] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 07:37:58 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:38:04 [http-nio-8081-exec-9] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>25-09-2024 07:38:04 [http-nio-8081-exec-9] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>25-09-2024 07:38:04 [http-nio-8081-exec-9] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:38:04 [http-nio-8081-exec-9] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>25-09-2024 07:38:04 [http-nio-8081-exec-9] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>25-09-2024 07:38:04 [http-nio-8081-exec-9] INFO  c.s.b.services.TransactionService        ::-> beneficiary is Active beneficiary is Active
+>25-09-2024 07:38:04 [http-nio-8081-exec-9] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:38:04 [http-nio-8081-exec-9] INFO  c.s.b.services.TransactionService        ::-> this means beneficiary is in the same bank this means beneficiary is in the same bank
+>25-09-2024 07:38:04 [http-nio-8081-exec-9] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>25-09-2024 07:38:04 [http-nio-8081-exec-9] INFO  c.s.b.services.TransactionService        ::-> beneficiary exists for the given account beneficiary exists for the given account
+>25-09-2024 07:38:04 [http-nio-8081-exec-9] INFO  c.s.b.services.TransactionService        ::-> customer has enough balance customer has enough balance
+>25-09-2024 07:38:04 [http-nio-8081-exec-9] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>25-09-2024 07:38:04 [http-nio-8081-exec-9] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:38:04 [http-nio-8081-exec-9] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>25-09-2024 07:38:04 [http-nio-8081-exec-9] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:38:05 [http-nio-8081-exec-8] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 07:38:05 [http-nio-8081-exec-8] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:38:23 [http-nio-8081-exec-5] INFO  c.s.b.controllers.BankController         ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 07:38:23 [http-nio-8081-exec-5] INFO  c.s.bankingApp.services.BankService      ::-> BankService::getBankDetails BankService::getBankDetails
+>25-09-2024 07:38:23 [http-nio-8081-exec-10] INFO  c.s.b.controllers.CustomerController     ::-> CustomerController::getCustomerDetailsByCustomerId CustomerController::getCustomerDetailsByCustomerId
+>25-09-2024 07:38:23 [http-nio-8081-exec-7] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 07:38:23 [http-nio-8081-exec-7] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:38:29 [http-nio-8081-exec-2] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>25-09-2024 07:38:29 [http-nio-8081-exec-2] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>25-09-2024 07:38:29 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:38:29 [http-nio-8081-exec-2] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>25-09-2024 07:38:29 [http-nio-8081-exec-2] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>25-09-2024 07:38:29 [http-nio-8081-exec-2] INFO  c.s.b.services.TransactionService        ::-> beneficiary is Active beneficiary is Active
+>25-09-2024 07:38:29 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:38:29 [http-nio-8081-exec-2] INFO  c.s.b.services.TransactionService        ::-> this means beneficiary is in the same bank this means beneficiary is in the same bank
+>25-09-2024 07:38:29 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>25-09-2024 07:38:29 [http-nio-8081-exec-2] INFO  c.s.b.services.TransactionService        ::-> beneficiary exists for the given account beneficiary exists for the given account
+>25-09-2024 07:38:29 [http-nio-8081-exec-2] INFO  c.s.b.services.TransactionService        ::-> customer has enough balance customer has enough balance
+>25-09-2024 07:38:29 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>25-09-2024 07:38:29 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:38:29 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>25-09-2024 07:38:29 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:38:29 [http-nio-8081-exec-3] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 07:38:29 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:39:29 [http-nio-8081-exec-1] INFO  c.s.b.controllers.BankController         ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 07:39:29 [http-nio-8081-exec-1] INFO  c.s.bankingApp.services.BankService      ::-> BankService::getBankDetails BankService::getBankDetails
+>25-09-2024 07:39:29 [http-nio-8081-exec-8] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 07:39:29 [http-nio-8081-exec-8] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:39:29 [http-nio-8081-exec-9] INFO  c.s.b.controllers.CustomerController     ::-> CustomerController::getCustomerDetailsByCustomerId CustomerController::getCustomerDetailsByCustomerId
+>25-09-2024 07:39:34 [http-nio-8081-exec-5] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>25-09-2024 07:39:34 [http-nio-8081-exec-5] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>25-09-2024 07:39:34 [http-nio-8081-exec-5] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:39:34 [http-nio-8081-exec-5] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>25-09-2024 07:39:34 [http-nio-8081-exec-5] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>25-09-2024 07:39:34 [http-nio-8081-exec-5] INFO  c.s.b.services.TransactionService        ::-> beneficiary is Active beneficiary is Active
+>25-09-2024 07:39:34 [http-nio-8081-exec-5] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:39:34 [http-nio-8081-exec-5] INFO  c.s.b.services.TransactionService        ::-> this means beneficiary is in the same bank this means beneficiary is in the same bank
+>25-09-2024 07:39:34 [http-nio-8081-exec-5] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>25-09-2024 07:39:34 [http-nio-8081-exec-5] INFO  c.s.b.services.TransactionService        ::-> beneficiary exists for the given account beneficiary exists for the given account
+>25-09-2024 07:39:34 [http-nio-8081-exec-5] INFO  c.s.b.services.TransactionService        ::-> customer has enough balance customer has enough balance
+>25-09-2024 07:39:34 [http-nio-8081-exec-5] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>25-09-2024 07:39:34 [http-nio-8081-exec-5] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:39:34 [http-nio-8081-exec-5] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>25-09-2024 07:39:34 [http-nio-8081-exec-5] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:39:34 [http-nio-8081-exec-7] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 07:39:34 [http-nio-8081-exec-7] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:40:55 [http-nio-8081-exec-6] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 07:40:55 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:47:26 [http-nio-8081-exec-1] INFO  c.s.b.controllers.BankController         ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 07:47:26 [http-nio-8081-exec-8] INFO  c.s.b.controllers.CustomerController     ::-> CustomerController::getCustomerDetailsByCustomerId CustomerController::getCustomerDetailsByCustomerId
+>25-09-2024 07:47:26 [http-nio-8081-exec-9] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 07:47:26 [http-nio-8081-exec-9] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:47:26 [http-nio-8081-exec-1] INFO  c.s.bankingApp.services.BankService      ::-> BankService::getBankDetails BankService::getBankDetails
+>25-09-2024 07:52:50 [http-nio-8081-exec-10] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>25-09-2024 07:52:50 [http-nio-8081-exec-10] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>25-09-2024 07:52:50 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:52:50 [http-nio-8081-exec-10] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>25-09-2024 07:52:50 [http-nio-8081-exec-10] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>25-09-2024 07:52:50 [http-nio-8081-exec-10] INFO  c.s.b.services.TransactionService        ::-> beneficiary is Active beneficiary is Active
+>25-09-2024 07:52:50 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:52:50 [http-nio-8081-exec-10] INFO  c.s.b.services.TransactionService        ::-> this means beneficiary is in the same bank this means beneficiary is in the same bank
+>25-09-2024 07:52:50 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>25-09-2024 07:52:50 [http-nio-8081-exec-10] INFO  c.s.b.services.TransactionService        ::-> beneficiary exists for the given account beneficiary exists for the given account
+>25-09-2024 07:52:50 [http-nio-8081-exec-10] INFO  c.s.b.services.TransactionService        ::-> customer has enough balance customer has enough balance
+>25-09-2024 07:52:50 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>25-09-2024 07:52:50 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:52:50 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>25-09-2024 07:52:50 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:52:50 [http-nio-8081-exec-3] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 07:52:50 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:53:33 [http-nio-8081-exec-6] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>25-09-2024 07:53:33 [http-nio-8081-exec-6] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>25-09-2024 07:53:33 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:53:33 [http-nio-8081-exec-6] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>25-09-2024 07:53:33 [http-nio-8081-exec-6] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>25-09-2024 07:53:33 [http-nio-8081-exec-6] INFO  c.s.b.services.TransactionService        ::-> beneficiary is Active beneficiary is Active
+>25-09-2024 07:53:33 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:53:33 [http-nio-8081-exec-6] INFO  c.s.b.services.TransactionService        ::-> this means beneficiary is in the same bank this means beneficiary is in the same bank
+>25-09-2024 07:53:33 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>25-09-2024 07:53:33 [http-nio-8081-exec-6] INFO  c.s.b.services.TransactionService        ::-> beneficiary exists for the given account beneficiary exists for the given account
+>25-09-2024 07:53:33 [http-nio-8081-exec-6] INFO  c.s.b.services.TransactionService        ::-> customer has enough balance customer has enough balance
+>25-09-2024 07:53:33 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>25-09-2024 07:53:33 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:53:33 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>25-09-2024 07:53:33 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:53:33 [http-nio-8081-exec-4] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 07:53:33 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:55:17 [http-nio-8081-exec-9] INFO  c.s.b.controllers.BankController         ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 07:55:17 [http-nio-8081-exec-9] INFO  c.s.bankingApp.services.BankService      ::-> BankService::getBankDetails BankService::getBankDetails
+>25-09-2024 07:55:17 [http-nio-8081-exec-9] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 07:55:17 [http-nio-8081-exec-9] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:55:17 [http-nio-8081-exec-8] INFO  c.s.b.controllers.CustomerController     ::-> CustomerController::getCustomerDetailsByCustomerId CustomerController::getCustomerDetailsByCustomerId
+>25-09-2024 07:55:25 [http-nio-8081-exec-7] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>25-09-2024 07:55:25 [http-nio-8081-exec-7] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>25-09-2024 07:55:25 [http-nio-8081-exec-7] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:55:25 [http-nio-8081-exec-7] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>25-09-2024 07:55:25 [http-nio-8081-exec-7] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>25-09-2024 07:55:25 [http-nio-8081-exec-7] INFO  c.s.b.services.TransactionService        ::-> beneficiary is Active beneficiary is Active
+>25-09-2024 07:55:25 [http-nio-8081-exec-7] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:55:25 [http-nio-8081-exec-7] INFO  c.s.b.services.TransactionService        ::-> this means beneficiary is in the same bank this means beneficiary is in the same bank
+>25-09-2024 07:55:25 [http-nio-8081-exec-7] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>25-09-2024 07:55:25 [http-nio-8081-exec-7] INFO  c.s.b.services.TransactionService        ::-> beneficiary exists for the given account beneficiary exists for the given account
+>25-09-2024 07:55:25 [http-nio-8081-exec-7] INFO  c.s.b.services.TransactionService        ::-> customer has enough balance customer has enough balance
+>25-09-2024 07:55:25 [http-nio-8081-exec-7] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>25-09-2024 07:55:25 [http-nio-8081-exec-7] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:55:25 [http-nio-8081-exec-7] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>25-09-2024 07:55:25 [http-nio-8081-exec-7] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 07:55:25 [http-nio-8081-exec-2] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 07:55:25 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 08:26:24 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m44s512ms490µs600ns). HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m44s512ms490µs600ns).
+>25-09-2024 08:38:14 [http-nio-8081-exec-4] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>25-09-2024 08:38:14 [http-nio-8081-exec-4] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>25-09-2024 08:38:14 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 08:38:14 [http-nio-8081-exec-4] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>25-09-2024 08:38:14 [http-nio-8081-exec-4] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>25-09-2024 08:38:14 [http-nio-8081-exec-4] INFO  c.s.b.services.TransactionService        ::-> beneficiary is Active beneficiary is Active
+>25-09-2024 08:38:14 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 08:38:14 [http-nio-8081-exec-4] INFO  c.s.b.services.TransactionService        ::-> this means beneficiary is in the same bank this means beneficiary is in the same bank
+>25-09-2024 08:38:14 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>25-09-2024 08:38:14 [http-nio-8081-exec-4] INFO  c.s.b.services.TransactionService        ::-> beneficiary exists for the given account beneficiary exists for the given account
+>25-09-2024 08:38:14 [http-nio-8081-exec-4] INFO  c.s.b.services.TransactionService        ::-> customer has enough balance customer has enough balance
+>25-09-2024 08:38:14 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>25-09-2024 08:38:14 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 08:38:14 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>25-09-2024 08:38:14 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 08:38:14 [http-nio-8081-exec-1] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 08:38:14 [http-nio-8081-exec-1] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 08:38:41 [http-nio-8081-exec-8] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 08:38:41 [http-nio-8081-exec-8] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 08:38:51 [http-nio-8081-exec-7] INFO  c.s.b.controllers.BankController         ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 08:38:51 [http-nio-8081-exec-7] INFO  c.s.bankingApp.services.BankService      ::-> BankService::getBankDetails BankService::getBankDetails
+>25-09-2024 08:38:51 [http-nio-8081-exec-2] INFO  c.s.b.controllers.CustomerController     ::-> CustomerController::getCustomerDetailsByCustomerId CustomerController::getCustomerDetailsByCustomerId
+>25-09-2024 08:38:51 [http-nio-8081-exec-3] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 08:38:51 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 08:38:56 [http-nio-8081-exec-10] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver ::-> Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported] Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+>25-09-2024 08:38:57 [http-nio-8081-exec-6] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver ::-> Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported] Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+>25-09-2024 08:39:10 [http-nio-8081-exec-3] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 08:39:10 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 08:40:36 [http-nio-8081-exec-9] INFO  c.s.b.controllers.BankController         ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 08:40:36 [http-nio-8081-exec-9] INFO  c.s.bankingApp.services.BankService      ::-> BankService::getBankDetails BankService::getBankDetails
+>25-09-2024 08:40:36 [http-nio-8081-exec-5] INFO  c.s.b.controllers.CustomerController     ::-> CustomerController::getCustomerDetailsByCustomerId CustomerController::getCustomerDetailsByCustomerId
+>25-09-2024 08:40:36 [http-nio-8081-exec-8] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 08:40:36 [http-nio-8081-exec-8] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 08:41:15 [http-nio-8081-exec-7] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::sendMoney TransactionController::sendMoney
+>25-09-2024 08:41:15 [http-nio-8081-exec-7] INFO  c.s.b.services.TransactionService        ::-> TransactionService:sendMoney TransactionService:sendMoney
+>25-09-2024 08:41:15 [http-nio-8081-exec-7] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 08:41:15 [http-nio-8081-exec-7] INFO  c.s.b.services.TransactionService        ::-> customer accout is active customer accout is active
+>25-09-2024 08:41:15 [http-nio-8081-exec-7] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>25-09-2024 08:41:15 [http-nio-8081-exec-7] INFO  c.s.b.services.TransactionService        ::-> beneficiary is Active beneficiary is Active
+>25-09-2024 08:41:15 [http-nio-8081-exec-7] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 08:41:15 [http-nio-8081-exec-7] INFO  c.s.b.services.TransactionService        ::-> this means beneficiary is in the same bank this means beneficiary is in the same bank
+>25-09-2024 08:41:15 [http-nio-8081-exec-7] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>25-09-2024 08:41:15 [http-nio-8081-exec-7] INFO  c.s.b.services.TransactionService        ::-> beneficiary exists for the given account beneficiary exists for the given account
+>25-09-2024 08:41:15 [http-nio-8081-exec-7] INFO  c.s.b.services.TransactionService        ::-> customer has enough balance customer has enough balance
+>25-09-2024 08:41:15 [http-nio-8081-exec-7] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>25-09-2024 08:41:15 [http-nio-8081-exec-7] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 08:41:15 [http-nio-8081-exec-7] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>25-09-2024 08:41:15 [http-nio-8081-exec-7] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 08:41:15 [http-nio-8081-exec-3] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 08:41:15 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 09:06:17 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m22s292ms940µs400ns). HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m22s292ms940µs400ns).
+>25-09-2024 09:09:51 [http-nio-8081-exec-4] INFO  c.s.b.controllers.BankController         ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 09:09:51 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.BankService      ::-> BankService::getBankDetails BankService::getBankDetails
+>25-09-2024 09:09:51 [http-nio-8081-exec-9] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 09:09:51 [http-nio-8081-exec-1] INFO  c.s.b.controllers.CustomerController     ::-> CustomerController::getCustomerDetailsByCustomerId CustomerController::getCustomerDetailsByCustomerId
+>25-09-2024 09:09:51 [http-nio-8081-exec-9] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 09:10:49 [http-nio-8081-exec-5] INFO  c.s.b.controllers.AccountController      ::-> AccountController::deleteBeneficiaryFromAccount:: AccountController::deleteBeneficiaryFromAccount::
+>25-09-2024 09:10:49 [http-nio-8081-exec-5] INFO  c.s.b.controllers.AccountController      ::-> c23171fe-bc2f-4c12-8d98-244f65897d17 c23171fe-bc2f-4c12-8d98-244f65897d17
+>25-09-2024 09:10:49 [http-nio-8081-exec-5] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::addBeneficiaryToAccount AccountService::addBeneficiaryToAccount
+>25-09-2024 09:10:49 [http-nio-8081-exec-5] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 09:10:49 [http-nio-8081-exec-5] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryById c23171fe-bc2f-4c12-8d98-244f65897d17 BeneficiaryService::getBeneficiaryById c23171fe-bc2f-4c12-8d98-244f65897d17
+>25-09-2024 09:10:49 [http-nio-8081-exec-5] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>25-09-2024 09:10:49 [http-nio-8081-exec-5] INFO  c.s.bankingApp.services.AccountService   ::-> beneficiary exists in account beneficiary exists in account
+>25-09-2024 09:10:49 [http-nio-8081-exec-5] INFO  c.s.bankingApp.services.AccountService   ::-> beneficiary deleted successfully from account beneficiary deleted successfully from account
+>25-09-2024 09:12:32 [http-nio-8081-exec-10] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 09:12:32 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 09:22:10 [http-nio-8081-exec-4] INFO  c.s.b.controllers.BankController         ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 09:22:10 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.BankService      ::-> BankService::getBankDetails BankService::getBankDetails
+>25-09-2024 09:22:10 [http-nio-8081-exec-1] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 09:22:10 [http-nio-8081-exec-1] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 09:22:10 [http-nio-8081-exec-9] INFO  c.s.b.controllers.CustomerController     ::-> CustomerController::getCustomerDetailsByCustomerId CustomerController::getCustomerDetailsByCustomerId
+>25-09-2024 09:22:53 [http-nio-8081-exec-3] INFO  c.s.b.controllers.BankController         ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 09:22:53 [http-nio-8081-exec-10] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 09:22:53 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.BankService      ::-> BankService::getBankDetails BankService::getBankDetails
+>25-09-2024 09:22:53 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 09:22:53 [http-nio-8081-exec-2] INFO  c.s.b.controllers.CustomerController     ::-> CustomerController::getCustomerDetailsByCustomerId CustomerController::getCustomerDetailsByCustomerId
+>25-09-2024 09:24:32 [http-nio-8081-exec-9] INFO  c.s.b.controllers.BankController         ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 09:24:32 [http-nio-8081-exec-9] INFO  c.s.bankingApp.services.BankService      ::-> BankService::getBankDetails BankService::getBankDetails
+>25-09-2024 09:24:32 [http-nio-8081-exec-8] INFO  c.s.b.controllers.CustomerController     ::-> CustomerController::getCustomerDetailsByCustomerId CustomerController::getCustomerDetailsByCustomerId
+>25-09-2024 09:24:32 [http-nio-8081-exec-5] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 09:24:32 [http-nio-8081-exec-5] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 09:29:05 [http-nio-8081-exec-2] INFO  c.s.b.controllers.BankController         ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 09:29:05 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.BankService      ::-> BankService::getBankDetails BankService::getBankDetails
+>25-09-2024 09:29:05 [http-nio-8081-exec-4] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 09:29:05 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 09:29:05 [http-nio-8081-exec-6] INFO  c.s.b.controllers.CustomerController     ::-> CustomerController::getCustomerDetailsByCustomerId CustomerController::getCustomerDetailsByCustomerId
+>25-09-2024 09:29:19 [http-nio-8081-exec-5] INFO  c.s.b.controllers.BankController         ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 09:29:19 [http-nio-8081-exec-8] INFO  c.s.b.controllers.CustomerController     ::-> CustomerController::getCustomerDetailsByCustomerId CustomerController::getCustomerDetailsByCustomerId
+>25-09-2024 09:29:19 [http-nio-8081-exec-5] INFO  c.s.bankingApp.services.BankService      ::-> BankService::getBankDetails BankService::getBankDetails
+>25-09-2024 09:29:19 [http-nio-8081-exec-7] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 09:29:19 [http-nio-8081-exec-7] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 09:29:19 [http-nio-8081-exec-9] INFO  c.s.b.controllers.AccountController      ::-> AccountController::addBeneficiaryToAccount:: AccountController::addBeneficiaryToAccount::
+>25-09-2024 09:29:19 [http-nio-8081-exec-9] INFO  c.s.b.controllers.AccountController      ::-> com.sukrutha.bankingApp.entities.Beneficiary@4cfe2412 com.sukrutha.bankingApp.entities.Beneficiary@4cfe2412
+>25-09-2024 09:29:19 [http-nio-8081-exec-9] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::addBeneficiaryToAccount AccountService::addBeneficiaryToAccount
+>25-09-2024 09:29:19 [http-nio-8081-exec-9] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 09:29:19 [http-nio-8081-exec-9] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>25-09-2024 09:29:19 [http-nio-8081-exec-9] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService:updateAccount AccountService:updateAccount
+>25-09-2024 09:29:19 [http-nio-8081-exec-9] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService updateBeneficiary BeneficiaryService updateBeneficiary
+>25-09-2024 09:29:37 [http-nio-8081-exec-10] INFO  c.s.b.controllers.AccountController      ::-> AccountController::addBeneficiaryToAccount:: AccountController::addBeneficiaryToAccount::
+>25-09-2024 09:29:37 [http-nio-8081-exec-10] INFO  c.s.b.controllers.AccountController      ::-> com.sukrutha.bankingApp.entities.Beneficiary@1e0704b4 com.sukrutha.bankingApp.entities.Beneficiary@1e0704b4
+>25-09-2024 09:29:37 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::addBeneficiaryToAccount AccountService::addBeneficiaryToAccount
+>25-09-2024 09:29:37 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 09:29:37 [http-nio-8081-exec-10] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>25-09-2024 09:29:37 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService:updateAccount AccountService:updateAccount
+>25-09-2024 09:29:37 [http-nio-8081-exec-10] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService updateBeneficiary BeneficiaryService updateBeneficiary
+>25-09-2024 09:29:37 [http-nio-8081-exec-3] INFO  c.s.b.controllers.BankController         ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 09:29:37 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.BankService      ::-> BankService::getBankDetails BankService::getBankDetails
+>25-09-2024 09:29:37 [http-nio-8081-exec-2] INFO  c.s.b.controllers.CustomerController     ::-> CustomerController::getCustomerDetailsByCustomerId CustomerController::getCustomerDetailsByCustomerId
+>25-09-2024 09:29:37 [http-nio-8081-exec-4] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 09:29:37 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 09:30:22 [http-nio-8081-exec-6] INFO  c.s.b.controllers.BankController         ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 09:30:22 [http-nio-8081-exec-6] INFO  c.s.bankingApp.services.BankService      ::-> BankService::getBankDetails BankService::getBankDetails
+>25-09-2024 09:30:22 [http-nio-8081-exec-1] INFO  c.s.b.controllers.CustomerController     ::-> CustomerController::getCustomerDetailsByCustomerId CustomerController::getCustomerDetailsByCustomerId
+>25-09-2024 09:30:22 [http-nio-8081-exec-5] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 09:30:22 [http-nio-8081-exec-5] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 09:30:50 [http-nio-8081-exec-7] INFO  c.s.b.controllers.BankController         ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 09:30:50 [http-nio-8081-exec-8] INFO  c.s.b.controllers.CustomerController     ::-> CustomerController::getCustomerDetailsByCustomerId CustomerController::getCustomerDetailsByCustomerId
+>25-09-2024 09:30:50 [http-nio-8081-exec-7] INFO  c.s.bankingApp.services.BankService      ::-> BankService::getBankDetails BankService::getBankDetails
+>25-09-2024 09:30:50 [http-nio-8081-exec-9] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 09:30:50 [http-nio-8081-exec-9] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 09:31:47 [http-nio-8081-exec-3] INFO  c.s.b.controllers.AccountController      ::-> AccountController::deleteBeneficiaryFromAccount:: AccountController::deleteBeneficiaryFromAccount::
+>25-09-2024 09:31:47 [http-nio-8081-exec-3] INFO  c.s.b.controllers.AccountController      ::-> 468d951a-ea7f-4e9b-a503-0a9a0328295a 468d951a-ea7f-4e9b-a503-0a9a0328295a
+>25-09-2024 09:31:47 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::addBeneficiaryToAccount AccountService::addBeneficiaryToAccount
+>25-09-2024 09:31:47 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 09:31:47 [http-nio-8081-exec-3] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryById 468d951a-ea7f-4e9b-a503-0a9a0328295a BeneficiaryService::getBeneficiaryById 468d951a-ea7f-4e9b-a503-0a9a0328295a
+>25-09-2024 09:31:47 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AcountService::isBeneficiaryExistsInAccount AcountService::isBeneficiaryExistsInAccount
+>25-09-2024 09:31:47 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> beneficiary exists in account beneficiary exists in account
+>25-09-2024 09:31:47 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> beneficiary deleted successfully from account beneficiary deleted successfully from account
+>25-09-2024 09:31:48 [http-nio-8081-exec-4] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>25-09-2024 09:31:48 [http-nio-8081-exec-4] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>25-09-2024 09:35:08 [RMI TCP Connection(263)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin ::-> Application shutdown requested. Application shutdown requested.
+>25-09-2024 09:35:08 [RMI TCP Connection(263)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Closing JPA EntityManagerFactory for persistence unit 'default' Closing JPA EntityManagerFactory for persistence unit 'default'
+>25-09-2024 09:35:08 [RMI TCP Connection(263)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Shutdown initiated... HikariPool-1 - Shutdown initiated...
+>25-09-2024 09:35:08 [RMI TCP Connection(263)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Shutdown completed. HikariPool-1 - Shutdown completed.

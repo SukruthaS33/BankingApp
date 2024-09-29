@@ -49,7 +49,7 @@ public class BeneficiaryService {
 			if (this.validateBeneficiaryDetails(beneficiary)) {
 				if (this.getBeneficiaryByBeneficiaryAccountNumber(beneficiary.getBeneficiaryAcctNumber()) == null) {
 					// logic to check if same bank /account number valid can be added here
-
+					log.info("beneficiary doesn't exist in table , hence adding "+beneficiary);
 					savedBeneficiary = beneficiaryRepository.save(beneficiary);
 
 				} else {

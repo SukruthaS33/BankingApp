@@ -1,0 +1,188 @@
+>26-09-2024 09:19:59 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Starting BankingAppApplication using Java 21.0.3 with PID 4868 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp) Starting BankingAppApplication using Java 21.0.3 with PID 4868 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp)
+>26-09-2024 09:19:59 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> No active profile set, falling back to 1 default profile: "default" No active profile set, falling back to 1 default profile: "default"
+>26-09-2024 09:19:59 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor ::-> Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+>26-09-2024 09:19:59 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor ::-> For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+>26-09-2024 09:20:01 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Bootstrapping Spring Data JPA repositories in DEFAULT mode. Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+>26-09-2024 09:20:01 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Finished Spring Data repository scanning in 136 ms. Found 7 JPA repository interfaces. Finished Spring Data repository scanning in 136 ms. Found 7 JPA repository interfaces.
+>26-09-2024 09:20:03 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat initialized with port 8081 (http) Tomcat initialized with port 8081 (http)
+>26-09-2024 09:20:03 [restartedMain] INFO  o.apache.catalina.core.StandardService   ::-> Starting service [Tomcat] Starting service [Tomcat]
+>26-09-2024 09:20:03 [restartedMain] INFO  org.apache.catalina.core.StandardEngine  ::-> Starting Servlet engine: [Apache Tomcat/10.1.28] Starting Servlet engine: [Apache Tomcat/10.1.28]
+>26-09-2024 09:20:03 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/bankingapp]    ::-> Initializing Spring embedded WebApplicationContext Initializing Spring embedded WebApplicationContext
+>26-09-2024 09:20:03 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext ::-> Root WebApplicationContext: initialization completed in 4127 ms Root WebApplicationContext: initialization completed in 4127 ms
+>26-09-2024 09:20:03 [restartedMain] INFO  o.hibernate.jpa.internal.util.LogHelper  ::-> HHH000204: Processing PersistenceUnitInfo [name: default] HHH000204: Processing PersistenceUnitInfo [name: default]
+>26-09-2024 09:20:03 [restartedMain] INFO  org.hibernate.Version                    ::-> HHH000412: Hibernate ORM core version 6.5.2.Final HHH000412: Hibernate ORM core version 6.5.2.Final
+>26-09-2024 09:20:03 [restartedMain] INFO  o.h.c.internal.RegionFactoryInitiator    ::-> HHH000026: Second-level cache disabled HHH000026: Second-level cache disabled
+>26-09-2024 09:20:04 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      ::-> No LoadTimeWeaver setup: ignoring JPA class transformer No LoadTimeWeaver setup: ignoring JPA class transformer
+>26-09-2024 09:20:04 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Starting... HikariPool-1 - Starting...
+>26-09-2024 09:20:05 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@678f05e0 HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@678f05e0
+>26-09-2024 09:20:05 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Start completed. HikariPool-1 - Start completed.
+>26-09-2024 09:20:05 [restartedMain] WARN  org.hibernate.orm.deprecation            ::-> HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+>26-09-2024 09:20:07 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       ::-> HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+>26-09-2024 09:20:07 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Initialized JPA EntityManagerFactory for persistence unit 'default' Initialized JPA EntityManagerFactory for persistence unit 'default'
+>26-09-2024 09:20:08 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory     ::-> Hibernate is in classpath; If applicable, HQL parser will be used. Hibernate is in classpath; If applicable, HQL parser will be used.
+>26-09-2024 09:20:09 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ::-> spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+>26-09-2024 09:20:09 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration ::-> 
+
+Using generated security password: ed0c3c8c-678e-4ead-91e3-ec8a1f95c0c9
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+ 
+
+Using generated security password: ed0c3c8c-678e-4ead-91e3-ec8a1f95c0c9
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+>26-09-2024 09:20:09 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ::-> Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+>26-09-2024 09:20:10 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer       ::-> LiveReload server is running on port 35729 LiveReload server is running on port 35729
+>26-09-2024 09:20:10 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat started on port 8081 (http) with context path '/bankingapp' Tomcat started on port 8081 (http) with context path '/bankingapp'
+>26-09-2024 09:20:10 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Started BankingAppApplication in 12.05 seconds (process running for 13.915) Started BankingAppApplication in 12.05 seconds (process running for 13.915)
+>26-09-2024 09:20:10 [restartedMain] INFO  c.s.bankingApp.bootstrap.RoleSeeder      ::-> RoleSeeder::run RoleSeeder::run
+>26-09-2024 09:20:10 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>26-09-2024 09:20:10 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> banking app started! banking app started!
+>26-09-2024 09:20:10 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>26-09-2024 09:20:22 [http-nio-8081-exec-2] INFO  o.a.c.c.C.[.[localhost].[/bankingapp]    ::-> Initializing Spring DispatcherServlet 'dispatcherServlet' Initializing Spring DispatcherServlet 'dispatcherServlet'
+>26-09-2024 09:20:22 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet        ::-> Initializing Servlet 'dispatcherServlet' Initializing Servlet 'dispatcherServlet'
+>26-09-2024 09:20:22 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet        ::-> Completed initialization in 2 ms Completed initialization in 2 ms
+>26-09-2024 09:20:22 [http-nio-8081-exec-1] INFO  c.s.b.controllers.BankController         ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>26-09-2024 09:20:22 [http-nio-8081-exec-1] INFO  c.s.bankingApp.services.BankService      ::-> BankService::getBankDetails BankService::getBankDetails
+>26-09-2024 09:20:23 [http-nio-8081-exec-3] INFO  c.s.b.controllers.CustomerController     ::-> CustomerController::getCustomerDetailsByCustomerId CustomerController::getCustomerDetailsByCustomerId
+>26-09-2024 09:20:23 [http-nio-8081-exec-2] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>26-09-2024 09:20:23 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>26-09-2024 09:20:38 [RMI TCP Connection(10)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin ::-> Application shutdown requested. Application shutdown requested.
+>26-09-2024 09:20:38 [RMI TCP Connection(10)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Closing JPA EntityManagerFactory for persistence unit 'default' Closing JPA EntityManagerFactory for persistence unit 'default'
+>26-09-2024 09:20:38 [RMI TCP Connection(10)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Shutdown initiated... HikariPool-1 - Shutdown initiated...
+>26-09-2024 09:20:38 [RMI TCP Connection(10)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Shutdown completed. HikariPool-1 - Shutdown completed.
+>26-09-2024 09:20:44 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Starting BankingAppApplication using Java 21.0.3 with PID 23836 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp) Starting BankingAppApplication using Java 21.0.3 with PID 23836 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp)
+>26-09-2024 09:20:44 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> No active profile set, falling back to 1 default profile: "default" No active profile set, falling back to 1 default profile: "default"
+>26-09-2024 09:20:44 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor ::-> Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+>26-09-2024 09:20:44 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor ::-> For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+>26-09-2024 09:20:46 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Bootstrapping Spring Data JPA repositories in DEFAULT mode. Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+>26-09-2024 09:20:46 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Finished Spring Data repository scanning in 101 ms. Found 7 JPA repository interfaces. Finished Spring Data repository scanning in 101 ms. Found 7 JPA repository interfaces.
+>26-09-2024 09:20:48 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat initialized with port 8081 (http) Tomcat initialized with port 8081 (http)
+>26-09-2024 09:20:48 [restartedMain] INFO  o.apache.catalina.core.StandardService   ::-> Starting service [Tomcat] Starting service [Tomcat]
+>26-09-2024 09:20:48 [restartedMain] INFO  org.apache.catalina.core.StandardEngine  ::-> Starting Servlet engine: [Apache Tomcat/10.1.28] Starting Servlet engine: [Apache Tomcat/10.1.28]
+>26-09-2024 09:20:48 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/bankingapp]    ::-> Initializing Spring embedded WebApplicationContext Initializing Spring embedded WebApplicationContext
+>26-09-2024 09:20:48 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext ::-> Root WebApplicationContext: initialization completed in 3839 ms Root WebApplicationContext: initialization completed in 3839 ms
+>26-09-2024 09:20:49 [restartedMain] INFO  o.hibernate.jpa.internal.util.LogHelper  ::-> HHH000204: Processing PersistenceUnitInfo [name: default] HHH000204: Processing PersistenceUnitInfo [name: default]
+>26-09-2024 09:20:49 [restartedMain] INFO  org.hibernate.Version                    ::-> HHH000412: Hibernate ORM core version 6.5.2.Final HHH000412: Hibernate ORM core version 6.5.2.Final
+>26-09-2024 09:20:49 [restartedMain] INFO  o.h.c.internal.RegionFactoryInitiator    ::-> HHH000026: Second-level cache disabled HHH000026: Second-level cache disabled
+>26-09-2024 09:20:50 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      ::-> No LoadTimeWeaver setup: ignoring JPA class transformer No LoadTimeWeaver setup: ignoring JPA class transformer
+>26-09-2024 09:20:50 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Starting... HikariPool-1 - Starting...
+>26-09-2024 09:20:50 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@449cba5a HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@449cba5a
+>26-09-2024 09:20:50 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Start completed. HikariPool-1 - Start completed.
+>26-09-2024 09:20:50 [restartedMain] WARN  org.hibernate.orm.deprecation            ::-> HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+>26-09-2024 09:20:53 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       ::-> HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+>26-09-2024 09:20:53 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Initialized JPA EntityManagerFactory for persistence unit 'default' Initialized JPA EntityManagerFactory for persistence unit 'default'
+>26-09-2024 09:20:54 [restartedMain] INFO  o.s.d.j.r.query.QueryEnhancerFactory     ::-> Hibernate is in classpath; If applicable, HQL parser will be used. Hibernate is in classpath; If applicable, HQL parser will be used.
+>26-09-2024 09:20:55 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ::-> spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+>26-09-2024 09:20:55 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration ::-> 
+
+Using generated security password: 42f34c53-864c-4338-a060-df1160460b3c
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+ 
+
+Using generated security password: 42f34c53-864c-4338-a060-df1160460b3c
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+>26-09-2024 09:20:55 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ::-> Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+>26-09-2024 09:20:56 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer       ::-> LiveReload server is running on port 35729 LiveReload server is running on port 35729
+>26-09-2024 09:20:56 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat started on port 8081 (http) with context path '/bankingapp' Tomcat started on port 8081 (http) with context path '/bankingapp'
+>26-09-2024 09:20:56 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Started BankingAppApplication in 12.203 seconds (process running for 13.57) Started BankingAppApplication in 12.203 seconds (process running for 13.57)
+>26-09-2024 09:20:56 [restartedMain] INFO  c.s.bankingApp.bootstrap.RoleSeeder      ::-> RoleSeeder::run RoleSeeder::run
+>26-09-2024 09:20:56 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>26-09-2024 09:20:56 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> banking app started! banking app started!
+>26-09-2024 09:20:56 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>26-09-2024 09:21:01 [http-nio-8081-exec-2] INFO  o.a.c.c.C.[.[localhost].[/bankingapp]    ::-> Initializing Spring DispatcherServlet 'dispatcherServlet' Initializing Spring DispatcherServlet 'dispatcherServlet'
+>26-09-2024 09:21:01 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet        ::-> Initializing Servlet 'dispatcherServlet' Initializing Servlet 'dispatcherServlet'
+>26-09-2024 09:21:01 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet        ::-> Completed initialization in 2 ms Completed initialization in 2 ms
+>26-09-2024 09:21:01 [http-nio-8081-exec-2] INFO  c.s.b.controllers.BankController         ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>26-09-2024 09:21:01 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.BankService      ::-> BankService::getBankDetails BankService::getBankDetails
+>26-09-2024 09:21:01 [http-nio-8081-exec-3] INFO  c.s.b.controllers.CustomerController     ::-> CustomerController::getCustomerDetailsByCustomerId CustomerController::getCustomerDetailsByCustomerId
+>26-09-2024 09:21:01 [http-nio-8081-exec-1] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>26-09-2024 09:21:01 [http-nio-8081-exec-1] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>26-09-2024 09:34:36 [http-nio-8081-exec-7] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::receiveMoney TransactionController::receiveMoney
+>26-09-2024 09:34:36 [http-nio-8081-exec-7] INFO  c.s.b.services.TransactionService        ::-> TransactionService:receiveMoney TransactionService:receiveMoney
+>26-09-2024 09:34:36 [http-nio-8081-exec-7] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>26-09-2024 09:34:36 [http-nio-8081-exec-7] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>26-09-2024 09:34:36 [http-nio-8081-exec-7] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>26-09-2024 09:34:36 [http-nio-8081-exec-7] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>26-09-2024 09:34:36 [http-nio-8081-exec-7] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>26-09-2024 09:34:36 [http-nio-8081-exec-7] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>26-09-2024 09:34:36 [http-nio-8081-exec-7] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>26-09-2024 09:34:36 [http-nio-8081-exec-8] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>26-09-2024 09:34:36 [http-nio-8081-exec-8] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>26-09-2024 09:35:53 [http-nio-8081-exec-10] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::receiveMoney TransactionController::receiveMoney
+>26-09-2024 09:35:53 [http-nio-8081-exec-10] INFO  c.s.b.services.TransactionService        ::-> TransactionService:receiveMoney TransactionService:receiveMoney
+>26-09-2024 09:35:53 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>26-09-2024 09:35:53 [http-nio-8081-exec-10] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>26-09-2024 09:35:53 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>26-09-2024 09:35:53 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>26-09-2024 09:35:53 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>26-09-2024 09:35:53 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>26-09-2024 09:35:53 [http-nio-8081-exec-10] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>26-09-2024 09:35:53 [http-nio-8081-exec-2] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>26-09-2024 09:35:53 [http-nio-8081-exec-2] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>26-09-2024 09:36:00 [http-nio-8081-exec-1] INFO  c.s.b.controllers.TransactionController  ::-> TransactionController::receiveMoney TransactionController::receiveMoney
+>26-09-2024 09:36:00 [http-nio-8081-exec-1] INFO  c.s.b.services.TransactionService        ::-> TransactionService:receiveMoney TransactionService:receiveMoney
+>26-09-2024 09:36:00 [http-nio-8081-exec-1] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>26-09-2024 09:36:00 [http-nio-8081-exec-1] INFO  c.s.b.services.BeneficiaryService        ::-> BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber BeneficiaryService::getBeneficiaryByBeneficiaryAccountNumber
+>26-09-2024 09:36:00 [http-nio-8081-exec-1] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>26-09-2024 09:36:00 [http-nio-8081-exec-1] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::debit AccountService::debit
+>26-09-2024 09:36:00 [http-nio-8081-exec-1] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>26-09-2024 09:36:00 [http-nio-8081-exec-1] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::credit AccountService::credit
+>26-09-2024 09:36:00 [http-nio-8081-exec-1] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>26-09-2024 09:36:00 [http-nio-8081-exec-3] INFO  c.s.b.controllers.AccountController      ::-> AccountController::getAccountByAccountNumber AccountController::getAccountByAccountNumber
+>26-09-2024 09:36:00 [http-nio-8081-exec-3] INFO  c.s.bankingApp.services.AccountService   ::-> AccountService::getAccountByAccountNumber AccountService::getAccountByAccountNumber
+>26-09-2024 09:43:30 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener ::-> Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications) Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+>26-09-2024 09:43:30 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Closing JPA EntityManagerFactory for persistence unit 'default' Closing JPA EntityManagerFactory for persistence unit 'default'
+>26-09-2024 09:43:30 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Shutdown initiated... HikariPool-1 - Shutdown initiated...
+>26-09-2024 09:43:30 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-1 - Shutdown completed. HikariPool-1 - Shutdown completed.
+>26-09-2024 09:43:30 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Starting BankingAppApplication using Java 21.0.3 with PID 23836 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp) Starting BankingAppApplication using Java 21.0.3 with PID 23836 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp)
+>26-09-2024 09:43:30 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> No active profile set, falling back to 1 default profile: "default" No active profile set, falling back to 1 default profile: "default"
+>26-09-2024 09:43:31 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Bootstrapping Spring Data JPA repositories in DEFAULT mode. Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+>26-09-2024 09:43:31 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate ::-> Finished Spring Data repository scanning in 16 ms. Found 7 JPA repository interfaces. Finished Spring Data repository scanning in 16 ms. Found 7 JPA repository interfaces.
+>26-09-2024 09:43:31 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat initialized with port 8081 (http) Tomcat initialized with port 8081 (http)
+>26-09-2024 09:43:31 [restartedMain] INFO  o.apache.catalina.core.StandardService   ::-> Starting service [Tomcat] Starting service [Tomcat]
+>26-09-2024 09:43:31 [restartedMain] INFO  org.apache.catalina.core.StandardEngine  ::-> Starting Servlet engine: [Apache Tomcat/10.1.28] Starting Servlet engine: [Apache Tomcat/10.1.28]
+>26-09-2024 09:43:31 [restartedMain] INFO  o.a.c.c.C.[.[localhost].[/bankingapp]    ::-> Initializing Spring embedded WebApplicationContext Initializing Spring embedded WebApplicationContext
+>26-09-2024 09:43:31 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext ::-> Root WebApplicationContext: initialization completed in 635 ms Root WebApplicationContext: initialization completed in 635 ms
+>26-09-2024 09:43:31 [restartedMain] INFO  o.hibernate.jpa.internal.util.LogHelper  ::-> HHH000204: Processing PersistenceUnitInfo [name: default] HHH000204: Processing PersistenceUnitInfo [name: default]
+>26-09-2024 09:43:31 [restartedMain] INFO  o.h.c.internal.RegionFactoryInitiator    ::-> HHH000026: Second-level cache disabled HHH000026: Second-level cache disabled
+>26-09-2024 09:43:31 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo      ::-> No LoadTimeWeaver setup: ignoring JPA class transformer No LoadTimeWeaver setup: ignoring JPA class transformer
+>26-09-2024 09:43:31 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-2 - Starting... HikariPool-2 - Starting...
+>26-09-2024 09:43:31 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@50384502 HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@50384502
+>26-09-2024 09:43:31 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-2 - Start completed. HikariPool-2 - Start completed.
+>26-09-2024 09:43:31 [restartedMain] WARN  org.hibernate.orm.deprecation            ::-> HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default) HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+>26-09-2024 09:43:31 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator       ::-> HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration) HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+>26-09-2024 09:43:31 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Initialized JPA EntityManagerFactory for persistence unit 'default' Initialized JPA EntityManagerFactory for persistence unit 'default'
+>26-09-2024 09:43:31 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration ::-> spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+>26-09-2024 09:43:31 [restartedMain] WARN  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration ::-> 
+
+Using generated security password: fd1a2e10-eb81-4c20-8117-b0f244efad27
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+ 
+
+Using generated security password: fd1a2e10-eb81-4c20-8117-b0f244efad27
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+>26-09-2024 09:43:31 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer ::-> Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+>26-09-2024 09:43:31 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer       ::-> LiveReload server is running on port 35729 LiveReload server is running on port 35729
+>26-09-2024 09:43:31 [restartedMain] INFO  o.s.b.w.embedded.tomcat.TomcatWebServer  ::-> Tomcat started on port 8081 (http) with context path '/bankingapp' Tomcat started on port 8081 (http) with context path '/bankingapp'
+>26-09-2024 09:43:31 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Started BankingAppApplication in 1.321 seconds (process running for 1369.326) Started BankingAppApplication in 1.321 seconds (process running for 1369.326)
+>26-09-2024 09:43:31 [restartedMain] INFO  c.s.bankingApp.bootstrap.RoleSeeder      ::-> RoleSeeder::run RoleSeeder::run
+>26-09-2024 09:43:31 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener ::-> Condition evaluation unchanged Condition evaluation unchanged
+>26-09-2024 09:43:31 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>26-09-2024 09:43:31 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> banking app started! banking app started!
+>26-09-2024 09:43:31 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> ********************************************** **********************************************
+>26-09-2024 10:26:11 [HikariPool-2 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=29m9s888ms687µs600ns). HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=29m9s888ms687µs600ns).
+>26-09-2024 10:28:47 [HikariPool-2 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool        ::-> HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=2m36s2ms852µs200ns). HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=2m36s2ms852µs200ns).
+>26-09-2024 10:31:49 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener ::-> Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications) Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+>26-09-2024 10:31:49 [Thread-7] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean ::-> Closing JPA EntityManagerFactory for persistence unit 'default' Closing JPA EntityManagerFactory for persistence unit 'default'
+>26-09-2024 10:31:49 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-2 - Shutdown initiated... HikariPool-2 - Shutdown initiated...
+>26-09-2024 10:31:49 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource       ::-> HikariPool-2 - Shutdown completed. HikariPool-2 - Shutdown completed.
+>26-09-2024 10:31:49 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> Starting BankingAppApplication using Java 21.0.3 with PID 23836 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp) Starting BankingAppApplication using Java 21.0.3 with PID 23836 (C:\banking_app\BankingApp\target\classes started by sukru in C:\banking_app\BankingApp)
+>26-09-2024 10:31:49 [restartedMain] INFO  c.s.bankingApp.BankingAppApplication     ::-> No active profile set, falling back to 1 default profile: "default" No active profile set, falling back to 1 default profile: "default"
