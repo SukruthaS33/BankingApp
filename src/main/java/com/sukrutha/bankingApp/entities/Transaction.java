@@ -7,6 +7,7 @@ import org.hibernate.resource.transaction.spi.TransactionStatus;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
 import com.sukrutha.bankingApp.entities.EnumContainer.AccountType;
@@ -57,13 +58,13 @@ public class Transaction {
 	@NotNull
 	@Column(name = "transaction_id")
 	private String transactionId;
-	@JsonProperty(access = Access.WRITE_ONLY)
+	@JsonBackReference 
 	@ManyToOne
 	@JoinColumn(name = "customer_acct_id")
 	private Account customerAccount;
+	@JsonBackReference
 	@ManyToOne
 	@JoinColumn(name = "beneficiary_account_id")
-	@JsonProperty(access = Access.WRITE_ONLY)
 	private Account beneficiaryAccount;
 	@Column(name = "amount")
 	@NotNull

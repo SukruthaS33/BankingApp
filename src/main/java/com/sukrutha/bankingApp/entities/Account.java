@@ -29,6 +29,7 @@ import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
 import com.sukrutha.bankingApp.entities.EnumContainer.AccountType;
@@ -64,11 +65,11 @@ public class Account {
 	@NotNull
 	@Min(value = 0, message = "Minimum balance must be more than 0")
 	private double balance;
+	@JsonManagedReference
 	@OneToMany(mappedBy = "customerAccount") // always map it by field name
 	// @JsonProperty(access = Access.WRITE_ONLY)
-	private List<Transaction> transactions;
-	@OneToMany(mappedBy = "beneficiaryAccount")
-	private List<Transaction> beneficiaryTransactions;
+	private List<Transaction> transactions;//here we are only referring to customer_accoutn in transactions not the case when the same customer is a beneficiary of some other customer
+//transaction for the account only
 	@Column(name = "isActive", columnDefinition = "BOOLEAN DEFAULT false")
 	@NotNull
 	private boolean isActive;
