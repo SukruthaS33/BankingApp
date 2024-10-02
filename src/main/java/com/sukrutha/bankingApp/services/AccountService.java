@@ -49,7 +49,7 @@ public class AccountService {
 
 			String accountNumber = accountBusinessLogic.generateRandomNumber();// rename it
 			account.setAccountNumber(accountNumber);
-			// account.setAccountType(accountType);
+			 account.setAccountType(accountType);
 			// account.setBalance(0);
 			account.setActive(true);
 			account.setBranch(branch);

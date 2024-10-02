@@ -17,6 +17,7 @@ import com.sukrutha.bankingApp.Repositories.CustomerRepository;
 import com.sukrutha.bankingApp.Repositories.RoleRepository;
 import com.sukrutha.bankingApp.businessLogics.CustomerBusinessLogic;
 import com.sukrutha.bankingApp.customExceptions.InputException;
+import com.sukrutha.bankingApp.entities.Address;
 import com.sukrutha.bankingApp.entities.Customer;
 import com.sukrutha.bankingApp.entities.Role;
 
@@ -91,8 +92,8 @@ public class CustomerService {
 	public Customer login(String customerEmail, String password) {
 		log.info("CustomerService::login");
 		// boolean loggedIn = false;
-		Customer customer =null;
-		
+		Customer customer = null;
+
 		try {
 			if (customerEmail == null || customerEmail.trim().isEmpty() || password == null
 					|| password.trim().isEmpty()) {
@@ -100,7 +101,7 @@ public class CustomerService {
 			}
 
 			Optional<Customer> customerOptional = customerRepository.findByCustomerEmail(customerEmail);
-			 customer = customerOptional.orElseThrow(() -> new Exception("Customer not found"));
+			customer = customerOptional.orElseThrow(() -> new Exception("Customer not found"));
 
 			// Corrected the argument order here
 			if (passwordEncoder.matches(password, customer.getCustomerPassword())) {
@@ -111,7 +112,7 @@ public class CustomerService {
 			e.printStackTrace();
 
 		}
-		log.info("customer "+customer);
+		log.info("customer " + customer);
 		return customer;
 	}
 
@@ -166,6 +167,32 @@ public class CustomerService {
 		}
 
 		return null;
+	}
+
+	public boolean updateCustomerDetails(String customerId, Customer customer, String nameOfUpdate) {
+		boolean updateCustomerDetailStatus = false;
+		try {
+
+			Customer existingCustomer = customerRepository.findById(customerId).orElseThrow(() -> new Exception());
+
+			if (nameOfUpdate.equalsIgnoreCase("address")) {
+				existingCustomer.setCustomerAddress(customer.getCustomerAddress());
+				updateCustomerDetailStatus = true;
+				customerRepository.save(existingCustomer);
+			}
+
+			else if (nameOfUpdate.equalsIgnoreCase("phone")) {
+				existingCustomer.setCustomerPhoneNumber(customer.getCustomerPhoneNumber());
+				updateCustomerDetailStatus = true;
+			customerRepository.save(existingCustomer);
+			}
+			return updateCustomerDetailStatus;
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			log.error("error in updating customer details");
+		}
+		return updateCustomerDetailStatus;
 	}
 
 }
