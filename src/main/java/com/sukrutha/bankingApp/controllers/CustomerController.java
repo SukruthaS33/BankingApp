@@ -112,4 +112,40 @@ public class CustomerController {
 		return null;
 	}
 
+	@PostMapping("/{customerId}/update/{nameOfUpdate}")
+	public ResponseEntity<Boolean> updateCustomerDetails(
+	        @PathVariable String customerId,
+	        @PathVariable String nameOfUpdate,
+	        @RequestBody Customer customer) {
+
+		boolean updateReqSubmitStatus = false;
+
+		try {
+			log.info(customerId);
+			log.info(nameOfUpdate);
+			log.info(customer.getCustomerAddress().getHouseNumber());
+			log.info(customer.getCustomerAddress().getLocality());
+			updateReqSubmitStatus = customerService.updateCustomerDetails(customerId, customer, nameOfUpdate);
+
+			if (updateReqSubmitStatus) {
+				return ResponseEntity.status(HttpStatus.OK).body(updateReqSubmitStatus);
+			}
+
+			else {
+				return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(updateReqSubmitStatus);
+			}
+
+		}
+
+		catch (Exception e) {
+			log.error(customerId);
+			log.error("encountered issue in getCustomerDetails() caller method");
+			
+
+		}
+
+		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(updateReqSubmitStatus);
+
+	}
+
 }

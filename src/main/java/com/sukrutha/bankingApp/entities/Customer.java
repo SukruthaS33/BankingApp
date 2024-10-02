@@ -75,7 +75,7 @@ public class Customer {
 	private int age;
 	@Valid
 	@Embedded
-	@JsonProperty(access = Access.WRITE_ONLY)
+	
 	private Address customerAddress;
 	@Valid
 	@Embedded
