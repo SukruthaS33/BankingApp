@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sukrutha.bankingApp.entities.Customer;
+import com.sukrutha.bankingApp.entities.CustomerRequest;
 import com.sukrutha.bankingApp.services.AdminService;
 
 import lombok.extern.slf4j.Slf4j;
@@ -67,4 +68,37 @@ public class AdminController {
 		}
 		return null;
 	}
+	
+	
+	@GetMapping("/customerNewAccountRequests")
+	public ResponseEntity <List<CustomerRequest>> getAllCustomerAccountRequests() {
+		log.info("CustomerController::getAllCustomerAccountRequests");
+		List<CustomerRequest> customerRequests = new ArrayList<>();
+
+		try {
+			customerRequests = adminService.getAllCustomerAccountRequests();
+
+			if (customerRequests != null) {
+
+				return ResponseEntity.status(HttpStatus.OK).body(customerRequests);
+			}
+
+			else if (customerRequests == null) {
+				return ResponseEntity.status(HttpStatus.NOT_FOUND).body(customerRequests);
+			}
+
+		}
+
+		catch (Exception e) {
+			
+			log.error("encountered issue in getCustomerDetails() caller method");
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(customerRequests);
+
+		}
+		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(customerRequests);
+	}
+	
+	
+
+	
 }

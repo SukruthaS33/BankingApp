@@ -84,10 +84,16 @@ public class AccountController {
 				log.info("customer and branch found");
 
 				String accountNumber = accountService.createAccount(accountType, branch, customer);
-				if (accountNumber == "" || accountNumber == null) {
+				log.info("created account number is "+accountNumber);
+				if ( accountNumber == null) {
 					return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
 				}
+				else if(accountNumber == "") {
+					return ResponseEntity.status(HttpStatus.OK).body("");
+				}
+				
 				return ResponseEntity.status(HttpStatus.OK).body(accountNumber);
+				
 			}
 
 			else {

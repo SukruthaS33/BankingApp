@@ -42,21 +42,34 @@ public class AccountService {
 	public String createAccount(String accountTypeStr, Branch branch, Customer customer) {
 		log.info("AccountService::createAccount");
 		try {
+			// first retrieve the customer
+			Customer existingCustomer = customerService.getCustomerById(customer.getCustomerId());
+			if (existingCustomer != null) {
+				int numberOfAccounts = existingCustomer.getAccounts().size();
+				if (numberOfAccounts < 3) {
+					EnumContainer.AccountType accountType = EnumContainer.AccountType
+							.valueOf(accountTypeStr.toUpperCase());
 
-			EnumContainer.AccountType accountType = EnumContainer.AccountType.valueOf(accountTypeStr.toUpperCase());
+					Account account = new Account();
 
-			Account account = new Account();
+					String accountNumber = accountBusinessLogic.generateRandomNumber();// rename it
+					account.setAccountNumber(accountNumber);
+					account.setAccountType(accountType);
+					// account.setBalance(0);
+					account.setActive(true);
+					account.setBranch(branch);
+					account.setCustomer(customer);
 
-			String accountNumber = accountBusinessLogic.generateRandomNumber();// rename it
-			account.setAccountNumber(accountNumber);
-			 account.setAccountType(accountType);
-			// account.setBalance(0);
-			account.setActive(true);
-			account.setBranch(branch);
-			account.setCustomer(customer);
+					account = accountRepository.save(account);
+					return accountNumber;
+				}
 
-			account = accountRepository.save(account);
-			return accountNumber;
+				else {
+					log.info("number of accounts" +numberOfAccounts);
+					return "";
+				}
+
+			}
 
 		} catch (IllegalArgumentException e) {
 
@@ -69,7 +82,7 @@ public class AccountService {
 			e.printStackTrace();
 			log.error("exception while creating account");
 		}
-		return "";
+		return null;
 	}
 
 	public String updateAccount(Account account) {
@@ -354,6 +367,7 @@ public class AccountService {
 		}
 		return beneficiariesOfAccount;
 	}
+
 	@Transactional
 	public boolean deleteBeneficiaryFromAccount(String accountNumber, String beneficiaryId) {
 
@@ -379,11 +393,22 @@ public class AccountService {
 			// check if beneficiary is linked to account
 			if (this.isBeneficiaryExistsInAccount(account, existingBeneficiary))
 				log.info("beneficiary exists in account");
-				if (accountRepository.deleteBeneficiaryLinkedToAccount(accountNumber, beneficiaryId) >= 1) {//in real case only one exists but we have not provided enough checks to ensure beneficiary is not already linked to an account
-					log.info("beneficiary deleted successfully from account");
-					deleteBenificiaryFromAcctStatus = true;
-					return deleteBenificiaryFromAcctStatus;
-				}
+			if (accountRepository.deleteBeneficiaryLinkedToAccount(accountNumber, beneficiaryId) >= 1) {// in real case
+																										// only one
+																										// exists but we
+																										// have not
+																										// provided
+																										// enough checks
+																										// to ensure
+																										// beneficiary
+																										// is not
+																										// already
+																										// linked to an
+																										// account
+				log.info("beneficiary deleted successfully from account");
+				deleteBenificiaryFromAcctStatus = true;
+				return deleteBenificiaryFromAcctStatus;
+			}
 
 		} catch (Exception e) {
 			log.error("error deleting beneficiary");
