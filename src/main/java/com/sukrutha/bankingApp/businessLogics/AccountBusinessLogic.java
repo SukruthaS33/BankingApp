@@ -10,7 +10,7 @@ public class AccountBusinessLogic {
 
 	
 	public String generateRandomNumber() {
-		log.info("CustomerBusinessLogic:generateRandomNumber");
+		log.info("AccountBusinessLogic:generateRandomNumber");
 		long min = 1000000000L;
 		long max = 9999999999L;
 
@@ -18,4 +18,6 @@ public class AccountBusinessLogic {
 		return String.valueOf(randomNum);
 
 	}
+	
+	
 }

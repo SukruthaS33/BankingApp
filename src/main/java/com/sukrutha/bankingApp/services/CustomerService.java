@@ -19,6 +19,7 @@ import com.sukrutha.bankingApp.businessLogics.CustomerBusinessLogic;
 import com.sukrutha.bankingApp.customExceptions.InputException;
 import com.sukrutha.bankingApp.entities.Address;
 import com.sukrutha.bankingApp.entities.Customer;
+import com.sukrutha.bankingApp.entities.CustomerRequest;
 import com.sukrutha.bankingApp.entities.Role;
 
 import lombok.extern.slf4j.Slf4j;
@@ -178,14 +179,20 @@ public class CustomerService {
 			if (nameOfUpdate.equalsIgnoreCase("address")) {
 				existingCustomer.setCustomerAddress(customer.getCustomerAddress());
 				updateCustomerDetailStatus = true;
-				customerRepository.save(existingCustomer);
+
 			}
 
 			else if (nameOfUpdate.equalsIgnoreCase("phone")) {
 				existingCustomer.setCustomerPhoneNumber(customer.getCustomerPhoneNumber());
 				updateCustomerDetailStatus = true;
-			customerRepository.save(existingCustomer);
+
 			}
+
+			else {
+				return updateCustomerDetailStatus;
+			}
+
+			customerRepository.save(existingCustomer);
 			return updateCustomerDetailStatus;
 
 		} catch (Exception e) {
@@ -194,5 +201,7 @@ public class CustomerService {
 		}
 		return updateCustomerDetailStatus;
 	}
+
+
 
 }

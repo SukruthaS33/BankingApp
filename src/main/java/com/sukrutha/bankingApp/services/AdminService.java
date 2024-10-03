@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.sukrutha.bankingApp.entities.Customer;
+import com.sukrutha.bankingApp.entities.CustomerRequest;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -61,6 +62,21 @@ public Customer getCustomerDetailsByCustomerId(String customerId) {
 		e.printStackTrace();
 		return null;
 	}
+}
+
+
+
+public List<CustomerRequest> getAllCustomerAccountRequests() {
+	
+	log.info("AdminService getAllCustomerAccountRequests");
+	try {
+		
+	}
+	
+	catch(Exception e) {
+		log.error("error in getting customer requests");
+	}
+	return null;
 }
 
 }
