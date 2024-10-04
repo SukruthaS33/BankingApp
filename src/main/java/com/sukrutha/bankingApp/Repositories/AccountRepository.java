@@ -33,7 +33,7 @@ public interface AccountRepository extends JpaRepository<Account, String> {
 			@Param("beneficiaryId") String beneficiaryId);
 
 	@Query("SELECT a.beneficiaries FROM Account a WHERE a.accountNumber = :accountNumber")
-	List<Beneficiary> findAllBeneficiariesInAccount(@Param("accountNumber") String accountNumber);
+	public List<Beneficiary> findAllBeneficiariesInAccount(@Param("accountNumber") String accountNumber);
 	
 	@Modifying
 	@Query(value = "DELETE FROM account_beneficiary WHERE account_number = :accountNumber AND beneficiary_id = :beneficiaryId", nativeQuery = true)
