@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -37,7 +38,7 @@ public class AdminController {
 
 	@GetMapping("/{customerId}")
 	public ResponseEntity<Customer> getCustomerDetailsByCustomerId(@PathVariable String customerId) {
-		log.info("CustomerController::getCustomerDetailsByCustomerId");
+		log.info("AdminController::getCustomerDetailsByCustomerId");
 		Customer customer = null;
 		try {
 			customer = adminService.getCustomerDetailsByCustomerId(customerId);
@@ -54,23 +55,39 @@ public class AdminController {
 		return null;
 	}
 
-//	@GetMapping("/customerNewAccountRequests")
-//	public ResponseEntity<List<CustomerRequest>> getAllCustomerAccountRequests() {
-//		log.info("CustomerController::getAllCustomerAccountRequests");
-//		List<CustomerRequest> customerRequests = new ArrayList<>();
-//		try {
-//			//customerRequests = adminService.getAllCustomerAccountRequests();
-//			if (customerRequests != null) {
-//				return ResponseEntity.status(HttpStatus.OK).body(customerRequests);
-//			} else if (customerRequests == null) {
-//				return ResponseEntity.status(HttpStatus.NOT_FOUND).body(customerRequests);
-//			}
-//		} catch (Exception e) {
-//
-//			log.error("encountered issue in getCustomerDetails() caller method");
-//		
-//		}
-//		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(customerRequests);
-//	}
+	@GetMapping("/customerNewAccountRequests")
+	public ResponseEntity<List<CustomerRequest>> getAllCustomerAccountRequests() {
+		log.info("AdminController::getAllCustomerAccountRequests");
+		List<CustomerRequest> customerRequests = new ArrayList<>();
+		try {
+			customerRequests = adminService.getAllCustomerAccountRequests();
+			if (customerRequests != null) {
+				return ResponseEntity.status(HttpStatus.OK).body(customerRequests);
+			} else if (customerRequests == null) {
+				return ResponseEntity.status(HttpStatus.NOT_FOUND).body(customerRequests);
+			}
+		} catch (Exception e) {
+
+			log.error("encountered issue in getCustomerDetails() caller method");
+
+		}
+		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(customerRequests);
+	}
+
+	@PostMapping("/{requestId}")
+	public ResponseEntity<Boolean> approveOrRejectSubmittedRequest(@PathVariable String requestId,
+			@RequestParam String requestStatus ,@RequestParam(required=false) String adminComment) {
+		log.info("AdminController::approveSubmittedRequest");
+		boolean approveOrRejectStatus = false;
+		try {
+			approveOrRejectStatus = adminService.approveOrRejectSubmittedRequest(requestId, requestStatus,adminComment);
+			return ResponseEntity.status(HttpStatus.OK).body(approveOrRejectStatus);
+		} catch (Exception e) {
+			e.printStackTrace();
+			log.error("error in updating request status");
+
+		}
+		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(approveOrRejectStatus);
+	}
 
 }

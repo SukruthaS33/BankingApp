@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,7 +22,7 @@ import com.sukrutha.bankingApp.services.CustomerService;
 import lombok.extern.slf4j.Slf4j;
 
 @Controller
-@RequestMapping("/api/v1/CustomerRequest")
+@RequestMapping("/api/v1/customerRequest")
 @Slf4j
 public class CustomerRequestController {
 
@@ -29,7 +30,7 @@ public class CustomerRequestController {
 	CustomerRequestService customerRequestService;
 
 	@GetMapping("/{requestId}")
-	public ResponseEntity<CustomerRequest> getRequestedItemById(@RequestParam String requestId) {
+	public ResponseEntity<CustomerRequest> getRequestedItemById(@PathVariable String requestId) {
 		log.info("CustomerRequestController::getRequestedItemById");
 		try {
 			CustomerRequest request = customerRequestService.getRequestedItemById(requestId);
@@ -57,12 +58,14 @@ public class CustomerRequestController {
 		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
 	}
 
-	@PostMapping("/newRequest")
-	public ResponseEntity<CustomerRequest> createNewRequest(@RequestBody CustomerRequest request) {
+	@PostMapping("/{customerId}/newRequest")
+	public ResponseEntity<CustomerRequest> createNewRequest(@RequestBody CustomerRequest request,@PathVariable String customerId) {
 		log.info("CustomerRequestController::createNewRequest");
 		CustomerRequest customerNewRequestForCustomer = null;
 		try {
-			customerNewRequestForCustomer = customerRequestService.createNewRequestForCustomer(request);
+			
+			
+			customerNewRequestForCustomer = customerRequestService.createNewRequestForCustomer(request,customerId);
 			return ResponseEntity.status(HttpStatus.OK).body(customerNewRequestForCustomer);
 
 		} catch (Exception e) {
