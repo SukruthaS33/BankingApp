@@ -35,7 +35,7 @@ public class CustomerRequest {
     private String requestId;
 
     @ManyToOne
-    @JoinColumn(name = "customer_id", referencedColumnName = "customer_id")  // Mapping the foreign key
+    @JoinColumn(name = "customer_id")  // Mapping the foreign key
     private Customer customer;  // The type should be Customer, not customerId
 
     @Column(name = "request_name")
@@ -43,6 +43,7 @@ public class CustomerRequest {
 
     @Column(name = "request_desc")
     private String requestFullDesc;
+    
     @LastModifiedDate
     @CreatedDate
     @Column(name = "request_ts")
@@ -53,6 +54,10 @@ public class CustomerRequest {
 
     @Column(name = "request_completion_time")
     private LocalDateTime requestCompletionTimeStamp;
+    
+    @Column(name="admin_comment")
+    private String adminComment;
+    
     
 
 }

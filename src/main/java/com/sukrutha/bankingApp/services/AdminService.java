@@ -18,6 +18,9 @@ public class AdminService {
 
 	@Autowired
 	CustomerService customerService;
+	
+	@Autowired
+	CustomerRequestService customerRequestService;
 
 	public List<Customer> getAllCustomersForAdmin() {
 		log.info("AdminService::getAllCustomersForAdmin::");
@@ -69,14 +72,32 @@ public Customer getCustomerDetailsByCustomerId(String customerId) {
 public List<CustomerRequest> getAllCustomerAccountRequests() {
 	
 	log.info("AdminService getAllCustomerAccountRequests");
+	List<CustomerRequest> allSubmittedRequests = new ArrayList<>();
 	try {
-		
+		allSubmittedRequests=customerRequestService.getAllRequestsofAllCustomers();
+		return allSubmittedRequests;
 	}
 	
 	catch(Exception e) {
 		log.error("error in getting customer requests");
 	}
-	return null;
+	return allSubmittedRequests;
+}
+
+
+
+public boolean approveOrRejectSubmittedRequest(String requestId,String requestStatus, String adminComment) {
+	log.info("AdminService approveOrRejectSubmittedRequest");
+	boolean approveOrRejectStatus = false;
+	try {
+	  approveOrRejectStatus = customerRequestService.approveOrRejectCustomerRequest(requestId, requestStatus,adminComment);
+	return approveOrRejectStatus;
+	}
+	catch(Exception e) {
+		e.printStackTrace();
+		log.error("error in approving/reject request");
+	}
+	return approveOrRejectStatus;
 }
 
 }
